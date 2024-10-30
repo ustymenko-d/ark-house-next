@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './SocialLinks.module.scss'
+import styles from './SocialLinks.module.css'
 
 const SocialLinks: React.FC = () => {
 	const BASIC_CLASSES: string =
