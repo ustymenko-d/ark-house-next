@@ -10,9 +10,9 @@ const Navigation = () => {
 	const breakpoints = useBreakpoints([767])
 	const [showNavList, setShowNavList] = useState(false)
 
-	const BASIC_NAV_LIST_CLASSES: string = `fixed flex flex-col justify-center gap-8 ${
+	const BASIC_NAV_LIST_CLASSES: string = `fixed flex flex-col gap-8 ${
 		showNavList ? 'visible' : 'invisible'
-	} w-full overflow-auto font-medium text-5xl px-4 bg-white md:visible md:relative md:min-h-fit md:left-0 md:top-0 md:py-5 md:px-0 md:flex-row md:justify-end md:items-center md:gap-8 md:transition-none md:text-xl`
+	} w-full overflow-auto font-normal text-5xl px-4 bg-white md:visible md:relative md:min-h-fit md:left-0 md:top-0 md:py-5 md:px-0 md:flex-row md:justify-end md:items-center md:gap-8 md:transition-none md:text-xl`
 
 	return (
 		<nav>
@@ -40,10 +40,10 @@ const Navigation = () => {
 				{NAVIGATION_LINKS.map((link, index) => (
 					<li
 						key={`${link.title}-${index}`}
-						className='relative'>
+						className='relative container mx-auto'>
 						<NavigationItem
 							link={link}
-							index={index}
+							index={++index}
 						/>
 					</li>
 				))}

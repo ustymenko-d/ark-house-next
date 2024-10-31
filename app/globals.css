@@ -95,12 +95,17 @@ h6 {
 @tailwind utilities;
 
 :root {
+	--dark-color: rgba(6, 5, 15, 1);
+	--light-color: rgba(255, 255, 255, 1);
 }
 
 html {
+	background: var(--light-color);
+	min-height: 300vh;
+
 	scroll-behavior: smooth;
 	scrollbar-width: thin;
-	scrollbar-color: #0a0a0a #fafafa;
+	scrollbar-color: var(--dark-color) var(--light-color);
 
 	&._scroll-lock {
 		overflow: hidden;
@@ -112,12 +117,12 @@ html {
 }
 
 .page::-webkit-scrollbar-track {
-	background: #fafafa;
+	background: var(--light-color);
 }
 
 .page::-webkit-scrollbar-thumb {
 	border: 3px solid transparent;
-	background-color: #0a0a0a;
+	background-color: var(--dark-color);
 }
 
 .animatedUnderline {

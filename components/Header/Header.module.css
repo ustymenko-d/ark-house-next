@@ -10,7 +10,7 @@
 		height: 300%;
 
 		transition: transform 0.4s;
-		background-color: #0a0a0a;
+		background-color: var(--dark-color);
 		pointer-events: none;
 	}
 

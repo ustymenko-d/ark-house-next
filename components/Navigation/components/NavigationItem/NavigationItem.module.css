@@ -17,14 +17,14 @@
 
 	&:focus-visible {
 		&::before {
-			color: black;
+			color: var(--dark-color);
 		}
 	}
 
 	@media (hover: hover) {
 		&:hover {
 			&::before {
-				color: black;
+				color: var(--dark-color);
 			}
 		}
 	}
@@ -32,7 +32,7 @@
 	@media (hover: none) {
 		&:active {
 			&::before {
-				color: black;
+				color: var(--dark-color);
 			}
 		}
 	}

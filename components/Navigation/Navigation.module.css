@@ -8,7 +8,7 @@
 		left: 0;
 		width: 100%;
 		height: 5px;
-		background-color: black;
+		background-color: var(--dark-color);
 	}
 
 	&::before,
@@ -31,8 +31,8 @@
 			top: 12px;
 			right: 0;
 			left: 0;
-			color: black;
-			font-size: 1rem;
+			color: var(--dark-color);
+			font-size: 0.875rem;
 			font-weight: bold;
 			text-align: center;
 		}
@@ -118,10 +118,12 @@
 	height: calc(100% - 78.5px);
 	min-height: calc(100vh - 78.5px);
 	min-height: calc(100dvh - 78.5px);
+	justify-content: center;
 	transition: left 0.4s, visibility 0.4s;
 
-	@media screen and (max-height: 500px) {
+	@media screen and (max-height: 600px) {
 		justify-content: start;
+		padding-block: 2rem;
 	}
 }
 
