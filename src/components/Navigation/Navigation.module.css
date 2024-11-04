@@ -1,0 +1,158 @@
+.toggler {
+	height: 50px;
+
+	&::before,
+	&::after,
+	.toggler-text {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 5px;
+		background-color: var(--dark-color);
+	}
+
+	&::before,
+	&::after {
+		content: '';
+		transition: 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55) left;
+	}
+	&::before {
+		top: 15%;
+	}
+	&::after {
+		top: calc(50% - 2.5px);
+	}
+	.toggler-text {
+		bottom: 15%;
+
+		&::before {
+			content: 'MENU';
+			position: absolute;
+			top: 12px;
+			right: 0;
+			left: 0;
+			color: var(--dark-color);
+			font-size: 0.875rem;
+			font-weight: bold;
+			text-align: center;
+		}
+	}
+
+	&:focus-visible {
+		&::before {
+			left: -100%;
+		}
+		&::after {
+			left: 100%;
+		}
+		.toggler-text::before {
+			animation: moveUpThenDown 0.8s ease 0.2s forwards,
+				shakeWhileMovingUp 0.8s ease 0.2s forwards,
+				shakeWhileMovingDown 0.2s ease 0.8s forwards;
+		}
+	}
+
+	@media (hover: hover) {
+		&:hover {
+			&::before {
+				left: -100%;
+			}
+			&::after {
+				left: 100%;
+			}
+			.toggler-text::before {
+				animation: moveUpThenDown 0.8s ease 0.2s forwards,
+					shakeWhileMovingUp 0.8s ease 0.2s forwards,
+					shakeWhileMovingDown 0.2s ease 0.8s forwards;
+			}
+		}
+	}
+
+	@media (hover: none) {
+		&:focus {
+			&::before {
+				left: -100%;
+			}
+			&::after {
+				left: 100%;
+			}
+			.toggler-text::before {
+				animation: moveUpThenDown 0.8s ease 0.2s forwards,
+					shakeWhileMovingUp 0.8s ease 0.2s forwards,
+					shakeWhileMovingDown 0.2s ease 0.8s forwards;
+			}
+		}
+	}
+}
+
+.toggler_active {
+	.toggler-text::before {
+		content: 'CLOSE';
+		font-size: 0.875rem;
+	}
+
+	&::before {
+		left: -100%;
+	}
+	&::after {
+		left: 100%;
+	}
+
+	.toggler-text::before {
+		animation: moveUpThenDown 0.8s ease 0.2s forwards,
+			shakeWhileMovingUp 0.8s ease 0.2s forwards,
+			shakeWhileMovingDown 0.2s ease 0.8s forwards;
+	}
+}
+
+.toggler_active.nav-toggler::before {
+	left: -100%;
+}
+.toggler_active.nav-toggler::after {
+	left: 100%;
+}
+
+@keyframes moveUpThenDown {
+	0% {
+		top: 0;
+	}
+	50% {
+		top: -30px;
+	}
+	100% {
+		top: -20px;
+	}
+}
+
+@keyframes shakeWhileMovingUp {
+	0% {
+		transform: rotateZ(0);
+	}
+	25% {
+		transform: rotateZ(-10deg);
+	}
+	50% {
+		transform: rotateZ(0deg);
+	}
+	75% {
+		transform: rotateZ(10deg);
+	}
+	100% {
+		transform: rotateZ(0);
+	}
+}
+
+@keyframes shakeWhileMovingDown {
+	0% {
+		transform: rotateZ(0);
+	}
+	80% {
+		transform: rotateZ(3deg);
+	}
+	90% {
+		transform: rotateZ(-3deg);
+	}
+	100% {
+		transform: rotateZ(0);
+	}
+}

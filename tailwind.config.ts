@@ -8,11 +8,14 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
-    },
+			colors: {
+				'dark-color': 'rgba(6, 5, 15, 1)',
+			},
+			fontFamily: {
+				sans: ['var(--font-inter)'],
+				mono: ['var(--font-roboto-mono)'],
+			},
+		},
   },
   plugins: [],
 };
