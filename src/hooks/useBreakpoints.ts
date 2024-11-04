@@ -1,4 +1,5 @@
 'use client'
+
 import { useCallback, useEffect, useRef, useState } from 'react'
 
 export const useBreakpoints = (breakpoints: number[]): number => {
@@ -8,8 +9,10 @@ export const useBreakpoints = (breakpoints: number[]): number => {
 	const updateIndex = useCallback(() => {
 		const width = window.innerWidth
 		const newIndex = breakpoints.findIndex((bp) => width <= bp)
-		setIndex(newIndex === -1 ? breakpoints.length : newIndex)
-	}, [breakpoints])
+		if (newIndex !== index) {
+			setIndex(newIndex === -1 ? breakpoints.length : newIndex)
+		}
+	}, [breakpoints, index])
 
 	useEffect(() => {
 		const handleResize = () => {
@@ -20,7 +23,7 @@ export const useBreakpoints = (breakpoints: number[]): number => {
 		}
 
 		updateIndex()
-		window.addEventListener('resize', updateIndex)
+		window.addEventListener('resize', handleResize)
 
 		return () => {
 			window.removeEventListener('resize', handleResize)
