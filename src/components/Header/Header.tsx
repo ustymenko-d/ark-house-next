@@ -10,11 +10,11 @@ const Header = () => {
 	const headerNavVisible = useAppStore((state) => state.headerNavVisible)
 
 	return (
-		<header className='z-10'>
+		<header className='z-40'>
 			<FocusLock
 				returnFocus
 				disabled={!headerNavVisible}>
-				<div className='overflow-hidden container mx-auto flex items-center justify-between px-4 py-2 md:py-3 md:border-b md:border-neutral-950'>
+				<div className='overflow-hidden container md:px-10 lg:px-20 mx-auto flex items-center justify-between px-4 py-2 md:py-3 md:border-b md:border-neutral-950'>
 					<div className={`${styles.logo} relative`}>
 						<Link
 							href='/'
