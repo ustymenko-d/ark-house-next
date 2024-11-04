@@ -2,8 +2,11 @@ import React from 'react'
 import styles from './Hero.module.css'
 import Button from '@/components/UI/Button/Button'
 import SocialLinks from '@/components/UI/SocialLinks/SocialLinks'
+import { useAppStore } from '@/store/store'
 
 const Hero: React.FC = () => {
+	const webpSupport = useAppStore((state) => state.webpSupport)
+
 	return (
 		<section
 			className={`${styles.hero} container mx-auto md:px-10 lg:px-20 relative overflow-hidden py-16 mb-10 flex flex-col items-start gap-12 justify-center md:justify-normal md:bg-none lg:gap-0 lg:flex-row lg:justify-between `}>
@@ -18,12 +21,17 @@ const Hero: React.FC = () => {
 				<br />
 				Design.
 			</h1>
-			<div className='z-10 px-4 flex flex-col items-start gap-8 lg:px-0 lg:self-center xl:self-start xl:gap-20 xl:items-end'>
+			<div className='z-10 px-4 flex flex-col items-start gap-8 lg:items-end lg:px-0 lg:self-center xl:self-start xl:gap-20 xl:items-end'>
 				<Button linkHref='/contact'>Contact&nbsp;us</Button>
 				<SocialLinks />
 			</div>
-			<div
-				className={`${styles.background} absolute left-0 right-0 bottom-0 flex flex-col justify-end items-center overflow-hidden pointer-events-none bg-no-repeat`}></div>
+
+			{webpSupport !== null && (
+				<div
+					className={`${styles.background}${
+						webpSupport ? '' : ` ${styles.background_noWebp}`
+					} absolute left-0 right-0 bottom-0 flex flex-col justify-end items-center overflow-hidden pointer-events-none bg-no-repeat`}></div>
+			)}
 		</section>
 	)
 }

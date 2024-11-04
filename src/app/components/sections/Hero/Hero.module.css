@@ -25,7 +25,6 @@
 
 .background {
 	height: calc(100% - 3.875rem);
-	background-image: url(../../../../assets/img/home-page/hero@mob.png);
 	background-size: 160%;
 	background-position: 0 100%;
 
@@ -49,9 +48,19 @@
 	}
 
 	@media screen and (width >= 1440px) {
-		background-image: url(../../../../assets/img/home-page/hero.png);
 		background-position-y: bottom;
 		background-size: contain;
+	}
+
+	@supports (
+		background-image:
+			url('data:image/webp;base64,UklGRhYAAABXRUJQVlA4TBEAAAAAAABAAEAAQAAAABAAEAAQAAABAAEAAQAAAAA=')
+	) {
+		background-image: url(/img/home-page/hero@mob.webp);
+
+		@media screen and (width >= 1440px) {
+			background-image: url(/img/home-page/hero.webp);
+		}
 	}
 
 	&::before {
@@ -73,5 +82,13 @@
 		@media screen and (width >= 1254px) {
 			height: 80%;
 		}
+	}
+}
+
+.background_noWebp {
+	background-image: url(/img/home-page/hero@mob.png);
+
+	@media screen and (width >= 1440px) {
+		background-image: url(/img/home-page/hero.png);
 	}
 }
