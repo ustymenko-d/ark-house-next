@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import PageBody from './components/Body'
 
 export const metadata: Metadata = {
 	title: 'Ark-House',
@@ -21,7 +22,7 @@ export default function RootLayout({
 		<html
 			lang='en'
 			className={`${inter.variable} font-sans`}>
-			{children}
+			<PageBody>{children}</PageBody>
 		</html>
 	)
 }

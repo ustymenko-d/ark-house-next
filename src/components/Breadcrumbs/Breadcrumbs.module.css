@@ -1,0 +1,10 @@
+.item {
+	&::after {
+		content: url(../../assets/icons/arrow.svg);
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: -40px;
+		pointer-events: none;
+	}
+}

@@ -6,7 +6,7 @@ const About = () => {
 	const imagesNames: string[] = ['about-1', 'about-2', 'about-3']
 
 	return (
-		<section className='mb-14'>
+		<section id='about-section' className='mb-14'>
 			<div className='container mx-auto px-4 md:px-10 md:border-t md:border-t-dark-color md:pt-14 md:text-center lg:px-20'>
 				<h2 className={`${styles.title} mb-10 font-semibold`}>
 					Forming an irrational love between clients and their buildings

@@ -94,6 +94,12 @@ h6 {
 @tailwind components;
 @tailwind utilities;
 
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: light;
+  }
+}
+
 :root {
 	--dark-color: rgba(6, 5, 15, 1);
 	--light-color: rgba(255, 255, 255, 1);
