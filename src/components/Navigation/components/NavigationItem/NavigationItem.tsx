@@ -1,4 +1,4 @@
-import { NavigationLink } from '@/const'
+import { NavigationLink } from '@/const/const'
 import Link from 'next/link'
 import styles from './NavigationItem.module.css'
 

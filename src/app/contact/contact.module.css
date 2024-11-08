@@ -1,0 +1,100 @@
+.contactPage {
+	min-height: 700px;
+}
+
+.title {
+	font-size: 2.5rem;
+	line-height: 1.3;
+	letter-spacing: -0.02em;
+
+	@media screen and (width >= 1024px) {
+		font-size: 3rem;
+	}
+}
+
+.toggler {
+	@media screen and (width >= 640px) {
+		max-width: 60%;
+	}
+
+	@media screen and (width >= 1280px) {
+		max-width: 50%;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 50%;
+		background-color: var(--dark-color);
+		transition: all 0.4s linear;
+		pointer-events: none;
+	}
+}
+
+.toggler_email {
+	&::before {
+		left: 50%;
+	}
+}
+
+.toggler__button {
+	z-index: 1;
+	padding-block: 0.625rem;
+	flex: 1 0 50%;
+	transition: color 0.4s;
+
+	&:not(:disabled):focus-visible {
+		border-color: transparent;
+	}
+
+	@media (hover: hover) {
+		&:not(:disabled):hover {
+			border-color: transparent;
+		}
+	}
+
+	@media (hover: none) {
+		&:not(:disabled):active {
+			border-color: transparent;
+		}
+	}
+}
+
+.description {
+	font-size: 1.5rem;
+	line-height: 1.3;
+	letter-spacing: -0.02em;
+
+	@media screen and (width >= 640px) {
+		max-width: 50%;
+	}
+}
+
+.input {
+	line-height: 1.3;
+	letter-spacing: -0.02em;
+
+	@media screen and (width >= 640px) {
+		max-width: 60%;
+	}
+
+	@media screen and (width >= 1024px) {
+		max-width: 50%;
+	}
+
+	&::placeholder {
+		color: rgba(178, 178, 178, 1);
+	}
+
+	&:disabled {
+		border-color: rgba(6, 5, 15, 0.1);
+		color: rgba(6, 5, 15, 0.1);
+	}
+
+	&:focus {
+		border: 1.5px solid var(--dark-color);
+	}
+}

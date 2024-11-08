@@ -1,5 +1,5 @@
 import React from 'react'
-import { PROJECT_DESCRIPTION } from '@/const'
+import { PROJECT_DESCRIPTION } from '@/const/const'
 import Button from '../UI/Button/Button'
 import SocialLinks from '../UI/SocialLinks/SocialLinks'
 import NavigationList from '../Navigation/components/NavigationList/NavigationList'
@@ -12,16 +12,14 @@ const Footer: React.FC = () => {
 		<footer className='px-4'>
 			<div className='container mx-auto'>
 				<div className='topline mb-12'>
-					<h2 className={`${styles.title} font-semibold text`}>
-						Start a Project?
-					</h2>
+					<h2 className={`${styles.title} font-semibold`}>Start a Project?</h2>
 					<Button linkHref='/contact'>Contact&nbsp;us</Button>
 				</div>
 
 				<div
 					className={`${styles.contact} mb-12 pb-6 border-b border-b-dark-color grid gap-6 md:px-10 lg:px-20 lg:pb-12 lg:gap-14`}>
 					<div className={styles.support}>
-						<h3 className='mb-4 font-semibold text'>
+						<h3 className='mb-4 font-semibold'>
 							Support is available 24 hours
 						</h3>
 						<Button linkHref='/contact'>Contact&nbsp;us</Button>

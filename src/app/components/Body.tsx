@@ -2,6 +2,8 @@
 
 import Footer from '@/components/Footer/Footer'
 import Header from '@/components/Header/Header'
+import ToTopButton from '@/components/UI/ToTopButton/ToTopButton'
+import useScrollBeyondThreshold from '@/hooks/useScrollBeyondThreshold'
 import { useAppStore } from '@/store/store'
 import { useEffect } from 'react'
 
@@ -15,6 +17,7 @@ const isWebpSupported = (): boolean => {
 }
 
 const PageBody = ({ children }: PageBodyProps) => {
+	const hasScrolledBeyond = useScrollBeyondThreshold()
 	const headerNavVisible = useAppStore((state) => state.headerNavVisible)
 	const webpSupport = useAppStore((state) => state.webpSupport)
 	const setWebpSupport = useAppStore((state) => state.setWebpSupport)
@@ -32,6 +35,7 @@ const PageBody = ({ children }: PageBodyProps) => {
 			<Header />
 			{children}
 			<Footer />
+			{hasScrolledBeyond && <ToTopButton />}
 		</body>
 	)
 }

@@ -1,5 +1,5 @@
 .about {
-	@media screen and (min-width: 1280px) {
+	@media screen and (width >= 1280px) {
 		grid-template-columns: 61.3% auto;
 		grid-template-rows: auto 1fr;
 	}
@@ -8,7 +8,7 @@
 .question {
 	font-size: 2rem;
 
-	@media screen and (min-width: 768px) {
+	@media screen and (width >= 768px) {
 		font-size: 2.5rem;
 	}
 }

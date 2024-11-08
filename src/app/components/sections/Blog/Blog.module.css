@@ -1,0 +1,6 @@
+.articles {
+	@media screen and (width >= 1440px) {
+		max-width: 86.7924%;
+		margin-inline-start: auto;
+	}
+}

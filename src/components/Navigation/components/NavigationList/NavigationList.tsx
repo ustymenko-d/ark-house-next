@@ -1,4 +1,4 @@
-import { NAVIGATION_LINKS } from '@/const'
+import { NAVIGATION_LINKS } from '@/const/const'
 import styles from './NavigationList.module.css'
 import NavigationItem from '../NavigationItem/NavigationItem'
 import React from 'react'
