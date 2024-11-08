@@ -3,7 +3,7 @@
 	background-color: #f8f8f8;
 	
 	&::after {
-		content: url(../img/icons/arrow-up-right.svg);
+		content: url(../../../assets/icons/arrow-up-right.svg);
 		position: absolute;
 		width: 100%;
 		height: 100%;

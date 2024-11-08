@@ -17,7 +17,7 @@ const isWebpSupported = (): boolean => {
 }
 
 const PageBody = ({ children }: PageBodyProps) => {
-	const hasScrolledBeyond = useScrollBeyondThreshold()
+	const hasScrolledBeyond = useScrollBeyondThreshold(50)
 	const headerNavVisible = useAppStore((state) => state.headerNavVisible)
 	const webpSupport = useAppStore((state) => state.webpSupport)
 	const setWebpSupport = useAppStore((state) => state.setWebpSupport)
