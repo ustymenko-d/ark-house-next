@@ -1,8 +1,8 @@
 import Button from '@/components/UI/Button/Button'
-import styles from './About.module.css'
+import styles from './AboutSection.module.css'
 import Image from 'next/image'
 
-const About = () => {
+const AboutSection = () => {
 	const imagesNames: string[] = ['about-1', 'about-2', 'about-3']
 
 	return (
@@ -53,4 +53,4 @@ const About = () => {
 	)
 }
 
-export default About
+export default AboutSection

@@ -3,7 +3,7 @@ import Button from '@/components/UI/Button/Button'
 import ArticleItem from '@/components/ArticleItem/ArticleItem'
 import { BLOG_ARTICLES } from '@/const/const'
 
-const Blog: React.FC = () => {
+const BlogSection: React.FC = () => {
 	return (
 		<section className='mx-auto px-4'>
 			<div className='topline mb-14 mx-auto container md:px-10 lg:px-20'>
@@ -22,4 +22,4 @@ const Blog: React.FC = () => {
 	)
 }
 
-export default Blog
+export default BlogSection

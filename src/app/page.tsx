@@ -1,15 +1,17 @@
-import Hero from './components/sections/Hero/Hero'
-import About from './components/sections/About/About'
-import Blog from './components/sections/Blog/Blog'
-import Services from './components/sections/Services/Services'
+import HeroSection from './components/sections/HeroSection/HeroSection'
+import AboutSection from './components/sections/AboutSection/AboutSection'
+import ServicesSection from './components/sections/ServicesSection/ServicesSection'
+import ProjectsSection from './components/sections/ProjectsSection/ProjectsSection'
+import BlogSection from './components/sections/BlogSection/BlogSection'
 
 const Home: React.FC = () => {
 	return (
 		<main className='flex-auto'>
-			<Hero />
-			<About />
-			<Services />
-			<Blog />
+			<HeroSection />
+			<AboutSection />
+			<ServicesSection />
+			<ProjectsSection />
+			<BlogSection />
 		</main>
 	)
 }

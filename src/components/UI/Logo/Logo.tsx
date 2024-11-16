@@ -1,9 +1,14 @@
 import React from 'react'
 
-const Logo: React.FC = () => {
+interface LogoProps {
+	classes?: string
+}
+
+const Logo: React.FC<LogoProps> = ({ classes = '' }) => {
 	return (
-		<div className='inline-block py-3 px-3 bg-neutral-950'>
+		<div className={`inline-block py-3 px-3 bg-neutral-950 ${classes}`}>
 			<svg
+				className='w-full h-auto'
 				width='60'
 				height='32'
 				viewBox='0 0 60 32'

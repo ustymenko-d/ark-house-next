@@ -16,7 +16,7 @@ const bannerNumber = (
 	</svg>
 )
 
-const Services: React.FC = () => {
+const ServicesSection: React.FC = () => {
 	return (
 		<section>
 			<Banner
@@ -28,4 +28,4 @@ const Services: React.FC = () => {
 	)
 }
 
-export default Services
+export default ServicesSection

@@ -1,12 +1,12 @@
 'use client'
 
 import React from 'react'
-import styles from './Hero.module.css'
+import { useAppStore } from '@/store/store'
 import Button from '@/components/UI/Button/Button'
 import SocialLinks from '@/components/UI/SocialLinks/SocialLinks'
-import { useAppStore } from '@/store/store'
+import styles from './HeroSection.module.css'
 
-const Hero: React.FC = () => {
+const HeroSection: React.FC = () => {
 	const webpSupport = useAppStore((state) => state.webpSupport)
 
 	return (
@@ -38,4 +38,4 @@ const Hero: React.FC = () => {
 	)
 }
 
-export default Hero
+export default HeroSection

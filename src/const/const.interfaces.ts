@@ -10,3 +10,10 @@ export interface Article {
 	date: string
 	imageUrl: string
 }
+
+export interface ProjectCase {
+	title: string
+	subtitle: string
+	imgSrc: string
+	category: string
+}
