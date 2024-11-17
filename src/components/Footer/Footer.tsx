@@ -81,7 +81,7 @@ const Footer: React.FC = () => {
 				<div className='mb-12 leading-5 md:px-10 lg:px-20'>
 					<p className='pb-5'>{PROJECT_DESCRIPTION}</p>
 					<Button linkHref='https://ustymenko.vercel.app'>
-						Back to portfolio
+						Back&nbsp;to&nbsp;portfolio
 					</Button>
 				</div>
 			</div>

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import PageBody from './components/Body'
+import PageBody from './components/PageBody'
 
 export const metadata: Metadata = {
 	title: 'Ark-House',

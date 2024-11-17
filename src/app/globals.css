@@ -125,15 +125,15 @@ img {
 	object-fit: cover;
 }
 
-.page::-webkit-scrollbar {
+body::-webkit-scrollbar {
 	width: 5px;
 }
 
-.page::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track {
 	background: var(--light-color);
 }
 
-.page::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb {
 	border: 3px solid transparent;
 	background-color: var(--dark-color);
 }
@@ -176,18 +176,14 @@ img {
 	@media screen and (width >= 768px) {
 		padding-inline: 2.5rem;
 	}
+
 	@media screen and (width >= 1024px) {
 		padding-inline: 5rem;
 	}
 
-	.title {
+	h2 {
 		font-size: 2.3rem;
 		line-height: 1.2;
 		letter-spacing: -0.02em;
-	}
-
-	@media screen and (width >= 768px) {
-		line-height: 1.5;
-		font-size: 3rem;
 	}
 }

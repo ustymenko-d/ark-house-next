@@ -7,6 +7,9 @@ interface AppState {
 
 	headerNavVisible: boolean
 	toggleHeaderNav: () => void
+
+	modalOpen: boolean
+	toggleModalOpen: () => void
 }
 
 export const useAppStore = create<AppState>()(
@@ -19,6 +22,9 @@ export const useAppStore = create<AppState>()(
 			headerNavVisible: false,
 			toggleHeaderNav: () =>
 				set((state) => ({ headerNavVisible: !state.headerNavVisible })),
+
+			modalOpen: false,
+			toggleModalOpen: () => set((state) => ({ modalOpen: !state.modalOpen })),
 		}),
 		{ name: 'AppStore' }
 	)
