@@ -1,11 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
-import Link from 'next/link'
 import ProjectCard from '@/components/ProjectCard/ProjectCard'
 import { PROJECTS_CASES } from '@/const/const'
-import styles from './ProjectsSection.module.css'
-import Button from '@/components/UI/Button/Button'
-import Banner from '@/components/Banner/Banner'
 import styles from './ProjectsSection.module.css'
 import Button from '@/components/UI/Button/Button'
 import Banner from '@/components/Banner/Banner'
@@ -16,13 +12,13 @@ const ProjectsSection: React.FC = () => {
 	const lastProjectCase = PROJECTS_CASES[9]
 
 	return (
-		<section className='mb-14'>
-			<div className='topline mb-14 mx-auto container p-4 md:px-10 lg:px-20'>
+		<section className='mb-14 px-4'>
+			<div className='topline mb-14 mx-auto container md:px-10 lg:px-20'>
 				<h2 className='leading-tight font-semibold'>Recent Projects</h2>
 				<Button linkHref='/projects'>Discover&nbsp;All</Button>
 			</div>
 
-			<div className='container mx-auto p-4 md:px-10 lg:px-20'>
+			<div className='container mx-auto md:px-10 lg:px-20'>
 				<div
 					className={`${styles.projectsGrid} mb-14 grid gap-y-12 lg:grid-cols-12 lg:gap-8 2xl:gap-16`}>
 					{firstProjectsGroup.map((projectCase, index) => (

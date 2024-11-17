@@ -1,9 +1,9 @@
 .hero {
 	transition: min-height 0.4s;
-	height: calc(100dvh - 78px);
-	max-height: 740px;
+	min-height: calc(100dvh - 78px);
+	/* max-height: 740px; */
 
-	@media screen and (width >= 1250px) {
+	@media screen and (min-width: 1250px) {
 		min-height: 46rem;
 		max-height: 800px;
 	}
