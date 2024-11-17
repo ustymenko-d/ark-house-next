@@ -2,12 +2,13 @@ import React from 'react'
 import styles from './Button.module.css'
 import Link from 'next/link'
 
-interface IButtonProps {
+interface ButtonProps {
 	linkHref?: string
 	children: string
+	onClickProp?: () => void
 }
 
-const Button: React.FC<IButtonProps> = ({ linkHref, children }) => {
+const Button: React.FC<ButtonProps> = ({ linkHref, children, onClickProp }) => {
 	const BASIC_CLASSES: string =
 		'relative inline-block overflow-hidden py-3 pl-8 pr-14 bg-neutral-950 text-neutral-50 font-medium text-base tracking-wide text-center'
 
@@ -18,7 +19,11 @@ const Button: React.FC<IButtonProps> = ({ linkHref, children }) => {
 			{children}
 		</Link>
 	) : (
-		<button className={`${BASIC_CLASSES} ${styles.button}`}>{children}</button>
+		<button
+			className={`${BASIC_CLASSES} ${styles.button}`}
+			onClick={onClickProp}>
+			{children}
+		</button>
 	)
 }
 

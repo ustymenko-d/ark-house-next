@@ -12,7 +12,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ projectCase }) => {
 	const { title, subtitle, imgSrc } = projectCase
 
 	return (
-		<div className='relative flex flex-col gap-1 tracking-tight text-center bg-neutral-100 md:text-left md:bg-transparent'>
+		<div className='relative h-full flex flex-col gap-1 tracking-tight text-center bg-neutral-100 md:text-left md:bg-transparent'>
 			<div className='h-full flex flex-col justify-start gap-2 md:gap-4'>
 				<picture className='flex-grow w-full'>
 					<source

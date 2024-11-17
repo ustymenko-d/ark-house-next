@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './SocialLinks.module.css'
+import { useAppStore } from '@/store/store'
 
 const SocialLinks: React.FC = () => {
 	const BASIC_CLASSES: string =
@@ -7,16 +8,22 @@ const SocialLinks: React.FC = () => {
 
 	const SOCIAL: string[] = ['Instagram', 'Twitter', 'Linkedin']
 
+	const toggleModalOpen = useAppStore((state) => state.toggleModalOpen)
+
+	const handleOpenModal = () => {
+		toggleModalOpen()
+	}
+
 	return (
 		<ul className='flex gap-8 lg:justify-end'>
 			{SOCIAL.map((item, index) => (
 				<li key={`${item}-${index}`}>
-					<a
-						href=''
+					<button
+						onClick={handleOpenModal}
 						aria-label={item}
 						className={`${BASIC_CLASSES} ${
 							styles[`SocialLinks-icon_${item}`]
-						}`}></a>
+						}`}></button>
 				</li>
 			))}
 		</ul>

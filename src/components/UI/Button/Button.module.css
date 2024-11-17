@@ -1,5 +1,5 @@
 .button {
-	transition: all 0.2s;
+	transition: all 0.1s;
 
 	&::before {
 		content: url(../../../assets/icons/arrow-up-right.svg);

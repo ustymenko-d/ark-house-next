@@ -125,15 +125,15 @@ img {
 	object-fit: cover;
 }
 
-.page::-webkit-scrollbar {
+body::-webkit-scrollbar {
 	width: 5px;
 }
 
-.page::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track {
 	background: var(--light-color);
 }
 
-.page::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb {
 	border: 3px solid transparent;
 	background-color: var(--dark-color);
 }
