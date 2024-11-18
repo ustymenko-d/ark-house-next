@@ -1,14 +1,14 @@
 export type NavigationLink = {
-	linkHref: string
 	title: string
+	href: string
 }
 
 export interface Article {
 	title: string
-	text: string
+	content: string
 	dateTime: string
 	date: string
-	imageUrl: string
+	imgSrc: string
 }
 
 export interface ProjectCase {
@@ -16,4 +16,20 @@ export interface ProjectCase {
 	subtitle: string
 	imgSrc: string
 	category: string
+}
+
+interface TeamMember {
+	imgSrc: string
+	name: string
+	role: string
+}
+
+export interface OneTabContent {
+	tabName: string
+	content: TeamMember[] | string | ProjectCase[]
+}
+
+export interface TabList {
+	tabs: string[]
+	tabsContent: OneTabContent[]
 }

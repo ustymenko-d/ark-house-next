@@ -1,0 +1,24 @@
+.wrapper {
+	grid-template-rows: 1fr 1.5fr auto;
+
+	@media screen and (min-width: 1024px) {
+		grid-template-columns: 30% 1fr;
+		grid-template-rows: minmax(640px, auto) auto;
+	}
+
+	@media screen and (min-width: 1280px) {
+		grid-template-columns: 40% 1fr;
+		gap: 1.5rem 3rem;
+	}
+}
+
+.description {
+	@media screen and (min-width: 1024px) {
+		grid-row: 2/-1;
+		grid-column: 2/-1;
+	}
+
+	@media screen and (min-width: 1280px) {
+		max-width: 66.66%;
+	}
+}

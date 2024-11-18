@@ -18,7 +18,7 @@ const Banner: React.FC<BannerProps> = ({
 		<div
 			className={`${classes} flex flex-col justify-center items-center gap-4 text-center text-dark-color`}>
 			{svgImage}
-			<p className={`${styles.text}font-bold text-4xl`}>
+			<p className={`${styles.text} font-bold text-4xl`}>
 				{topLineText}
 				<br />
 				{bottomLineText}

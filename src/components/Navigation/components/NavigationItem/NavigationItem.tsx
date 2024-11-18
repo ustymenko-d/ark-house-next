@@ -9,13 +9,13 @@ type NavigationItemProps = {
 }
 
 const NavigationItem: React.FC<NavigationItemProps> = ({ link, index }) => {
-	const { title, linkHref } = link
+	const { title, href } = link
 	const pathname = usePathname()
 
 	return (
 		<Link
 			className={`${styles.navItem} text-black animatedUnderline`}
-			href={pathname === '/' ? linkHref : `/${linkHref}`}
+			href={pathname === '/' ? href : `/${href}`}
 			data-number={index}>
 			{title}
 		</Link>

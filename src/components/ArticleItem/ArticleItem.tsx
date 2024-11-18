@@ -8,27 +8,27 @@ interface ArticleItemProps {
 }
 
 const ArticleItem: React.FC<ArticleItemProps> = ({ article }) => {
-	const { title, text, dateTime, imageUrl } = article
+	const { title, content, dateTime, imgSrc } = article
 
 	return (
 		<div className='h-full flex flex-col bg-neutral-100'>
 			<picture>
 				<source
 					media='(max-width: 1024px)'
-					srcSet={`${imageUrl}@mob.webp`}
+					srcSet={`${imgSrc}@mob.webp`}
 					type='image/webp'
 				/>
 				<source
 					media='(max-width: 1024px)'
-					srcSet={`${imageUrl}@mob.jpg`}
+					srcSet={`${imgSrc}@mob.jpg`}
 				/>
 				<source
-					srcSet={`${imageUrl}.webp`}
+					srcSet={`${imgSrc}.webp`}
 					type='image/webp'
 				/>
 				<Image
 					className={`${styles.image} bg-dark-color`}
-					src={`${imageUrl}.jpg`}
+					src={`${imgSrc}.jpg`}
 					loading='lazy'
 					alt=''
 					width={2221}
@@ -43,7 +43,7 @@ const ArticleItem: React.FC<ArticleItemProps> = ({ article }) => {
 					{dateTime}
 				</time>
 				<h3 className='font-semibold text-2xl mb-1'>{title}</h3>
-				<p className='text-lg'>{text}</p>
+				<p className='text-lg'>{content}</p>
 			</div>
 		</div>
 	)

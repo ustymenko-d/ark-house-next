@@ -1,46 +1,44 @@
-import { Article, NavigationLink, ProjectCase } from './const.interfaces'
-
-export const NAVIGATION_LINKS: NavigationLink[] = [
-	{
-		linkHref: '#about',
-		title: 'About',
-	},
-	{
-		linkHref: '#services',
-		title: 'Services',
-	},
-	{
-		linkHref: '#projects',
-		title: 'Projects',
-	},
-	{
-		linkHref: '#team',
-		title: 'Team',
-	},
-	{
-		linkHref: '#blog',
-		title: 'Blog',
-	},
-]
+import {
+	Article,
+	NavigationLink,
+	ProjectCase,
+	TabList,
+} from './const.interfaces'
 
 export const PROJECT_DESCRIPTION: string = 'Lorem text'
 
-export const BLOG_ARTICLES: Article[] = [
+export const NAVIGATION_LINKS: NavigationLink[] = [
 	{
-		title: 'Design and architecture training',
-		text: 'Designers and architects learn through a combination of formal education, practical experience, and continuing professional development.',
-		dateTime: '2023-01-01',
-		date: 'Nov 01, 2023',
-		imageUrl: '/img/home-page/blog-items/meet',
+		title: 'About',
+		href: '#about',
 	},
 	{
-		title: 'Design of public spaces',
-		text: 'Public space design focuses on creating functional, safe, and visually appealing areas that foster social connections, community involvement, and a strong sense of place.',
-		dateTime: '2023-11-12',
-		date: 'Nov 12, 2023',
-		imageUrl: '/img/home-page/blog-items/street',
+		title: 'Services',
+		href: '#services',
+	},
+	{
+		title: 'Projects',
+		href: '#projects',
+	},
+	{
+		title: 'Team',
+		href: '#team',
+	},
+	{
+		title: 'Blog',
+		href: '#blog',
 	},
 ]
+
+export const SERVICES_TABS: TabList = {
+	tabs: ['Architecture', 'Landscape', 'Interior', 'Design'],
+	tabsContent: [
+		{ tabName: 'Architecture', content: '/home-page/services-arc' },
+		{ tabName: 'Landscape', content: '/home-page/services-landscape' },
+		{ tabName: 'Interior', content: '/home-page/services-interior' },
+		{ tabName: 'Design', content: '/home-page/services-design' },
+	],
+}
 
 export const PROJECTS_CASES: ProjectCase[] = [
 	{
@@ -189,5 +187,24 @@ export const PROJECTS_CASES: ProjectCase[] = [
 		subtitle: 'Logan, UT',
 		imgSrc: '/img/projects-page/design/third',
 		category: 'Design',
+	},
+]
+
+export const BLOG_ARTICLES: Article[] = [
+	{
+		title: 'Design and architecture training',
+		content:
+			'Designers and architects learn through a combination of formal education, practical experience, and continuing professional development.',
+		dateTime: '2023-01-01',
+		date: 'Nov 01, 2023',
+		imgSrc: '/img/home-page/blog-items/meet',
+	},
+	{
+		title: 'Design of public spaces',
+		content:
+			'Public space design focuses on creating functional, safe, and visually appealing areas that foster social connections, community involvement, and a strong sense of place.',
+		dateTime: '2023-11-12',
+		date: 'Nov 12, 2023',
+		imgSrc: '/img/home-page/blog-items/street',
 	},
 ]
