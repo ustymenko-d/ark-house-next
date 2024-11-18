@@ -1,5 +1,5 @@
-import Banner from '@/components/Banner/Banner'
 import React from 'react'
+import Banner from '@/components/Banner/Banner'
 
 const bannerNumber = (
 	<svg
@@ -18,7 +18,7 @@ const bannerNumber = (
 
 const ServicesSection: React.FC = () => {
 	return (
-		<section>
+		<section id='services'>
 			<Banner
 				svgImage={bannerNumber}
 				topLineText='Offices around'

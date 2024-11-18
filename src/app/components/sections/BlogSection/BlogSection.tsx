@@ -15,7 +15,7 @@ const BlogSection: React.FC = () => {
 	}
 
 	return (
-		<section className='mx-auto px-4'>
+		<section id='blog' className='mx-auto px-4'>
 			<div className='topline mb-14 mx-auto container md:px-10 lg:px-20'>
 				<h2 className='leading-tight font-semibold'>Blog</h2>
 				<Button onClickProp={handleOpenModal}>Show&nbsp;More</Button>

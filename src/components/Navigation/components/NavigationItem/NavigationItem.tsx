@@ -1,5 +1,6 @@
-import { NavigationLink } from '@/const/const'
+import { NavigationLink } from '@/const/const.interfaces'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import styles from './NavigationItem.module.css'
 
 type NavigationItemProps = {
@@ -8,12 +9,15 @@ type NavigationItemProps = {
 }
 
 const NavigationItem: React.FC<NavigationItemProps> = ({ link, index }) => {
+	const { title, linkHref } = link
+	const pathname = usePathname()
+
 	return (
 		<Link
 			className={`${styles.navItem} text-black animatedUnderline`}
-			href={link.linkHref}
+			href={pathname === '/' ? linkHref : `/${linkHref}`}
 			data-number={index}>
-			{link.title}
+			{title}
 		</Link>
 	)
 }

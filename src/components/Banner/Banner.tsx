@@ -5,7 +5,7 @@ interface BannerProps {
 	svgImage: ReactNode
 	topLineText: string
 	bottomLineText: string
-	classes: string
+	classes?: string
 }
 
 const Banner: React.FC<BannerProps> = ({
