@@ -23,9 +23,9 @@ const ServicesTypeContent: React.FC<ServicesTypeContentProps> = ({
 						? 'h-full'
 						: 'overflow-hidden invisible opacity-0 h-0 w-0'
 				}
-				id={`services-tabpanel-${++index}`}
+				id={`services-tabpanel-${index}`}
 				role='tabpanel'
-				aria-labelledby={`services-tab-${++index}`}>
+				aria-labelledby={`services-tab-${index}`}>
 				<picture>
 					<source
 						media='(max-width: 1280px)'

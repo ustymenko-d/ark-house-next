@@ -18,7 +18,7 @@ export interface ProjectCase {
 	category: string
 }
 
-interface TeamMember {
+export interface TeamMember {
 	imgSrc: string
 	name: string
 	role: string

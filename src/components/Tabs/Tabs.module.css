@@ -1,4 +1,4 @@
-.tabs {
+.tabs_services {
 	grid-template-rows: auto minmax(auto, 640px);
 
 	@media screen and (min-width: 1280px) {
@@ -7,6 +7,11 @@
 	}
 }
 
+.tabs_team {
+	@media screen and (min-width: 1280px) {
+		grid-template-columns: auto 1fr;
+	}
+}
 .tabButton_active {
 	background-size: 100% 1px;
 }

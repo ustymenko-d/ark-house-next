@@ -4,8 +4,8 @@ import React, { useState } from 'react'
 import { TabList } from '@/const/const.interfaces'
 import ServicesTypeContent from './components/ServicesTypeContent/ServicesTypeContent'
 // import ProjectsTypeContent from './components/ProjectsTypeContent/ProjectsTypeContent'
-// import TeamTypeContent from './components/TeamTypeContent/TeamTypeContent'
 import styles from './Tabs.module.css'
+import TeamTypeContent from './components/TeamTypeContent/TeamTypeContent'
 
 interface TabsProps {
 	tabsType: 'services' | 'projects' | 'team'
@@ -24,7 +24,12 @@ const Tabs: React.FC<TabsProps> = ({ tabsType, tabsList }) => {
 	}
 
 	return (
-		<div className={`${styles.tabs} grid gap-6 xl:gap-12`}>
+		<div
+			className={`${
+				tabsType === 'services'
+					? `${styles.tabs_services} `
+					: `${styles.tabs_team} `
+			}grid gap-6 xl:gap-12`}>
 			<ul
 				className='h-full w-full flex items-center flex-wrap gap-y-2 gap-x-4 sm:justify-between xl:flex-col xl:justify-evenly xl:items-start xl:mb-0'
 				role='tablist'>
@@ -60,13 +65,13 @@ const Tabs: React.FC<TabsProps> = ({ tabsType, tabsList }) => {
 						tabsContent={tabsContent}
 						activeTab={activeTab}
 					/>
-				)}
+				)} */}
 				{tabsType === 'team' && (
 					<TeamTypeContent
 						tabsContent={tabsContent}
 						activeTab={activeTab}
 					/>
-				)} */}
+				)}
 			</div>
 		</div>
 	)

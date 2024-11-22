@@ -40,6 +40,137 @@ export const SERVICES_TABS: TabList = {
 	],
 }
 
+export const TEAM_TABS: TabList = {
+	tabs: ['Management', 'Architects', 'Engineers', 'Builders'],
+	tabsContent: [
+		{
+			tabName: 'Management',
+			content: [
+				{
+					imgSrc: '/team/managment/jane',
+					name: 'Jane Cooper',
+					role: 'Art Director',
+				},
+				{
+					imgSrc: '/team/managment/cameron',
+					name: 'Cameron Williamson',
+					role: 'Senior Manager',
+				},
+				{
+					imgSrc: '/team/managment/brooklyn',
+					name: 'Brooklyn Simmons',
+					role: 'PR Manager',
+				},
+				{
+					imgSrc: '/team/managment/jacob',
+					name: 'Jacob Jones',
+					role: 'Financial Director',
+				},
+				{
+					imgSrc: '/team/managment/jerome',
+					name: 'Jerome Bell',
+					role: 'Lead Designer',
+				},
+				{
+					imgSrc: '/team/managment/kristin',
+					name: 'Kristin Watson',
+					role: 'HR Manager',
+				},
+			],
+		},
+		{
+			tabName: 'Engineers',
+			content: [
+				{
+					imgSrc: '/team/engineers/caleb',
+					name: 'Caleb Hayes',
+					role: 'Project Architect',
+				},
+				{
+					imgSrc: '/team/engineers/grace',
+					name: 'Grace Sullivan',
+					role: 'Design Architect',
+				},
+				{
+					imgSrc: '/team/engineers/isabella',
+					name: 'Isabella Jordan',
+					role: 'Urban Planner',
+				},
+				{
+					imgSrc: '/team/engineers/leo',
+					name: 'Leo Bennett',
+					role: 'Sustainable Specialist',
+				},
+				{
+					imgSrc: '/team/engineers/lily',
+					name: 'Lily Coleman',
+					role: 'Interior Architect',
+				},
+				{
+					imgSrc: '/team/engineers/owen',
+					name: 'Owen Mitchell',
+					role: 'BIM Specialist',
+				},
+			],
+		},
+		{
+			tabName: 'Architects',
+			content: [
+				{
+					imgSrc: '/team/arc/ava',
+					name: 'Ava Reynolds',
+					role: 'Mechanical Engineer',
+				},
+				{
+					imgSrc: '/team/arc/ethan',
+					name: 'Ethan Anderson',
+					role: 'Civil Engineer',
+				},
+				{
+					imgSrc: '/team/arc/gabriel',
+					name: 'Gabriel Rivera',
+					role: 'Electrical Engineer',
+				},
+				{
+					imgSrc: '/team/arc/mason',
+					name: 'Mason Parker',
+					role: 'Software Engineer',
+				},
+				{
+					imgSrc: '/team/arc/sophia',
+					name: 'Sophia Myers',
+					role: 'Environmental Engineer',
+				},
+			],
+		},
+		{
+			tabName: 'Builders',
+			content: [
+				{
+					imgSrc: '/team/builder/robert',
+					name: 'Robert Fox',
+					role: 'Chief Engineer',
+				},
+				{
+					imgSrc: '/team/builder/devon',
+					name: 'Devon Lane',
+					role: 'Lead designer',
+				},
+				{
+					imgSrc: '/team/builder/olivia',
+					name: 'Olivia Turner',
+					role: 'Communications Engineer',
+				},
+				{
+					imgSrc: '/team/builder/jerome',
+					name: 'Jerome Bell',
+					role: 'Communications Engineer',
+				},
+			],
+		},
+	],
+}
+
 export const PROJECTS_CASES: ProjectCase[] = [
 	{
 		title: 'UVU Classroom Building',
