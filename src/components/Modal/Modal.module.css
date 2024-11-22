@@ -8,8 +8,12 @@
 
 .dialog {
 	z-index: 95;
-
+	
 	@media (screen) and (min-width: 768px) {
 		max-width: 60%;
 	}
+}
+
+html:has(.dialog) {
+	background-color: rgba(23, 23, 23, 0.5); 
 }

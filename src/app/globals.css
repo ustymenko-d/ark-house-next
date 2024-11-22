@@ -106,17 +106,15 @@ h6 {
 }
 
 html {
-	padding-left: calc(100vw - 100%);
-
 	scroll-behavior: smooth;
 	scrollbar-width: thin;
 	scrollbar-color: var(--dark-color) var(--light-color);
 	scrollbar-gutter: stable;
 	background: var(--light-color);
+}
 
-	&._scroll-lock {
-		overflow: hidden;
-	}
+body {
+	padding-left: calc(100vw - 100%);
 }
 
 img {
