@@ -5,6 +5,7 @@
 		top: 50%;
 		transform: translateY(-50%);
 		right: -40px;
+		line-height: 0;
 		pointer-events: none;
 	}
 }

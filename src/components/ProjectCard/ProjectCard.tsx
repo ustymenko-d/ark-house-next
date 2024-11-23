@@ -38,7 +38,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ projectCase }) => {
 					/>
 				</picture>
 
-				<p className={`${styles.title} font-semibold leading-tight`}>
+				<p className={`${styles.title} mb-2 font-semibold leading-tight`}>
 					{title}
 					<br />
 					<span className={styles.subtitle}>{subtitle}</span>

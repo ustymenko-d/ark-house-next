@@ -18,7 +18,11 @@ const Navigation: React.FC = () => {
 
 	const toggleNavListVisible = () => {
 		if (!headerNavVisible) {
-			window.scrollTo(0, 0)
+			window.scrollTo({
+				top: 0,
+				left: 0,
+				behavior: 'smooth',
+			})
 		}
 
 		toggleHeaderNav()
@@ -62,6 +66,7 @@ const Navigation: React.FC = () => {
 				basicClasses={BASIC_NAV_LIST_CLASSES}
 				navListVisible={headerNavVisible}
 				header={true}
+				toggleNavListVisible={toggleNavListVisible}
 			/>
 		</nav>
 	)

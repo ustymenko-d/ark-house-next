@@ -1,5 +1,5 @@
 import React from 'react'
-import { OneTabContent } from '@/const/const.interfaces'
+import { OneTabContent, TeamMember } from '@/const/const.interfaces'
 import TeamMemberCard from '@/components/TeamMemberCard/TeamMemberCard'
 // import styles from './TeamTypeContent.module.css'
 
@@ -15,6 +15,8 @@ const TeamTypeContent: React.FC<TeamTypeContentProps> = ({
 	return tabsContent.map((item, index) => {
 		const { tabName, content } = item
 
+		console.log(1, item)
+
 		return (
 			<div
 				key={`${tabName}-${index}`}
@@ -27,12 +29,14 @@ const TeamTypeContent: React.FC<TeamTypeContentProps> = ({
 				role='tabpanel'
 				aria-labelledby={`team-tab-${index}`}>
 				<div className='grid gap-10 grid-cols-1 md:grid-cols-2 xl:grid-cols-3'>
-					{content.map((member, memberIndex) => (
-						<TeamMemberCard
-							key={`${member.name}-${memberIndex}`}
-							teamMember={member}
-						/>
-					))}
+					{(content as TeamMember[]).map(
+						(member: TeamMember, memberIndex: number) => (
+							<TeamMemberCard
+								key={`${member.name}-${memberIndex}`}
+								teamMember={member}
+							/>
+						)
+					)}
 				</div>
 			</div>
 		)

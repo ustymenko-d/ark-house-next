@@ -7,12 +7,14 @@ interface NavigationListProps {
 	basicClasses: string
 	navListVisible?: boolean
 	header?: boolean
+	toggleNavListVisible: () => void
 }
 
 const NavigationList: React.FC<NavigationListProps> = ({
 	basicClasses,
 	navListVisible,
 	header,
+	toggleNavListVisible,
 }) => {
 	return (
 		<ul
@@ -32,6 +34,7 @@ const NavigationList: React.FC<NavigationListProps> = ({
 					<NavigationItem
 						link={link}
 						index={++index}
+						toggleNavListVisible={toggleNavListVisible}
 					/>
 				</li>
 			))}
