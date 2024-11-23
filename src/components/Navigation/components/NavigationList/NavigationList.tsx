@@ -24,7 +24,11 @@ const NavigationList: React.FC<NavigationListProps> = ({
 			{NAVIGATION_LINKS.map((link, index) => (
 				<li
 					key={`${link.title}-${index}`}
-					className='relative container sm:mx-auto sm:pl-4 md:pl-0'>
+					className={`${
+						header
+							? 'relative container sm:mx-auto sm:pl-4 md:pl-0'
+							: 'relative'
+					}`}>
 					<NavigationItem
 						link={link}
 						index={++index}
