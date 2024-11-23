@@ -13,9 +13,6 @@ const ProjectsTypeContent: React.FC<ProjectsTypeContentProps> = ({
 	tabsContent,
 	activeTab,
 }) => {
-	console.log(tabsContent)
-	console.log(activeTab)
-
 	return tabsContent.map((item, index) => {
 		const { tabName, content } = item
 
@@ -30,7 +27,8 @@ const ProjectsTypeContent: React.FC<ProjectsTypeContentProps> = ({
 				id={`projects-tabpanel-${index}`}
 				role='tabpanel'
 				aria-labelledby={`projects-tab-${index}`}>
-				<div className={`${styles.grid} grid gap-x-4 gap-y-6 md:grid-cols-2 xl:grid-cols-12`}>
+				<div
+					className={`${styles.grid} grid gap-x-4 gap-y-6 md:grid-cols-2 xl:grid-cols-12`}>
 					{(content as ProjectCase[]).map(
 						(projectCase: ProjectCase, projectCaseIndex: number) => (
 							<Link

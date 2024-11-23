@@ -23,7 +23,6 @@ const NavigationItem: React.FC<NavigationItemProps> = ({
 			href={pathname === '/' ? href : `/${href}`}
 			data-number={index}
 			onClick={() => {
-				console.log(1)
 				toggleNavListVisible()
 			}}>
 			{title}

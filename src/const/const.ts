@@ -2,6 +2,7 @@ import {
 	Article,
 	NavigationLink,
 	ProjectCase,
+	ProjectCharacteristic,
 	TabList,
 } from './const.interfaces'
 
@@ -361,5 +362,61 @@ export const BLOG_ARTICLES: Article[] = [
 		dateTime: '2023-11-12',
 		date: 'Nov 12, 2023',
 		imgSrc: '/img/home-page/blog-items/street',
+	},
+]
+
+export const PROJECT_CHARACTERISTICS: ProjectCharacteristic[] = [
+	{
+		characteristic: 'Location',
+		value: 'London',
+	},
+	{
+		characteristic: 'Area',
+		value: '70.000 m',
+	},
+	{
+		characteristic: 'Construction cost',
+		value: '130 mill NOK',
+	},
+	{
+		characteristic: 'Client',
+		value: 'Vanre MVC',
+	},
+	{
+		characteristic: 'Year',
+		value: '2018',
+	},
+]
+
+export const ONE_PROJECT: ProjectCase[] = [
+	{
+		title: 'Front facades',
+		subtitle: 'London',
+		imgSrc: '/img/project/first',
+	},
+	{
+		title: 'Facades from the side',
+		subtitle: 'London',
+		imgSrc: '/img/project/second',
+	},
+	{
+		title: 'Facades close up',
+		subtitle: 'London',
+		imgSrc: '/img/project/third',
+	},
+	{
+		title: 'Facades close up',
+		subtitle: 'London',
+		imgSrc: '/img/project/fourth',
+	},
+	{
+		title: 'Side glass panels',
+		subtitle: 'London',
+		imgSrc: '/img/project/fifth',
+	},
+	{
+		title: 'Hanging balconies',
+		subtitle: 'London',
+		imgSrc: '/img/project/sixth',
 	},
 ]

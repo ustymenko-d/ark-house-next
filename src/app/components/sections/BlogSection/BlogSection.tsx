@@ -6,6 +6,7 @@ import ArticleItem from '@/components/ArticleItem/ArticleItem'
 import { BLOG_ARTICLES } from '@/const/const'
 import { useAppStore } from '@/store/store'
 import styles from './BlogSection.module.css'
+import ModalButton from '@/components/ModalButton/ModalButton'
 
 const BlogSection: React.FC = () => {
 	const toggleModalOpen = useAppStore((state) => state.toggleModalOpen)
@@ -15,7 +16,9 @@ const BlogSection: React.FC = () => {
 	}
 
 	return (
-		<section id='blog' className='mx-auto px-4'>
+		<section
+			id='blog'
+			className='mx-auto px-4'>
 			<div className='topline mb-14 mx-auto container md:px-10 lg:px-20'>
 				<h2 className='leading-tight font-semibold'>Blog</h2>
 				<Button onClickProp={handleOpenModal}>Show&nbsp;More</Button>
@@ -23,18 +26,11 @@ const BlogSection: React.FC = () => {
 
 			<div className='mx-auto container md:px-10 lg:px-20 mb-14 grid gap-10 lg:grid-cols-2 2xl:max-w-screen-xl'>
 				{BLOG_ARTICLES.map((article) => (
-					<div
-						className={styles.button}
-						tabIndex={0}
-						key={`${article.title}`}
-						onClick={handleOpenModal}
-						onKeyDown={(e) => {
-							if (e.code === 'Space' || e.code === 'Enter') {
-								handleOpenModal()
-							}
-						}}>
+					<ModalButton
+						classNames={styles.button}
+						key={`${article.title}`}>
 						<ArticleItem article={article} />
-					</div>
+					</ModalButton>
 				))}
 			</div>
 		</section>

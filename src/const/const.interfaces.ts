@@ -15,7 +15,7 @@ export interface ProjectCase {
 	title: string
 	subtitle: string
 	imgSrc: string
-	category: string
+	category?: string
 }
 
 export interface TeamMember {
@@ -32,4 +32,9 @@ export interface OneTabContent {
 export interface TabList {
 	tabs: string[]
 	tabsContent: OneTabContent[]
+}
+
+export interface ProjectCharacteristic {
+	characteristic: string
+	value: string
 }

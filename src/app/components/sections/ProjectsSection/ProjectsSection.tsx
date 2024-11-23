@@ -12,7 +12,9 @@ const ProjectsSection: React.FC = () => {
 	const lastProjectCase = PROJECTS_CASES[9]
 
 	return (
-		<section id='projects' className='mb-14 px-4'>
+		<section
+			id='projects'
+			className='mb-14 px-4'>
 			<div className='topline mb-14 mx-auto container md:px-10 lg:px-20'>
 				<h2 className='leading-tight font-semibold'>Recent Projects</h2>
 				<Button linkHref='/projects'>Discover&nbsp;All</Button>

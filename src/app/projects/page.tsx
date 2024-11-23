@@ -18,7 +18,7 @@ const ProjectsPage: React.FC = () => {
 			<div className='container mx-auto px-4 md:px-10 lg:px-20'>
 				<Breadcrumbs navItems={navItems} />
 
-				<section className='mb-14 pt-8 '>
+				<section className='mb-14 pt-8'>
 					<h1 className='mb-4 text-5xl font-semibold'>Projects</h1>
 					<p className='mb-4 text-3xl font-semibold'>
 						Our projects are examples of attitudes rather than design
