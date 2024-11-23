@@ -31,7 +31,7 @@ const PageBody = ({ children }: PageBodyProps) => {
 	}, [webpSupport, setWebpSupport])
 	return (
 		<body
-			className={`h-full flex flex-col text-neutral-950 bg-white${
+			className={`overflow-x-clip h-full flex flex-col text-neutral-950 bg-white${
 				headerNavVisible || modalOpen ? ' overflow-hidden' : ''
 			}`}>
 			<Header />

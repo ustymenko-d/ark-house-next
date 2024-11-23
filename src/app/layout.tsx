@@ -21,7 +21,7 @@ export default function RootLayout({
 	return (
 		<html
 			lang='en'
-			className={`${inter.variable} font-sans overflow-x-hidden`}>
+			className={`${inter.variable} font-sans overflow-x-clip`}>
 			<PageBody>{children}</PageBody>
 		</html>
 	)
