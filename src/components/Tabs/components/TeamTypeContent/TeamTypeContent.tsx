@@ -12,9 +12,6 @@ const TeamTypeContent: React.FC<TeamTypeContentProps> = ({
 	tabsContent,
 	activeTab,
 }) => {
-	console.log(tabsContent)
-	console.log(activeTab)
-
 	return tabsContent.map((item, index) => {
 		const { tabName, content } = item
 

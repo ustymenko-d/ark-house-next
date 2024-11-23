@@ -4,8 +4,8 @@ import React, { useState } from 'react'
 import { TabList } from '@/const/const.interfaces'
 import ServicesTypeContent from './components/ServicesTypeContent/ServicesTypeContent'
 // import ProjectsTypeContent from './components/ProjectsTypeContent/ProjectsTypeContent'
-import styles from './Tabs.module.css'
 import TeamTypeContent from './components/TeamTypeContent/TeamTypeContent'
+import styles from './Tabs.module.css'
 
 interface TabsProps {
 	tabsType: 'services' | 'projects' | 'team'
@@ -36,7 +36,7 @@ const Tabs: React.FC<TabsProps> = ({ tabsType, tabsList }) => {
 				{tabs.map((tabName, index) => (
 					<li key={`${tabName}-${index}`}>
 						<button
-							id={`${tabsType}-tab-${++index}`}
+							id={`${tabsType}-tab-${index}`}
 							className={`${
 								activeTab === tabName ? `${styles.tabButton_active} ` : ''
 							}animatedUnderline text-2xl font-semibold bg-transparent text-dark-color`}
@@ -45,7 +45,7 @@ const Tabs: React.FC<TabsProps> = ({ tabsType, tabsList }) => {
 							}
 							role='tab'
 							aria-selected={activeTab === tabName}
-							aria-controls={`${tabsType}-tabpanel-${++index}`}
+							aria-controls={`${tabsType}-tabpanel-${index}`}
 							aria-label={`Set ${tabName} tab`}>
 							{tabName}
 						</button>

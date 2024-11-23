@@ -2,6 +2,7 @@ import React from 'react'
 import Button from '@/components/UI/Button/Button'
 import Tabs from '@/components/Tabs/Tabs'
 import { TEAM_TABS } from '@/const/const'
+import styles from './TeamSection.module.css'
 
 const TeamSection: React.FC = () => {
 	return (
@@ -13,7 +14,7 @@ const TeamSection: React.FC = () => {
 				<Button linkHref='/contact'>Discover&nbsp;All</Button>
 			</div>
 
-			<div className='left-0 w-full bg-neutral-100'>
+			<div className={`${styles.teamWrapper} relative w-full bg-neutral-100`}>
 				<div className='container mb-14 mx-auto py-12 md:px-10 lg:px-20'>
 					<p className='text-2xl mb-10 xl:max-w-5xl'>
 						Our team of expert architects and builders, with over 45 years of
@@ -22,7 +23,10 @@ const TeamSection: React.FC = () => {
 						expectations.
 					</p>
 
-					<Tabs tabsList={TEAM_TABS} tabsType='team' />
+					<Tabs
+						tabsList={TEAM_TABS}
+						tabsType='team'
+					/>
 				</div>
 			</div>
 		</section>
