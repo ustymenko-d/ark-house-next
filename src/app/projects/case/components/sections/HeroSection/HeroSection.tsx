@@ -28,7 +28,7 @@ const HeroSection: React.FC = () => {
 						<Image
 							width={4000}
 							height={3000}
-							className='min-h-48 h-full block bg-dark-color'
+							className='min-h-48 h-full block bg-dark-color shadow'
 							src='/img/project/hero.jpg'
 							alt='Central Saint Giles'
 						/>

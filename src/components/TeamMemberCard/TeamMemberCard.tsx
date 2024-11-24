@@ -25,7 +25,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ teamMember }) => {
 					type='image/webp'
 				/>
 				<img
-					className='w-full aspect-square mb-2 bg-dark-color'
+					className='block w-full aspect-square bg-dark-color shadow'
 					src={`/img${imgSrc}.jpg`}
 					alt=''
 					loading='lazy'

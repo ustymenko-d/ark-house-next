@@ -31,7 +31,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ projectCase }) => {
 					<Image
 						width={896}
 						height={985}
-						className='w-full h-full min-h-20 bg-dark-color'
+						className='w-full h-full min-h-20 bg-dark-color shadow'
 						src={`${imgSrc}.jpg`}
 						alt='Project case'
 						loading='lazy'
