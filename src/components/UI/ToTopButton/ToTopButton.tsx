@@ -9,7 +9,7 @@ const ToTopButton: React.FC = () => {
 	return (
 		<button
 			onClick={handleGoToTop}
-			className={`${styles.toTop} box-content w-5 h-5 fixed bottom-4 right-4 border border-dark-color p-4 transition-all duration-300 text-dark-color`}></button>
+			className={`${styles.toTop} box-content w-5 h-5 fixed bottom-4 right-4 border border-dark-color p-4 transition-all duration-300 text-dark-color shadow`}></button>
 	)
 }
 

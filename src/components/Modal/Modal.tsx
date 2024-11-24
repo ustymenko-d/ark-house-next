@@ -22,7 +22,7 @@ const Modal: React.FC = () => {
 				className={`${styles.backdrop} absolute inset-0 w-full h-full`}></div>
 
 			<div
-				className={`${styles.dialog} p-4 bg-white md:p-8 max-w`}
+				className={`${styles.dialog} p-4 bg-white shadow-xl md:p-8`}
 				role='dialog'
 				aria-modal={true}
 				aria-labelledby='dialog-title'

@@ -1,7 +1,7 @@
 .toTop {
 	z-index: 3;
 	background-color: #f8f8f8;
-	
+
 	&::after {
 		content: url(../../../assets/icons/arrow-up-right.svg);
 		position: absolute;

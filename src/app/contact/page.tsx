@@ -4,15 +4,25 @@ import { useState } from 'react'
 import Button from '@/components/UI/Button/Button'
 import styles from './contact.module.css'
 import { useBreakpoints } from '@/hooks/useBreakpoints'
+import ContactPopup from './components/ContactPopup/ContactPopup'
 
 const ContactPage: React.FC = () => {
-	const [phoneType, setPhoneType] = useState<boolean>(true)
 	const breakpoints = useBreakpoints([640])
+	const [phoneType, setPhoneType] = useState<boolean>(true)
+	const [showPopup, setShowPopup] = useState<boolean>(false)
 
-	const toggleType = () => setPhoneType((prev) => !prev)
+	const toggleType = (): void => setPhoneType((prev) => !prev)
 
-	const handleSubmit = () => {
-		alert('Successful! (In fact, nothing was sent anywhere)')
+	const togglePopupShow = (isShow: boolean = true): void => {
+		setShowPopup(isShow)
+	}
+
+	const handleSubmit = (): void => {
+		togglePopupShow()
+
+		setTimeout(() => {
+			togglePopupShow(false)
+		}, 3000)
 	}
 
 	return (
@@ -36,7 +46,6 @@ const ContactPage: React.FC = () => {
 							phoneType ? ' text-white ' : ' '
 						}px-4 border border-dark-color bg-transparent text-dark-color outline-none`}
 						type='button'>
-						{/* Phone&nbsp;Number */}
 						{breakpoints ? 'Phone Number' : 'Phone'}
 					</button>
 					<button
@@ -82,6 +91,8 @@ const ContactPage: React.FC = () => {
 				)}
 				<Button>Contact&nbsp;us</Button>
 			</form>
+
+			{showPopup && <ContactPopup togglePopupShow={togglePopupShow} />}
 		</main>
 	)
 }
