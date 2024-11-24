@@ -23,12 +23,6 @@ export default function RootLayout({
 		<html
 			lang='en'
 			className={`${inter.variable} font-sans overflow-x-clip h-fit`}>
-			<head>
-				<meta
-					name='next-size-adjust'
-					content='auto'
-				/>
-			</head>
 			<PageBody>{children}</PageBody>
 		</html>
 	)

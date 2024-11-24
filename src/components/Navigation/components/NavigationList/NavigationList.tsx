@@ -18,6 +18,7 @@ const NavigationList: React.FC<NavigationListProps> = ({
 }) => {
 	return (
 		<ul
+			id={header ? 'navigation-list' : 'footer-navigation-list'}
 			className={`${basicClasses}${
 				header ? ` ${styles['navigation-list_header']}` : ''
 			}${navListVisible ? ` ${styles['navigation-list_active']}` : ''}`}
