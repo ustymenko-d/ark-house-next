@@ -17,7 +17,7 @@ const ContactPage: React.FC = () => {
 
 	return (
 		<main
-			className={`${styles.contactPage} flex-auto container mx-auto px-4 md:px-10 lg:px-20`}>
+			className={`${styles.contactPage} flex-auto flex flex-col justify-center container mx-auto px-4 md:px-10 lg:px-20`}>
 			<form
 				className='h-full flex flex-col justify-center items-center gap-y-6'
 				action={handleSubmit}>

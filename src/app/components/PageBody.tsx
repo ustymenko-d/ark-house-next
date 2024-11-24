@@ -19,7 +19,6 @@ const isWebpSupported = (): boolean => {
 
 const PageBody = ({ children }: PageBodyProps) => {
 	const hasScrolledBeyond = useScrollBeyondThreshold(50)
-	const headerNavVisible = useAppStore((state) => state.headerNavVisible)
 	const modalOpen = useAppStore((state) => state.modalOpen)
 	const webpSupport = useAppStore((state) => state.webpSupport)
 	const setWebpSupport = useAppStore((state) => state.setWebpSupport)
@@ -30,10 +29,7 @@ const PageBody = ({ children }: PageBodyProps) => {
 		}
 	}, [webpSupport, setWebpSupport])
 	return (
-		<body
-			className={`overflow-x-clip h-full flex flex-col text-neutral-950 bg-white${
-				headerNavVisible || modalOpen ? ' overflow-hidden' : ''
-			}`}>
+		<body className='overflow-x-clip h-full flex flex-col text-neutral-950 bg-white'>
 			<Header />
 			{children}
 			<Footer />
