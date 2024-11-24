@@ -7,7 +7,7 @@ interface NavigationListProps {
 	basicClasses: string
 	navListVisible?: boolean
 	header?: boolean
-	toggleNavListVisible: () => void
+	toggleNavListVisible?: () => void
 }
 
 const NavigationList: React.FC<NavigationListProps> = ({

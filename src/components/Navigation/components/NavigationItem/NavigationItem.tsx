@@ -6,7 +6,7 @@ import styles from './NavigationItem.module.css'
 type NavigationItemProps = {
 	link: NavigationLink
 	index: number
-	toggleNavListVisible: () => void
+	toggleNavListVisible?: () => void
 }
 
 const NavigationItem: React.FC<NavigationItemProps> = ({
@@ -23,7 +23,9 @@ const NavigationItem: React.FC<NavigationItemProps> = ({
 			href={pathname === '/' ? href : `/${href}`}
 			data-number={index}
 			onClick={() => {
-				toggleNavListVisible()
+				if (toggleNavListVisible) {
+					toggleNavListVisible()
+				}
 			}}>
 			{title}
 		</Link>
