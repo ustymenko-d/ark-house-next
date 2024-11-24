@@ -21,7 +21,6 @@ const NavigationList: React.FC<NavigationListProps> = ({
 			className={`${basicClasses}${
 				header ? ` ${styles['navigation-list_header']}` : ''
 			}${navListVisible ? ` ${styles['navigation-list_active']}` : ''}`}
-			id='navigation-list'
 			aria-hidden={navListVisible ? !navListVisible : false}>
 			{NAVIGATION_LINKS.map((link, index) => (
 				<li
