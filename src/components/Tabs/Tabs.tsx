@@ -30,32 +30,33 @@ const Tabs: React.FC<TabsProps> = ({ tabsType, tabsList }) => {
 					? `${styles.tabs_services} `
 					: `${styles.tabs_team} `
 			}grid gap-6 xl:gap-12`}>
-			<ul
+			<div
 				className={`h-full w-full flex items-center flex-wrap gap-y-2 gap-x-4 sm:justify-between xl:flex-col ${
-					tabsType === 'projects' ? 'xl:justify-start xl:gap-y-8' : 'xl:justify-evenly'
+					tabsType === 'projects'
+						? 'xl:justify-start xl:gap-y-8'
+						: 'xl:justify-evenly'
 				} xl:items-start xl:mb-0`}
 				role='tablist'>
 				{tabs.map((tabName, index) => (
-					<li key={`${tabName}-${index}`}>
-						<button
-							id={`${tabsType}-tab-${index}`}
-							className={`${
-								activeTab === tabName ? `${styles.tabButton_active} ` : ''
-							}animatedUnderline text-2xl font-semibold bg-transparent text-dark-color`}
-							onClick={(e) =>
-								handleChangeTab((e.target as HTMLButtonElement).textContent)
-							}
-							role='tab'
-							aria-selected={activeTab === tabName}
-							aria-controls={`${tabsType}-tabpanel-${index}`}
-							aria-label={`Set ${tabName} tab`}>
-							{tabName}
-						</button>
-					</li>
+					<button
+						key={`${tabName}-${index}`}
+						id={`${tabsType}-tab-${index}`}
+						className={`${
+							activeTab === tabName ? `${styles.tabButton_active} ` : ''
+						}animatedUnderline text-2xl font-semibold bg-transparent text-dark-color`}
+						onClick={(e) =>
+							handleChangeTab((e.target as HTMLButtonElement).textContent)
+						}
+						role='tab'
+						aria-selected={activeTab === tabName}
+						aria-controls={`${tabsType}-tabpanel-${index}`}
+						aria-label={`Set ${tabName} tab`}>
+						{tabName}
+					</button>
 				))}
-			</ul>
+			</div>
 
-			<div >
+			<div>
 				{tabsType === 'services' && (
 					<ServicesTypeContent
 						tabsContent={tabsContent}

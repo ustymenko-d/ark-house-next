@@ -20,6 +20,7 @@ const Header = () => {
 					<div className={`${styles.logo} relative`}>
 						<Link
 							href='/'
+							aria-label='Go Ark-House home'
 							className='inline-block'
 							replace>
 							<Logo />
