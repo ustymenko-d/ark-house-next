@@ -27,7 +27,7 @@ const ServicesSection: React.FC = () => {
 			className='mb-14 px-4'>
 			<div className='topline mb-14 mx-auto container md:px-10 lg:px-20'>
 				<h2 className='leading-tight font-semibold'>Services</h2>
-				<Button linkHref='/contact'>Discover&nbsp;All</Button>
+				<Button linkHref='/projects'>Discover&nbsp;All</Button>
 			</div>
 
 			<div
