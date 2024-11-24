@@ -24,6 +24,11 @@ const Modal: React.FC = () => {
 			<div
 				className={`${styles.dialog} p-4 bg-white shadow-xl md:p-8`}
 				role='dialog'
+				onKeyDown={(e) => {
+					if (e.code === 'Escape') {
+						handleClose()
+					}
+				}}
 				aria-modal={true}
 				aria-labelledby='dialog-title'
 				aria-describedby='dialog-description'>
