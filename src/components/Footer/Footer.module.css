@@ -26,7 +26,7 @@
 		grid-area: supp;
 	}
 
-	h3 {
+	.heading {
 		font-size: 1.3rem;
 		line-height: 1.2;
 		letter-spacing: -0.02em;
@@ -47,7 +47,7 @@
 		grid-area: adr;
 	}
 
-	address {
+	.address {
 		font-size: 1.125rem;
 	}
 }
