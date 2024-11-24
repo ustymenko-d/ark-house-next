@@ -10,6 +10,9 @@ interface AppState {
 
 	modalOpen: boolean
 	toggleModalOpen: () => void
+
+	projectModalOpen: boolean
+	toggleProjectModalOpen: () => void
 }
 
 export const useAppStore = create<AppState>()(
@@ -25,6 +28,10 @@ export const useAppStore = create<AppState>()(
 
 			modalOpen: false,
 			toggleModalOpen: () => set((state) => ({ modalOpen: !state.modalOpen })),
+
+			projectModalOpen: false,
+			toggleProjectModalOpen: () =>
+				set((state) => ({ projectModalOpen: !state.projectModalOpen })),
 		}),
 		{ name: 'AppStore' }
 	)
