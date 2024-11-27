@@ -7,6 +7,7 @@ import { BLOG_ARTICLES } from '@/const/const'
 import { useAppStore } from '@/store/store'
 import styles from './BlogSection.module.css'
 import ModalButton from '@/components/ModalButton/ModalButton'
+import AnimatedWrapper from '@/components/AnimatedWrapper/AnimatedWrapper'
 
 const BlogSection: React.FC = () => {
 	const toggleModalOpen = useAppStore((state) => state.toggleModalOpen)
@@ -25,11 +26,14 @@ const BlogSection: React.FC = () => {
 			</div>
 
 			<div className='mx-auto container md:px-10 lg:px-20 mb-14 grid gap-10 lg:grid-cols-2 2xl:max-w-screen-xl'>
-				{BLOG_ARTICLES.map((article) => (
+				{BLOG_ARTICLES.map((article, index) => (
 					<ModalButton
 						classNames={styles.button}
 						key={`${article.title}`}>
-						<ArticleItem article={article} />
+						<AnimatedWrapper
+							delay={(index + index) * 0.1}>
+							<ArticleItem article={article} />
+						</AnimatedWrapper>
 					</ModalButton>
 				))}
 			</div>

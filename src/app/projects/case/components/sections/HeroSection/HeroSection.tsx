@@ -3,6 +3,7 @@ import Image from 'next/image'
 import ProjectCharacteristicItem from '../../ProjectCharacteristicItem/ProjectCharacteristicItem'
 import { PROJECT_CHARACTERISTICS } from '@/const/const'
 import styles from './HeroSection.module.css'
+import AnimatedWrapper from '@/components/AnimatedWrapper/AnimatedWrapper'
 
 const HeroSection: React.FC = () => {
 	return (
@@ -36,10 +37,11 @@ const HeroSection: React.FC = () => {
 
 					<div className='flex flex-col gap-4'>
 						{PROJECT_CHARACTERISTICS.map((characteristic, index) => (
-							<ProjectCharacteristicItem
+							<AnimatedWrapper
 								key={`char-${index}`}
-								charItem={characteristic}
-							/>
+								delay={(index + (++index + 1)) * 0.1}>
+								<ProjectCharacteristicItem charItem={characteristic} />
+							</AnimatedWrapper>
 						))}
 					</div>
 				</div>

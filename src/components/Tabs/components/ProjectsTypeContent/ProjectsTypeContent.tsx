@@ -3,6 +3,7 @@ import { OneTabContent, ProjectCase } from '@/const/const.interfaces'
 import ProjectCard from '@/components/ProjectCard/ProjectCard'
 import Link from 'next/link'
 import styles from './ProjectsTypeContent.module.css'
+import AnimatedWrapper from '@/components/AnimatedWrapper/AnimatedWrapper'
 
 interface ProjectsTypeContentProps {
 	tabsContent: OneTabContent[]
@@ -35,7 +36,9 @@ const ProjectsTypeContent: React.FC<ProjectsTypeContentProps> = ({
 								className={styles.link}
 								key={`${projectCase.title}-${projectCaseIndex}`}
 								href='/projects/case'>
-								<ProjectCard projectCase={projectCase} />
+								<AnimatedWrapper>
+									<ProjectCard projectCase={projectCase} />
+								</AnimatedWrapper>
 							</Link>
 						)
 					)}

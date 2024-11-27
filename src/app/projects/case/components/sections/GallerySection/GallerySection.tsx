@@ -8,6 +8,7 @@ import styles from './GallerySection.module.css'
 import ProjectModal from '@/components/ProjectModal/ProjectModal'
 import { useAppStore } from '@/store/store'
 import { ProjectCase } from '@/const/const.interfaces'
+import AnimatedWrapper from '@/components/AnimatedWrapper/AnimatedWrapper'
 
 const GallerySection: React.FC = () => {
 	const projectModalOpen = useAppStore((state) => state.projectModalOpen)
@@ -45,7 +46,9 @@ const GallerySection: React.FC = () => {
 								handleOpenModal(oneProject)
 							}
 						}}>
-						<ProjectCard projectCase={oneProject} />
+						<AnimatedWrapper>
+							<ProjectCard projectCase={oneProject} />
+						</AnimatedWrapper>
 					</div>
 				))}
 

@@ -113,6 +113,10 @@ html {
 	background: var(--light-color);
 }
 
+html:has(.isOpenNav) {
+	overflow: hidden;
+}
+
 body {
 	padding-left: calc(100vw - 100%);
 }

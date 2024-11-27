@@ -5,6 +5,7 @@ import { PROJECTS_CASES } from '@/const/const'
 import styles from './ProjectsSection.module.css'
 import Button from '@/components/UI/Button/Button'
 import Banner from '@/components/Banner/Banner'
+import AnimatedWrapper from '@/components/AnimatedWrapper/AnimatedWrapper'
 
 const ProjectsSection: React.FC = () => {
 	const firstProjectsGroup = PROJECTS_CASES.slice(0, 3)
@@ -28,7 +29,9 @@ const ProjectsSection: React.FC = () => {
 							className={styles.projectLink}
 							key={`${projectCase.title}-${index}`}
 							href='/projects/case'>
-							<ProjectCard projectCase={projectCase} />
+							<AnimatedWrapper>
+								<ProjectCard projectCase={projectCase} />
+							</AnimatedWrapper>
 						</Link>
 					))}
 
@@ -61,7 +64,9 @@ const ProjectsSection: React.FC = () => {
 							className={styles.projectLink}
 							key={`${projectCase.title}-${index}`}
 							href='/projects/case'>
-							<ProjectCard projectCase={projectCase} />
+							<AnimatedWrapper>
+								<ProjectCard projectCase={projectCase} />
+							</AnimatedWrapper>
 						</Link>
 					))}
 
@@ -100,7 +105,9 @@ const ProjectsSection: React.FC = () => {
 					<Link
 						className={styles.projectLink}
 						href='/projects/case'>
-						<ProjectCard projectCase={lastProjectCase} />
+						<AnimatedWrapper>
+							<ProjectCard projectCase={lastProjectCase} />
+						</AnimatedWrapper>
 					</Link>
 				</div>
 

@@ -11,9 +11,9 @@ const AboutSection = () => {
 			id='about'
 			className='mb-14'>
 			<div className='container mx-auto px-4 md:px-10 md:border-t md:border-t-dark-color md:pt-14 md:text-center lg:px-20'>
-				<h2 className={`${styles.title} mb-10 font-semibold`}>
+				<h1 className={`${styles.title} mb-10 font-semibold`}>
 					Forming an irrational love between clients and their buildings
-				</h2>
+				</h1>
 				<p className={`${styles.text} mb-6`}>
 					Our approach starts with...
 					<br />
@@ -25,7 +25,7 @@ const AboutSection = () => {
 						<div
 							key={`${item}-${index}`}
 							className={`${styles.wrapper} overflow-hidden relative aspect-square`}>
-							<AnimatedWrapper delay={(index + 2) * 0.1}>
+							<AnimatedWrapper delay={(index + (index + 2)) * 0.1}>
 								<picture className='relative z-10'>
 									<source
 										srcSet={`/img/home-page/${item}.webp`}

@@ -1,6 +1,7 @@
 import Button from '@/components/UI/Button/Button'
 import styles from './About.module.css'
 import Image from 'next/image'
+import AnimatedWrapper from '@/components/AnimatedWrapper/AnimatedWrapper'
 
 const About: React.FC = () => {
 	return (
@@ -48,10 +49,13 @@ const About: React.FC = () => {
 					Together, we are a community with a culture for beautiful and
 					outstanding architecture, a culture that is Powered by Commitment.
 				</p>
-				<p className={`${styles.question} mb-4 text-4xl leading-tight tracking-tight font-semibold`}>
-					Do you want to work with us?
-				</p>
-				<Button linkHref='/contact'>Our&nbsp;Vacancies</Button>
+				<AnimatedWrapper>
+					<p
+						className={`${styles.question} mb-4 text-4xl leading-tight tracking-tight font-semibold`}>
+						Do you want to work with us?
+					</p>
+					<Button linkHref='/contact'>Our&nbsp;Vacancies</Button>
+				</AnimatedWrapper>
 			</div>
 		</section>
 	)
