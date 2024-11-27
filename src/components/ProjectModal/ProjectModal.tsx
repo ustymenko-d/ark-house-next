@@ -47,7 +47,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ imageSrc }) => {
 					<ReactFocusLock
 						returnFocus
 						disabled={!projectModalOpen}>
-						<div className='min-h-full flex flex-col gap-4'>
+						<div className={`${styles.dialog__content} grid gap-4`}>
 							<div>
 								<picture className='flex-grow w-full'>
 									<source
@@ -66,7 +66,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ imageSrc }) => {
 									<Image
 										width={896}
 										height={985}
-										className='w-full h-full min-h-20 bg-dark-color shadow'
+										className='w-full h-full min-h-20 bg-dark-color object-contain shadow'
 										src={`${imageSrc}.jpg`}
 										alt='Project case'
 										loading='lazy'
