@@ -115,7 +115,7 @@ const ContactPage: React.FC = () => {
 						phoneType ? 'call you' : 'write to you'
 					} now`}
 				</p>
-				<div className='sm:w-3/5 lg:w-1/2'>
+				<div className='w-full sm:w-3/5 lg:w-1/2'>
 					<input
 						className={`${styles.input} w-full py-5 px-6 border border-dark-color rounded-none leading-5`}
 						value={formData.name}
@@ -126,7 +126,7 @@ const ContactPage: React.FC = () => {
 					/>
 					{errors.name && <p className='text-red-500 mt-1'>{errors.name}</p>}
 				</div>
-				<div className='sm:w-3/5 lg:w-1/2'>
+				<div className='w-full sm:w-3/5 lg:w-1/2'>
 					<input
 						className={`${styles.input} w-full py-5 px-6 border border-dark-color rounded-none leading-5`}
 						value={formData.contact}
