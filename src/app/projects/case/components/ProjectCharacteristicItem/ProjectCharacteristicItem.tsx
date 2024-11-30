@@ -11,7 +11,7 @@ const ProjectCharacteristicItem: React.FC<ProjectCharacteristicProps> = ({
 	const { characteristic, value } = charItem
 	return (
 		<div className='flex flex-col gap-1 text-xl'>
-			<span className='font-medium uppercase'>{characteristic}</span>
+			<span className='font-semibold uppercase'>{characteristic}</span>
 			<span>{value}</span>
 		</div>
 	)

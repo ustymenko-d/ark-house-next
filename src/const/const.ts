@@ -368,16 +368,16 @@ export const BLOG_ARTICLES: Article[] = [
 
 export const PROJECT_CHARACTERISTICS: ProjectCharacteristic[] = [
 	{
+		characteristic: 'Construction cost',
+		value: '130 mill NOK',
+	},
+	{
 		characteristic: 'Location',
 		value: 'London',
 	},
 	{
 		characteristic: 'Area',
 		value: '70.000 m',
-	},
-	{
-		characteristic: 'Construction cost',
-		value: '130 mill NOK',
 	},
 	{
 		characteristic: 'Client',
