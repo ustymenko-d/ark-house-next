@@ -8,7 +8,7 @@ const ToTopButton: React.FC = () => {
 	}
 
 	return (
-		<div className='fixed inset-0 pointer-events-none'>
+		<div className='fixed inset-0 pointer-events-none z-20'>
 			<AnimatedWrapper
 				typeFade={false}
 				duration={0.2}>
