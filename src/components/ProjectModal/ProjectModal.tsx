@@ -34,7 +34,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ imageSrc }) => {
 				duration={0.2}
 				additionalClasses='flex items-center justify-center'>
 				<div
-					className={`${styles.dialog} overflow-auto p-4 bg-white shadow-xl md:p-8`}
+					className={`${styles.dialog} sm:w-fit overflow-auto p-4 bg-white shadow-xl md:p-8`}
 					role='dialog'
 					onKeyDown={(e) => {
 						if (e.code === 'Escape') {
@@ -47,9 +47,9 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ imageSrc }) => {
 					<ReactFocusLock
 						returnFocus
 						disabled={!projectModalOpen}>
-						<div className={`${styles.dialog__content} grid gap-4`}>
+						<div className={`${styles.dialog__content} sm:w-fit grid gap-4`}>
 							<div>
-								<picture className='flex-grow w-full'>
+								<picture className='flex-grow aspect-auto'>
 									<source
 										media='(max-width: 1250px)'
 										srcSet={`${imageSrc}@mob.webp`}
@@ -66,14 +66,14 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ imageSrc }) => {
 									<Image
 										width={896}
 										height={985}
-										className='w-full h-full min-h-20 bg-dark-color object-contain shadow'
+										className='aspect-auto w-full h-full min-h-20 bg-dark-color object-contain shadow'
 										src={`${imageSrc}.jpg`}
 										alt='Project case'
 										loading='lazy'
 									/>
 								</picture>
 							</div>
-							<div className='flex flex-col md:items-start gap-4'>
+							<div className='flex flex-col gap-4 md:items-start lg:grid lg:grid-cols-2'>
 								<Button onClickProp={handleClose}>
 									Close&nbsp;modal&nbsp;window
 								</Button>
