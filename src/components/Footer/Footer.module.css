@@ -3,27 +3,32 @@
 	line-height: 1.3;
 	letter-spacing: -0.02em;
 
-	@media screen and (width >= 768px) {
+	@media screen and (min-width: 768px) {
 		font-size: 3rem;
 		line-height: 1.5;
 	}
 
-	@media screen and (width >= 1024px) {
+	@media screen and (min-width: 1024px) {
 		font-size: 2.8rem;
 	}
 }
 
 .contact {
-	@media screen and (width >= 1024px) {
-		grid-template-areas:
+	@media screen and (min-width: 1024px) {
+		/* grid-template-areas:
 			'supp adr adr adr'
-			'nav nav nav social';
+			'nav nav nav social'; */
+
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-rows: repeat(2, auto);
 	}
 }
 
 .support {
-	@media screen and (width >= 1024px) {
-		grid-area: supp;
+	@media screen and (min-width: 1024px) {
+		/* grid-area: supp; */
+		grid-column: 1/3;
+		grid-row: 1/2;
 	}
 
 	.heading {
@@ -31,20 +36,22 @@
 		line-height: 1.2;
 		letter-spacing: -0.02em;
 
-		@media screen and (width >= 768px) {
+		@media screen and (min-width: 768px) {
 			font-size: 2.8rem;
 			line-height: 1.5;
 		}
 
-		@media screen and (width >= 1024px) {
-			font-size: 2.3rem;
+		@media screen and (min-width: 1024px) {
+			font-size: 2rem;
 		}
 	}
 }
 
 .addresses {
-	@media screen and (width >= 1024px) {
-		grid-area: adr;
+	@media screen and (min-width: 1024px) {
+		/* grid-area: adr; */
+		grid-column: 3/-1;
+		grid-row: 1/2;
 	}
 
 	.address {
@@ -53,13 +60,17 @@
 }
 
 .navigation {
-	@media screen and (width >= 1024px) {
-		grid-area: nav;
+	@media screen and (min-width: 1024px) {
+		/* grid-area: nav; */
+		grid-column: 1/4;
+		grid-row: 2/3;
 	}
 }
 
 .social {
-	@media screen and (width >= 1024px) {
-		grid-area: social;
+	@media screen and (min-width: 1024px) {
+		/* grid-area: social; */
+		grid-column: 4/-1;
+		grid-row: 2/3;
 	}
 }

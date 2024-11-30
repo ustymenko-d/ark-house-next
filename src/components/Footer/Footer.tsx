@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
 					className={`${styles.contact} mb-12 pb-6 border-b border-b-dark-color grid gap-6 md:px-10 lg:px-20 lg:pb-12 lg:gap-14`}>
 					<div className={styles.support}>
 						<h3 className={`${styles.heading} mb-4 font-semibold`}>
-							Support is available 24 hours
+							Support is available 24&nbsp;hours
 						</h3>
 						<Button linkHref='/contact'>Contact&nbsp;us</Button>
 					</div>
