@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
 				<div
 					className={`${styles.contact} mb-12 pb-6 border-b border-b-dark-color grid gap-6 md:px-10 lg:px-20 lg:pb-12 lg:grid lg:grid-cols-5 lg:gap-14 lg:text-4xl`}>
 					<div className='lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-2'>
-						<h3 className='text-xl mb-4 font-semibold md:text-4xl'>
+						<h3 className='text-xl mb-4 font-semibold md:text-3xl'>
 							Support is available 24&nbsp;hours
 						</h3>
 						<Button linkHref='/contact'>Contact&nbsp;us</Button>
