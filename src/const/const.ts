@@ -6,7 +6,8 @@ import {
 	TabList,
 } from './const.interfaces'
 
-export const PROJECT_DESCRIPTION: string = 'Lorem text'
+export const PROJECT_DESCRIPTION: string =
+	'This multi-page website uses React to build dynamic and reusable UI components, with Next.js for server-side rendering to improve performance and SEO. TypeScript ensures type safety and better code quality. TailwindCSS is used for fast and customizable styling, and Zustand manages global state across the app. Zod is utilized for schema validation to ensure reliable data handling.'
 
 export const NAVIGATION_LINKS: NavigationLink[] = [
 	{

@@ -12,23 +12,22 @@ const Footer: React.FC = () => {
 		<footer className='px-4'>
 			<div className='container mx-auto'>
 				<div className='topline mb-12'>
-					<h2 className={`${styles.title} font-semibold`}>Start a Project?</h2>
+					<h2 className='font-semibold'>Start a Project?</h2>
 					<Button linkHref='/contact'>Contact&nbsp;us</Button>
 				</div>
 
 				<div
-					className={`${styles.contact} mb-12 pb-6 border-b border-b-dark-color grid gap-6 md:px-10 lg:px-20 lg:pb-12 lg:gap-14`}>
-					<div className={styles.support}>
-						<h3 className={`${styles.heading} mb-4 font-semibold`}>
+					className={`${styles.contact} mb-12 pb-6 border-b border-b-dark-color grid gap-6 md:px-10 lg:px-20 lg:pb-12 lg:grid lg:grid-cols-5 lg:gap-14 lg:text-4xl`}>
+					<div className='lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-2'>
+						<h3 className='text-xl mb-4 font-semibold md:text-4xl'>
 							Support is available 24&nbsp;hours
 						</h3>
 						<Button linkHref='/contact'>Contact&nbsp;us</Button>
 					</div>
 
-					<div
-						className={`${styles.addresses} flex flex-wrap gap-x-24 gap-y-8 text-dark-color md:flex-row md:gap-x-16 md:gap-y-5 lg:justify-end lg:gap-x-16`}>
+					<div className='lg:col-start-3 lg:-col-end-1 lg:row-start-1 lg:row-end-2 flex flex-wrap gap-x-24 gap-y-8 text-dark-color md:flex-row md:gap-x-16 md:gap-y-5 lg:justify-end lg:gap-x-16'>
 						<div>
-							<address className={`${styles.address} h-full flex flex-col gap-y-3 items-start not-italic lg:justify-start`}>
+							<address className='text-lg h-full flex flex-col gap-y-3 items-start not-italic lg:justify-start'>
 								<p className='lg:leading-7'>
 									<b>North</b>
 									<br />
@@ -48,7 +47,7 @@ const Footer: React.FC = () => {
 							</address>
 						</div>
 						<div>
-							<address className={`${styles.address} h-full flex flex-col gap-y-3 items-start not-italic lg:justify-start`}>
+							<address className='text-lg h-full flex flex-col gap-y-3 items-start not-italic lg:justify-start'>
 								<p className='lg:leading-7'>
 									<b>Midlands</b>
 									<br />
@@ -69,11 +68,11 @@ const Footer: React.FC = () => {
 						</div>
 					</div>
 
-					<div className={styles.navigation}>
+					<div className='lg:col-start-1 lg:col-end-4 lg:row-start-2 lg:row-end-3'>
 						<NavigationList basicClasses={BASIC_NAV_LIST_CLASSES} />
 					</div>
 
-					<div className={`${styles.social} lg:self-center`}>
+					<div className='lg:col-start-4 lg:-col-end-1 lg:row-start-2 lg:row-end-3 lg:self-center'>
 						<SocialLinks />
 					</div>
 				</div>
