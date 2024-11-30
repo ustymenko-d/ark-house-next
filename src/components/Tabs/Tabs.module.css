@@ -12,6 +12,6 @@
 		grid-template-columns: auto 1fr;
 	}
 }
-.tabButton_active {
+.tabButton_active:global(.animatedUnderline) {
 	background-size: 100% 1px;
 }
