@@ -27,8 +27,17 @@ const PageBody: FC<PageBodyProps> = ({ children }) => {
 	const setWebpSupport = useAppStore((state) => state.setWebpSupport)
 
 	useEffect(() => {
-		const timer = setTimeout(() => setIsLoading(false), 100)
-		return () => clearTimeout(timer)
+		const animationTime = 3000
+		const startTime = performance.now()
+
+		const simulatePageLoad = setTimeout(() => {
+			const elapsedTime = performance.now() - startTime
+			const remainingTime = animationTime - elapsedTime
+
+			setTimeout(() => setIsLoading(false), Math.max(remainingTime, 0))
+		}, 0)
+
+		return () => clearTimeout(simulatePageLoad)
 	}, [])
 
 	useEffect(() => {
