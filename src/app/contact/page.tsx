@@ -7,23 +7,19 @@ import Button from '@/components/UI/Button/Button'
 import ContactPopup from './components/ContactPopup/ContactPopup'
 import styles from './contact.module.css'
 
-const contactSchema = z.object({
-	name: z
-		.string()
-		.regex(/^[A-Za-z\s]+$/, 'Name should contain only letters')
-		.min(1, 'Name field is required'),
-	contact: z
-		.union([
-			z
-				.string()
-				.regex(
-					/^\+(\d{1,3})(\(\d{3}\))? ?\d{3}-?\d{4}$|^\+\d{1,3}\d{7,10}$/,
-					'Invalid phone format +1(800) 555-5555'
-				),
-			z.string().email('Invalid email format'),
-		])
-		.refine((value) => value.trim() !== '', 'Contact field is required'),
-})
+const nameSchema = z
+	.string()
+	.regex(/^[A-Za-z\s]+$/, 'Name should contain only letters')
+	.min(1, 'Name field is required')
+
+const phoneSchema = z
+	.string()
+	.regex(
+		/^\+(\d{1,3})(\(\d{3}\))? ?\d{3}-?\d{4}$|^\+\d{1,3}\d{7,10}$/,
+		'Invalid phone format +1(800) 555-5555'
+	)
+
+const emailSchema = z.string().email('Invalid email format')
 
 const ContactPage: React.FC = () => {
 	const breakpoints = useBreakpoints([640])
@@ -31,6 +27,11 @@ const ContactPage: React.FC = () => {
 	const [showPopup, setShowPopup] = useState<boolean>(false)
 	const [formData, setFormData] = useState({ name: '', contact: '' })
 	const [errors, setErrors] = useState<{ name?: string; contact?: string }>({})
+
+	const contactSchema = z.object({
+		name: nameSchema,
+		contact: phoneType ? phoneSchema : emailSchema,
+	})
 
 	const toggleType = (): void => {
 		setPhoneType((prev) => !prev)
