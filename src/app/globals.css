@@ -113,7 +113,7 @@ html {
 	background: var(--light-color);
 }
 
-html:has(.isOpenNav) {
+html:has(.isNavOpen) {
 	overflow: hidden;
 }
 

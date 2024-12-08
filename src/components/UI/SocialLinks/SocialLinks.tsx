@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import styles from './SocialLinks.module.css'
 import { useAppStore } from '@/store/store'

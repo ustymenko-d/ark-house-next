@@ -12,8 +12,8 @@ const config: Config = {
 			keyframes: {
 				moveDiagonal: {
 					'0%': {
-						top: '-140%',
-						left: '-140%',
+						top: '-150%',
+						left: '-150%',
 					},
 					'100%': {
 						top: '100%',
