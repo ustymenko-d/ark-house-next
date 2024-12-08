@@ -1,11 +1,18 @@
+'use client'
+
 import React from 'react'
 import styles from './ToTopButton.module.css'
 import AnimatedWrapper from '@/components/AnimatedWrapper/AnimatedWrapper'
+import useScrollBeyondThreshold from '@/hooks/useScrollBeyondThreshold'
 
 const ToTopButton: React.FC = () => {
+	const hasScrolledBeyond = useScrollBeyondThreshold(50)
+
 	const handleGoToTop = () => {
 		window.scrollTo({ top: 0, behavior: 'smooth' })
 	}
+
+	if (!hasScrolledBeyond) return null
 
 	return (
 		<div className='fixed inset-0 pointer-events-none z-20'>

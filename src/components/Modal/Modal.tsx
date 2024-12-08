@@ -15,7 +15,9 @@ const Modal: React.FC = () => {
 		toggleModalOpen()
 	}
 
-	return modalOpen ? (
+	if (!modalOpen) return null
+
+	return (
 		<div
 			className={`${styles.dialogWrapper} fixed inset-0 w-screen h-lvh overflow-y-auto overflow-x-hidden p-4 flex items-center justify-center`}>
 			<div
@@ -63,7 +65,7 @@ const Modal: React.FC = () => {
 				</div>
 			</AnimatedWrapper>
 		</div>
-	) : null
+	)
 }
 
 export default Modal

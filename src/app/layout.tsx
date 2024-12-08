@@ -1,7 +1,10 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Header from '@/components/Header/Header'
+import Footer from '@/components/Footer/Footer'
+import ToTopButton from '@/components/UI/ToTopButton/ToTopButton'
+import Modal from '@/components/Modal/Modal'
 import './globals.css'
-import PageBody from './components/PageBody'
 
 export const metadata: Metadata = {
 	title: 'Ark-House',
@@ -23,7 +26,13 @@ export default function RootLayout({
 		<html
 			lang='en'
 			className={`${inter.variable} font-sans overflow-x-clip h-fit`}>
-			<PageBody>{children}</PageBody>
+			<body className='overflow-x-clip h-full flex flex-col text-neutral-950 bg-white'>
+				<Header />
+				{children}
+				<Footer />
+				<ToTopButton />
+				<Modal />
+			</body>
 		</html>
 	)
 }

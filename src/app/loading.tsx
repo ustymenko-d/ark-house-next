@@ -1,6 +1,26 @@
 'use client'
 
-const Loading = () => {
+import { FC, useEffect, useState } from 'react'
+
+const Loading: FC = () => {
+	const [isLoading, setIsLoading] = useState(true)
+
+	useEffect(() => {
+		const animationTime = 3000
+		const startTime = performance.now()
+
+		const simulatePageLoad = setTimeout(() => {
+			const elapsedTime = performance.now() - startTime
+			const remainingTime = animationTime - elapsedTime
+
+			setTimeout(() => setIsLoading(false), Math.max(remainingTime, 0))
+		}, 0)
+
+		return () => clearTimeout(simulatePageLoad)
+	}, [])
+
+	if (!isLoading) return null
+
 	return (
 		<div
 			className={`bg-white fixed z-50 inset-0 flex items-center justify-center`}>

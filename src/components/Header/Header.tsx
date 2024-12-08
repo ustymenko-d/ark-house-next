@@ -7,12 +7,26 @@ import FocusLock from 'react-focus-lock'
 import styles from './Header.module.css'
 import Logo from '../UI/Logo/Logo'
 import Navigation from '../Navigation/Navigation'
+import { useEffect } from 'react'
+
+const isWebpSupported = (): boolean => {
+	const canvas = document.createElement('canvas')
+	return canvas.toDataURL('image/webp').startsWith('data:image/webp')
+}
 
 const Header = () => {
 	const headerNavVisible = useAppStore((state) => state.headerNavVisible)
+	const webpSupport = useAppStore((state) => state.webpSupport)
+	const setWebpSupport = useAppStore((state) => state.setWebpSupport)
+	
+	useEffect(() => {
+		if (webpSupport === null) {
+			setWebpSupport(isWebpSupported())
+		}
+	}, [webpSupport, setWebpSupport])
 
 	return (
-		<header className='z-40'>
+		<header className={`z-40${headerNavVisible ? ' isNavOpen' : ''}`}>
 			<FocusLock
 				returnFocus
 				disabled={!headerNavVisible}>
