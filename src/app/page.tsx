@@ -7,7 +7,7 @@ import BlogSection from './components/sections/BlogSection/BlogSection'
 
 const Home: React.FC = () => {
 	return (
-		<main className='flex-auto'>
+		<main>
 			<HeroSection />
 			<AboutSection />
 			<ServicesSection />
