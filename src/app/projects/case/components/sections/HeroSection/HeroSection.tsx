@@ -13,12 +13,12 @@ const HeroSection: React.FC = () => {
 				<div className={`${styles.grid} mb-4 grid gap-6`}>
 					<picture className='lg:row-span-full'>
 						<source
-							media='(max-width: 1024px)'
+							media='(max-width: 1023px)'
 							srcSet='/img/project/hero@mob.webp'
 							type='image/webp'
 						/>
 						<source
-							media='(max-width: 1024px)'
+							media='(max-width: 1023px)'
 							srcSet='/img/project/hero@mob.jpg'
 						/>
 						<source

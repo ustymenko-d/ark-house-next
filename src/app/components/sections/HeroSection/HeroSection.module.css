@@ -1,11 +1,11 @@
 .hero {
-	transition: min-height 0.4s;
-	min-height: calc(100dvh - 78px);
-	/* max-height: 740px; */
+	height: calc(100dvh - 78px);
+	min-height: fit-content;
+	max-height: 800px;
+	transition: height 0.5s;
 
 	@media screen and (min-width: 1250px) {
 		min-height: 46rem;
-		max-height: 800px;
 	}
 
 	&::before {
@@ -19,7 +19,7 @@
 		height: 70%;
 		background-color: rgb(248, 248, 248);
 
-		@media screen and (width >= 1024px) {
+		@media screen and (min-width: 1024px) {
 			width: calc(100% - 160px);
 			height: 63%;
 			margin-inline: auto;
@@ -32,41 +32,36 @@
 	line-height: 1.11538;
 	letter-spacing: -0.03em;
 
-	@media screen and (width >= 768px) {
+	@media screen and (min-width: 768px) {
 		font-size: 96px;
 	}
 
-	@media screen and (width >= 1250px) {
+	@media screen and (min-width: 1250px) {
 		font-size: 6.5rem;
 	}
 }
 
 .background {
 	height: calc(100% - 3.875rem);
-	background-size: 160%;
+	background-size: 111%;
 	background-position: 0 100%;
 	background-image: url(/img/home-page/hero@mob.webp);
 
-	@media screen and (width >= 640px) {
-		background-size: 140%;
+	@media screen and (min-width: 768px) {
+		background-size: 100%;
 	}
 
-	@media screen and (width >= 768px) {
-		background-size: 125%;
-		background-position: -50% 100%;
-	}
-
-	@media screen and (width >= 1024px) {
+	@media screen and (min-width: 1024px) {
 		background-size: contain;
 		background-size: calc(100% - 160px);
 		background-position-x: center;
 	}
 
-	@media screen and (width >= 1250px) {
+	@media screen and (min-width: 1250px) {
 		height: 78%;
 	}
 
-	@media screen and (width >= 1440px) {
+	@media screen and (min-width: 1440px) {
 		background-position-y: bottom;
 		background-size: contain;
 	}
@@ -77,7 +72,7 @@
 	) {
 		background-image: url(/img/home-page/hero@mob.webp);
 
-		@media screen and (width >= 1440px) {
+		@media screen and (min-width: 1024px) {
 			background-image: url(/img/home-page/hero.webp);
 		}
 	}
@@ -86,7 +81,7 @@
 .background_noWebp {
 	background-image: url(/img/home-page/hero@mob.png);
 
-	@media screen and (width >= 1440px) {
+	@media screen and (min-width: 1024px) {
 		background-image: url(/img/home-page/hero.png);
 	}
 }

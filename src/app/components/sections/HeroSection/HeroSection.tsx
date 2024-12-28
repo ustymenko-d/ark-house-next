@@ -18,9 +18,19 @@ const HeroSection: React.FC = () => {
 				<span className='absolute top-0 right-3 mr-4 font-medium text-lg tracking-wide'>
 					Since&nbsp;1975&nbsp;-
 				</span>
-				<AnimatedWrapper>Architecture.</AnimatedWrapper>
-				<AnimatedWrapper delay={0.3}>Planning.</AnimatedWrapper>
-				<AnimatedWrapper delay={0.5}>Design.</AnimatedWrapper>
+				<AnimatedWrapper additionalClasses='max-h-fit'>
+					Architecture.
+				</AnimatedWrapper>
+				<AnimatedWrapper
+					delay={0.3}
+					additionalClasses='max-h-fit'>
+					Planning.
+				</AnimatedWrapper>
+				<AnimatedWrapper
+					delay={0.5}
+					additionalClasses='max-h-fit'>
+					Design.
+				</AnimatedWrapper>
 			</div>
 			<div className='z-10 px-4 flex flex-col items-start gap-8 lg:items-end lg:px-0 lg:self-center xl:self-start xl:gap-20 xl:items-end'>
 				<Button linkHref='/contact'>Contact&nbsp;us</Button>
