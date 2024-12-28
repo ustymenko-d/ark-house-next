@@ -1,5 +1,5 @@
-import Button from '@/components/UI/Button/Button'
 import Image from 'next/image'
+import Button from '@/components/UI/Button/Button'
 import AnimatedWrapper from '@/components/AnimatedWrapper/AnimatedWrapper'
 import styles from './AboutSection.module.css'
 

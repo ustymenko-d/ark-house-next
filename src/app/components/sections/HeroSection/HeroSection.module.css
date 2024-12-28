@@ -45,7 +45,7 @@
 	height: calc(100% - 3.875rem);
 	background-size: 111%;
 	background-position: 0 100%;
-	background-image: url(/img/home-page/hero@mob.webp);
+	background-image: url(/img/home-page/hero@mob.png);
 
 	@media screen and (min-width: 768px) {
 		background-size: 100%;
@@ -66,6 +66,10 @@
 		background-size: contain;
 	}
 
+	@media screen and (min-width: 1024px) {
+		background-image: url(/img/home-page/hero.png);
+	}
+
 	@supports (
 		background-image:
 			url('data:image/webp;base64,UklGRhYAAABXRUJQVlA4TBEAAAAAAABAAEAAQAAAABAAEAAQAAABAAEAAQAAAAA=')
@@ -75,13 +79,5 @@
 		@media screen and (min-width: 1024px) {
 			background-image: url(/img/home-page/hero.webp);
 		}
-	}
-}
-
-.background_noWebp {
-	background-image: url(/img/home-page/hero@mob.png);
-
-	@media screen and (min-width: 1024px) {
-		background-image: url(/img/home-page/hero.png);
 	}
 }

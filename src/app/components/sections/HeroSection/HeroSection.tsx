@@ -1,15 +1,9 @@
-'use client'
-
-import React from 'react'
-import { useAppStore } from '@/store/store'
 import Button from '@/components/UI/Button/Button'
 import SocialLinks from '@/components/UI/SocialLinks/SocialLinks'
-import styles from './HeroSection.module.css'
 import AnimatedWrapper from '@/components/AnimatedWrapper/AnimatedWrapper'
+import styles from './HeroSection.module.css'
 
 const HeroSection: React.FC = () => {
-	const webpSupport = useAppStore((state) => state.webpSupport)
-
 	return (
 		<section
 			className={`${styles.hero} container mx-auto md:px-10 lg:px-20 relative overflow-hidden py-16 mb-10 flex flex-col items-start gap-12 justify-center md:justify-normal md:bg-none lg:gap-0 lg:flex-row lg:justify-between `}>
@@ -37,12 +31,8 @@ const HeroSection: React.FC = () => {
 				<SocialLinks />
 			</div>
 
-			{webpSupport !== null && (
-				<div
-					className={`${styles.background}${
-						webpSupport ? '' : ` ${styles.background_noWebp}`
-					} absolute left-0 right-0 bottom-0 flex flex-col justify-end items-center overflow-hidden pointer-events-none bg-no-repeat`}></div>
-			)}
+			<div
+				className={`${styles.background} absolute left-0 right-0 bottom-0 flex flex-col justify-end items-center overflow-hidden pointer-events-none bg-no-repeat`}></div>
 		</section>
 	)
 }
