@@ -22,19 +22,19 @@ const navItems = [
 const ProjectPage: React.FC = () => {
 	return (
 		<main className='flex-auto'>
-			<div className='container mx-auto px-4 md:px-10 lg:px-20'>
+			<div className='container px-4 mx-auto md:px-10 lg:px-20'>
 				<Breadcrumbs navItems={navItems} />
 			</div>
 
 			<HeroSection />
 			<GallerySection />
 
-			<div className='topline mb-14 mx-auto container md:px-10 lg:px-20'>
-				<h2 className='leading-tight font-semibold'>Development team</h2>
+			<div className='container px-4 mx-auto md:px-10 lg:px-20 topline mb-14'>
+				<h2 className='font-semibold leading-tight'>Development team</h2>
 				<Button linkHref='/contact'>Contact&nbsp;Us</Button>
 			</div>
 
-			<div className='container mx-auto mb-14 px-4 md:px-10 lg:px-20'>
+			<div className='container px-4 mx-auto mb-14 md:px-10 lg:px-20'>
 				<Tabs
 					tabsList={TEAM_TABS}
 					tabsType='team'
