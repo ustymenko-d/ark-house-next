@@ -5,6 +5,7 @@ import { FC, ReactNode, useRef } from 'react'
 
 type AnimatedWrapperProps = {
 	children: ReactNode
+	motionKey: string
 	delay?: number
 	duration?: number
 	typeFade?: boolean
@@ -13,6 +14,7 @@ type AnimatedWrapperProps = {
 
 const AnimatedWrapper: FC<AnimatedWrapperProps> = ({
 	children,
+	motionKey,
 	delay = 0,
 	duration = 0.4,
 	typeFade = true,
@@ -33,6 +35,7 @@ const AnimatedWrapper: FC<AnimatedWrapperProps> = ({
 
 	return (
 		<motion.div
+			key={motionKey}
 			className={additionalClasses ? `h-full ${additionalClasses}` : 'h-full'}
 			ref={motionRef}
 			initial='hidden'
