@@ -5,7 +5,7 @@ import { FC, ReactNode, useRef } from 'react'
 
 type AnimatedWrapperProps = {
 	children: ReactNode
-	motionKey: string
+	motionKey?: string
 	delay?: number
 	duration?: number
 	typeFade?: boolean
