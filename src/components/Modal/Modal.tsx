@@ -28,7 +28,7 @@ const Modal: React.FC = () => {
 					<AnimatedWrapper
 						motionKey='modal'
 						typeFade={false}
-						duration={0.3}
+						duration={0.2}
 						additionalClasses='flex items-center justify-center'>
 						<div
 							className={`${styles.dialog} p-4 bg-white shadow-xl md:p-8`}

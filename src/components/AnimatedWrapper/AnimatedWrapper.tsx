@@ -36,7 +36,7 @@ const AnimatedWrapper: FC<AnimatedWrapperProps> = ({
 	return (
 		<motion.div
 			key={motionKey}
-			className={additionalClasses ? `h-full ${additionalClasses}` : 'h-full'}
+			className={additionalClasses ? `${additionalClasses}` : ''}
 			ref={motionRef}
 			initial='hidden'
 			animate={isInView ? 'visible' : 'hidden'}
