@@ -54,11 +54,11 @@ const Footer = () => {
 						<Button linkHref='/contact'>Contact&nbsp;us</Button>
 					</div>
 
-					<div className='flex flex-wrap lg:col-start-3 lg:-col-end-1 lg:row-start-1 lg:row-end-2 gap-x-24 gap-y-8 text-dark-color md:flex-row md:gap-x-16 md:gap-y-5 lg:justify-end lg:gap-x-16'>
+					<div className='flex flex-wrap lg:col-start-3 lg:-col-end-1 lg:row-start-1 lg:row-end-2 gap-x-8 sm:gap-x-20 gap-y-8 text-dark-color md:flex-row md:gap-x-16 md:gap-y-5 lg:justify-end lg:gap-x-16'>
 						{addressData.map(({ title, lines, phone, href }) => (
 							<address
 								key={title}
-								className='flex flex-col items-start h-full text-lg not-italic gap-y-3 lg:justify-start'>
+								className='flex flex-col items-start text-lg not-italic gap-y-3 lg:justify-start'>
 								<p className='lg:leading-7'>
 									<b>{title}</b>
 									<br />
