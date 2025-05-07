@@ -1,29 +1,28 @@
-import React from 'react'
-import { OneTabContent } from '@/const/const.interfaces'
+import clsx from 'clsx'
 import Image from 'next/image'
-import styles from './ServicesTypeContent.module.css'
 import AnimatedWrapper from '@/components/AnimatedWrapper/AnimatedWrapper'
+import { OneTabContent } from '@/const/const.types'
+import styles from './ServicesTypeContent.module.css'
 
 interface ServicesTypeContentProps {
 	tabsContent: OneTabContent[]
 	activeTab: string
 }
 
-const ServicesTypeContent: React.FC<ServicesTypeContentProps> = ({
+const ServicesTypeContent = ({
 	tabsContent,
 	activeTab,
-}) => {
-	return tabsContent.map((item, index) => {
+}: ServicesTypeContentProps) =>
+	tabsContent.map((item, index) => {
 		const { tabName, content } = item
 
 		return (
 			<div
 				key={`${tabName}-${index}`}
-				className={
-					activeTab === tabName
-						? 'h-full'
-						: 'overflow-hidden invisible opacity-0 h-0 w-0'
-				}
+				className={clsx({
+					'h-full': activeTab === tabName,
+					'overflow-hidden invisible opacity-0 h-0 w-0': activeTab !== tabName,
+				})}
 				id={`services-tabpanel-${index}`}
 				role='tabpanel'
 				aria-labelledby={`services-tab-${index}`}>
@@ -55,6 +54,5 @@ const ServicesTypeContent: React.FC<ServicesTypeContentProps> = ({
 			</div>
 		)
 	})
-}
 
 export default ServicesTypeContent

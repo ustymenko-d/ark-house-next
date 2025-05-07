@@ -1,7 +1,8 @@
 'use client'
 
+import clsx from 'clsx'
+import { ReactNode, useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { FC, ReactNode, useRef } from 'react'
 
 type AnimatedWrapperProps = {
 	children: ReactNode
@@ -12,14 +13,14 @@ type AnimatedWrapperProps = {
 	additionalClasses?: string
 }
 
-const AnimatedWrapper: FC<AnimatedWrapperProps> = ({
+const AnimatedWrapper = ({
 	children,
 	motionKey,
 	delay = 0,
 	duration = 0.4,
 	typeFade = true,
 	additionalClasses,
-}) => {
+}: AnimatedWrapperProps) => {
 	const motionRef = useRef<HTMLDivElement | null>(null)
 	const isInView = useInView(motionRef, { once: true })
 
@@ -36,7 +37,7 @@ const AnimatedWrapper: FC<AnimatedWrapperProps> = ({
 	return (
 		<motion.div
 			key={motionKey}
-			className={additionalClasses ? `${additionalClasses}` : ''}
+			className={clsx(additionalClasses)}
 			ref={motionRef}
 			initial='hidden'
 			animate={isInView ? 'visible' : 'hidden'}

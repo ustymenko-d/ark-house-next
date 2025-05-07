@@ -2,10 +2,10 @@
 
 import { useState } from 'react'
 import { z } from 'zod'
-import { useBreakpoints } from '@/hooks/useBreakpoints'
 import Button from '@/components/UI/Button/Button'
-import ContactPopup from './components/ContactPopup/ContactPopup'
-import styles from './contact.module.css'
+import Input from './components/Input/Input'
+import Popup from './components/Popup/Popup'
+import ContactTypeToggle from './components/ContactTypeToggle/ContactTypeToggle'
 
 const nameSchema = z
 	.string()
@@ -21,11 +21,13 @@ const phoneSchema = z
 
 const emailSchema = z.string().email('Invalid email format')
 
-const ContactPage: React.FC = () => {
-	const breakpoints = useBreakpoints([640])
-	const [phoneType, setPhoneType] = useState<boolean>(true)
-	const [showPopup, setShowPopup] = useState<boolean>(false)
-	const [formData, setFormData] = useState({ name: '', contact: '' })
+const ContactPage = () => {
+	const [phoneType, setPhoneType] = useState(true)
+	const [showPopup, setShowPopup] = useState(false)
+	const [formData, setFormData] = useState<{ name: string; contact: string }>({
+		name: '',
+		contact: '',
+	})
 	const [errors, setErrors] = useState<{ name?: string; contact?: string }>({})
 
 	const contactSchema = z.object({
@@ -33,7 +35,7 @@ const ContactPage: React.FC = () => {
 		contact: phoneType ? phoneSchema : emailSchema,
 	})
 
-	const toggleType = (): void => {
+	const toggleContactType = (): void => {
 		setPhoneType((prev) => !prev)
 		setFormData((prev) => ({ ...prev, contact: '' }))
 		setErrors({})
@@ -45,22 +47,16 @@ const ContactPage: React.FC = () => {
 		setErrors((prev) => ({ ...prev, [name]: undefined }))
 	}
 
-	const togglePopupShow = (isShow: boolean = true): void => {
-		setShowPopup(isShow)
-	}
-
 	const handleSubmit = (e: React.FormEvent): void => {
 		e.preventDefault()
 
 		try {
 			contactSchema.parse(formData)
 			setErrors({})
-			togglePopupShow()
+			setShowPopup(true)
 			setFormData({ name: '', contact: '' })
 
-			setTimeout(() => {
-				togglePopupShow(false)
-			}, 3000)
+			setTimeout(() => setShowPopup(false), 3000)
 		} catch (validationError) {
 			if (validationError instanceof z.ZodError) {
 				const fieldErrors: { name?: string; contact?: string } = {}
@@ -78,73 +74,46 @@ const ContactPage: React.FC = () => {
 	}
 
 	return (
-		<main
-			className={`${styles.contactPage} flex-auto flex flex-col justify-center container mx-auto px-4 md:px-10 lg:px-20`}>
+		<main className='min-h-[700px] flex-auto flex flex-col justify-center container mx-auto px-4 md:px-10 lg:px-20'>
 			<form
-				className='h-full flex flex-col justify-center items-center gap-y-6'
+				className='flex flex-col items-center justify-center h-full gap-y-6'
 				onSubmit={handleSubmit}>
-				<h1 className={`mb-8 font-semibold text-4xl lg:text-5xl text-center`}>
+				<h1 className='mb-8 text-4xl font-semibold text-center lg:text-5xl'>
 					We will be glad to contact&nbsp;you
 				</h1>
 
-				<div
-					className={`${styles.toggler}${
-						phoneType ? ` ` : ` ${styles.toggler_email} `
-					}relative w-full flex flex-nowrap items-center border border-dark-color text-center`}>
-					<button
-						disabled={phoneType}
-						onClick={toggleType}
-						className={`${styles.toggler__button}${
-							phoneType ? ' text-white ' : ' '
-						}px-4 border border-dark-color bg-transparent text-dark-color outline-none`}
-						type='button'>
-						{breakpoints ? 'Phone Number' : 'Phone'}
-					</button>
-					<button
-						disabled={!phoneType}
-						onClick={toggleType}
-						className={`${styles.toggler__button}${
-							phoneType ? ' ' : ' text-white '
-						}px-4 border border-dark-color bg-transparent text-dark-color outline-none`}
-						type='button'>
-						Email
-					</button>
-				</div>
+				<ContactTypeToggle
+					phoneType={phoneType}
+					toggleContactType={toggleContactType}
+				/>
 
-				<p className={`${styles.description} text-center`}>
+				<p className='text-2xl text-center sm:max-w-80'>
 					{`Give us your ${phoneType ? 'number' : 'email'} and we will ${
 						phoneType ? 'call you' : 'write to you'
 					} now`}
 				</p>
-				<div className='w-full sm:w-3/5 lg:w-1/2'>
-					<input
-						className={`${styles.input} w-full py-5 px-6 border border-dark-color rounded-none leading-5`}
-						value={formData.name}
-						onChange={handleChange}
-						name='name'
-						placeholder='Your Name'
-						type='text'
-					/>
-					{errors.name && <p className='text-red-500 mt-1'>{errors.name}</p>}
-				</div>
-				<div className='w-full sm:w-3/5 lg:w-1/2'>
-					<input
-						className={`${styles.input} w-full py-5 px-6 border border-dark-color rounded-none leading-5`}
-						value={formData.contact}
-						onChange={handleChange}
-						name='contact'
-						placeholder={phoneType ? '+0(123) 456-7890' : 'username@mail.com'}
-						type={phoneType ? 'tel' : 'email'}
-					/>
-					{errors.contact && (
-						<p className='text-red-500 mt-1'>{errors.contact}</p>
-					)}
-				</div>
+
+				<Input
+					name='name'
+					type='text'
+					placeholder='Your Name'
+					formData={formData}
+					errors={errors}
+					handleChange={handleChange}
+				/>
+				<Input
+					name='contact'
+					type={phoneType ? 'tel' : 'email'}
+					placeholder={phoneType ? '+0(123) 456-7890' : 'username@mail.com'}
+					formData={formData}
+					errors={errors}
+					handleChange={handleChange}
+				/>
 
 				<Button>Contact&nbsp;us</Button>
 			</form>
 
-			{showPopup && <ContactPopup togglePopupShow={togglePopupShow} />}
+			{showPopup && <Popup closePopup={() => setShowPopup(false)} />}
 		</main>
 	)
 }

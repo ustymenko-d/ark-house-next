@@ -1,32 +1,26 @@
 'use client'
 
 import { useAppStore } from '@/store/store'
-import React from 'react'
 
 interface ModalButtonProps {
 	children: React.ReactNode
-	classNames: string
+	className: string
 }
 
-const ModalButton: React.FC<ModalButtonProps> = ({ children, classNames }) => {
+const ModalButton = ({ children, className }: ModalButtonProps) => {
 	const toggleModalOpen = useAppStore((state) => state.toggleModalOpen)
-
-	const handleOpenModal = () => {
-		toggleModalOpen()
-	}
 
 	return (
 		<div
 			tabIndex={0}
-			className={classNames}
+			className={className}
 			role='button'
-			onClick={handleOpenModal}
+			onClick={toggleModalOpen}
 			onKeyDown={(e: React.KeyboardEvent<HTMLDivElement>) => {
-				if (!(e.code === 'Tab')) {
-					e.preventDefault()
-				}
+				if (e.key === 'Tab') return
+				e.preventDefault()
 				if (e.code === 'Space' || e.code === 'Enter') {
-					handleOpenModal()
+					toggleModalOpen()
 				}
 			}}>
 			{children}

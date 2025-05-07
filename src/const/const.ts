@@ -4,10 +4,10 @@ import {
 	ProjectCase,
 	ProjectCharacteristic,
 	TabList,
-} from './const.interfaces'
+} from './const.types'
 
 export const PROJECT_DESCRIPTION: string =
-	'This multi-page website uses React to build dynamic and reusable UI components, with Next.js for server-side rendering to improve performance and SEO. TypeScript ensures type safety and better code quality. TailwindCSS is used for fast and customizable styling, and Zustand manages global state across the app. Zod is utilized for schema validation to ensure reliable data handling.'
+	'The project is built with React and Next.js. TypeScript ensures type safety and code reliability, while TailwindCSS enables fast, consistent styling. Zustand handles global state management, and Zod provides data validation.'
 
 export const NAVIGATION_LINKS: NavigationLink[] = [
 	{

@@ -1,22 +1,18 @@
 'use client'
 
-import React, { useEffect } from 'react'
+import clsx from 'clsx'
+import { useCallback, useEffect } from 'react'
 import { useBreakpoints } from '@/hooks/useBreakpoints'
 import { useAppStore } from '@/store/store'
 import NavigationList from './components/NavigationList/NavigationList'
 import styles from './Navigation.module.css'
 
-const Navigation: React.FC = () => {
-	const breakpoints = useBreakpoints([767])
-
+const Navigation = () => {
 	const headerNavVisible = useAppStore((state) => state.headerNavVisible)
 	const toggleHeaderNav = useAppStore((state) => state.toggleHeaderNav)
+	const breakpoints = useBreakpoints([767])
 
-	const BASIC_NAV_LIST_CLASSES: string = `fixed flex flex-col gap-8 ${
-		headerNavVisible ? 'visible' : 'invisible'
-	} w-full overflow-auto font-normal text-5xl px-4 bg-white md:visible md:relative md:min-h-fit md:left-0 md:top-0 md:py-5 md:px-0 md:flex-row md:justify-end md:items-center md:gap-8 md:transition-none md:text-xl`
-
-	const toggleNavListVisible = () => {
+	const toggleNavListVisible = useCallback(() => {
 		if (!headerNavVisible) {
 			window.scrollTo({
 				top: 0,
@@ -26,7 +22,7 @@ const Navigation: React.FC = () => {
 		}
 
 		toggleHeaderNav()
-	}
+	}, [headerNavVisible, toggleHeaderNav])
 
 	useEffect(() => {
 		const handleEsc = (event: KeyboardEvent) => {
@@ -36,10 +32,8 @@ const Navigation: React.FC = () => {
 		}
 
 		document.addEventListener('keydown', handleEsc)
-		return () => {
-			document.removeEventListener('keydown', handleEsc)
-		}
-	}, [headerNavVisible])
+		return () => document.removeEventListener('keydown', handleEsc)
+	}, [headerNavVisible, toggleNavListVisible])
 
 	useEffect(() => {
 		if (breakpoints === 1 && headerNavVisible) {
@@ -51,9 +45,11 @@ const Navigation: React.FC = () => {
 		<nav>
 			{breakpoints === 0 && (
 				<button
-					className={`${styles.toggler} ${
-						headerNavVisible ? styles.toggler_active : ''
-					} bg-transparent relative aspect-square overflow-hidden md:hidden`}
+					className={clsx(
+						styles.toggler,
+						{ [styles.toggler_active]: headerNavVisible },
+						'bg-transparent relative aspect-square overflow-hidden md:hidden'
+					)}
 					aria-expanded={headerNavVisible}
 					aria-controls='navigation-list'
 					aria-label={`${headerNavVisible ? 'Hide' : 'Show'}page navigation`}
@@ -63,7 +59,11 @@ const Navigation: React.FC = () => {
 			)}
 
 			<NavigationList
-				basicClasses={BASIC_NAV_LIST_CLASSES}
+				className={clsx(
+					'fixed flex flex-col gap-8 w-full overflow-auto font-normal text-5xl px-4 bg-white',
+					{ visible: headerNavVisible, invisible: !headerNavVisible },
+					'md:visible md:relative md:min-h-fit md:left-0 md:top-0 md:py-5 md:px-0 md:flex-row md:justify-end md:items-center md:gap-8 md:transition-none md:text-xl'
+				)}
 				navListVisible={headerNavVisible}
 				header={true}
 				toggleNavListVisible={toggleNavListVisible}

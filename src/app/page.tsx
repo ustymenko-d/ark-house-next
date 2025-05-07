@@ -5,17 +5,15 @@ import ProjectsSection from './components/sections/ProjectsSection/ProjectsSecti
 import TeamSection from './components/sections/TeamSection/TeamSection'
 import BlogSection from './components/sections/BlogSection/BlogSection'
 
-const Home: React.FC = () => {
-	return (
-		<main>
-			<HeroSection />
-			<AboutSection />
-			<ServicesSection />
-			<ProjectsSection />
-			<TeamSection />
-			<BlogSection />
-		</main>
-	)
-}
+const Home = () => (
+	<main>
+		<HeroSection />
+		<AboutSection />
+		<ServicesSection />
+		<ProjectsSection />
+		<TeamSection />
+		<BlogSection />
+	</main>
+)
 
 export default Home

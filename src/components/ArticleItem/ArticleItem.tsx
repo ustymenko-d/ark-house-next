@@ -1,17 +1,13 @@
+import clsx from 'clsx'
 import Image from 'next/image'
-import React from 'react'
+import { Article } from '@/const/const.types'
 import styles from './ArticleItem.module.css'
-import { Article } from '@/const/const.interfaces'
 
-interface ArticleItemProps {
-	article: Article
-}
-
-const ArticleItem: React.FC<ArticleItemProps> = ({ article }) => {
+const ArticleItem = ({ article }: { article: Article }) => {
 	const { title, content, dateTime, imgSrc } = article
 
 	return (
-		<div className='h-full flex flex-col bg-neutral-100'>
+		<div className='flex flex-col h-full bg-neutral-100'>
 			<picture>
 				<source
 					media='(max-width: 1024px)'
@@ -27,7 +23,7 @@ const ArticleItem: React.FC<ArticleItemProps> = ({ article }) => {
 					type='image/webp'
 				/>
 				<Image
-					className={`${styles.image} bg-dark-color`}
+					className={clsx(styles.image, 'flex-grow bg-dark-color')}
 					src={`${imgSrc}.jpg`}
 					loading='lazy'
 					alt=''
@@ -38,11 +34,11 @@ const ArticleItem: React.FC<ArticleItemProps> = ({ article }) => {
 
 			<div className='p-4'>
 				<time
-					className={`${styles.date} mb-1 text-xl`}
+					className={clsx(styles.date, 'mb-1 text-xl')}
 					dateTime={dateTime}>
 					{dateTime}
 				</time>
-				<h3 className='font-semibold text-2xl mb-1'>{title}</h3>
+				<h3 className='mb-1 text-2xl font-semibold'>{title}</h3>
 				<p className='text-lg'>{content}</p>
 			</div>
 		</div>

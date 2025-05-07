@@ -1,11 +1,6 @@
-import { TeamMember } from '@/const/const.interfaces'
-import React from 'react'
+import { TeamMember } from '@/const/const.types'
 
-interface TeamMemberCardProps {
-	teamMember: TeamMember
-}
-
-const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ teamMember }) => {
+const TeamMemberCard = ({ teamMember }: { teamMember: TeamMember }) => {
 	const { imgSrc, name, role } = teamMember
 
 	return (
@@ -25,7 +20,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ teamMember }) => {
 					type='image/webp'
 				/>
 				<img
-					className='block w-full aspect-square bg-dark-color shadow'
+					className='block w-full shadow aspect-square bg-dark-color'
 					src={`/img${imgSrc}.jpg`}
 					alt=''
 					loading='lazy'

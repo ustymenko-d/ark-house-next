@@ -1,0 +1,14 @@
+.input {
+	&::placeholder {
+		color: rgba(178, 178, 178, 1);
+	}
+
+	&:disabled {
+		border-color: rgba(6, 5, 15, 0.1);
+		color: rgba(6, 5, 15, 0.1);
+	}
+
+	&:focus {
+		border: 1.5px solid var(--dark-color);
+	}
+}

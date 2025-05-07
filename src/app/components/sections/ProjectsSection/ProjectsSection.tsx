@@ -1,13 +1,12 @@
-import React from 'react'
 import Link from 'next/link'
-import ProjectCard from '@/components/ProjectCard/ProjectCard'
-import { PROJECTS_CASES } from '@/const/const'
-import styles from './ProjectsSection.module.css'
 import Button from '@/components/UI/Button/Button'
 import Banner from '@/components/Banner/Banner'
+import ProjectCard from '@/components/ProjectCard/ProjectCard'
 import AnimatedWrapper from '@/components/AnimatedWrapper/AnimatedWrapper'
+import { PROJECTS_CASES } from '@/const/const'
+import styles from './ProjectsSection.module.css'
 
-const ProjectsSection: React.FC = () => {
+const ProjectsSection = () => {
 	const firstProjectsGroup = PROJECTS_CASES.slice(0, 3)
 	const secondProjectsGroup = PROJECTS_CASES.slice(3, 9)
 	const lastProjectCase = PROJECTS_CASES[9]
@@ -15,9 +14,9 @@ const ProjectsSection: React.FC = () => {
 	return (
 		<section
 			id='projects'
-			className='mb-14 px-4'>
-			<div className='topline mb-14 mx-auto container md:px-10 lg:px-20'>
-				<h2 className='leading-tight font-semibold'>Recent Projects</h2>
+			className='px-4 mb-14'>
+			<div className='container mx-auto topline mb-14 md:px-10 lg:px-20'>
+				<h2 className='font-semibold leading-tight'>Recent Projects</h2>
 				<Button linkHref='/projects'>Discover&nbsp;All</Button>
 			</div>
 
@@ -29,14 +28,14 @@ const ProjectsSection: React.FC = () => {
 							className={styles.projectLink}
 							key={`${projectCase.title}-${index}`}
 							href='/projects/case'>
-							<AnimatedWrapper>
+							<AnimatedWrapper additionalClasses='h-full'>
 								<ProjectCard projectCase={projectCase} />
 							</AnimatedWrapper>
 						</Link>
 					))}
 
 					<Banner
-						classes={styles.banner}
+						className={styles.banner}
 						svgImage={
 							<svg
 								className='w-full'
@@ -64,14 +63,14 @@ const ProjectsSection: React.FC = () => {
 							className={styles.projectLink}
 							key={`${projectCase.title}-${index}`}
 							href='/projects/case'>
-							<AnimatedWrapper>
+							<AnimatedWrapper additionalClasses='h-full'>
 								<ProjectCard projectCase={projectCase} />
 							</AnimatedWrapper>
 						</Link>
 					))}
 
 					<Banner
-						classes={styles.banner}
+						className={styles.banner}
 						svgImage={
 							<svg
 								className='w-full'
@@ -105,7 +104,7 @@ const ProjectsSection: React.FC = () => {
 					<Link
 						className={styles.projectLink}
 						href='/projects/case'>
-						<AnimatedWrapper>
+						<AnimatedWrapper additionalClasses='h-full'>
 							<ProjectCard projectCase={lastProjectCase} />
 						</AnimatedWrapper>
 					</Link>

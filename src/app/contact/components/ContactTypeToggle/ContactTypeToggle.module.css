@@ -1,7 +1,3 @@
-.contactPage {
-	min-height: 700px;
-}
-
 .toggler {
 	@media screen and (min-width: 640px) {
 		max-width: 60%;
@@ -21,12 +17,6 @@
 		background-color: var(--dark-color);
 		transition: all 0.4s linear;
 		pointer-events: none;
-	}
-}
-
-.toggler_email {
-	&::before {
-		left: 50%;
 	}
 }
 
@@ -53,27 +43,8 @@
 	}
 }
 
-.description {
-	font-size: 1.5rem;
-	line-height: 1.3;
-	letter-spacing: -0.02em;
-
-	@media screen and (min-width: 640px) {
-		max-width: 50%;
-	}
-}
-
-.input {
-	&::placeholder {
-		color: rgba(178, 178, 178, 1);
-	}
-
-	&:disabled {
-		border-color: rgba(6, 5, 15, 0.1);
-		color: rgba(6, 5, 15, 0.1);
-	}
-
-	&:focus {
-		border: 1.5px solid var(--dark-color);
+.toggler_email {
+	&::before {
+		left: 50%;
 	}
 }

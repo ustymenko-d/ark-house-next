@@ -1,20 +1,14 @@
-import { ProjectCharacteristic } from '@/const/const.interfaces'
-import React from 'react'
+import { ProjectCharacteristic } from '@/const/const.types'
 
-interface ProjectCharacteristicProps {
-	charItem: ProjectCharacteristic
-}
-
-const ProjectCharacteristicItem: React.FC<ProjectCharacteristicProps> = ({
+const ProjectCharacteristicItem = ({
 	charItem,
-}) => {
-	const { characteristic, value } = charItem
-	return (
-		<div className='flex flex-col gap-1 text-xl'>
-			<span className='font-semibold uppercase'>{characteristic}</span>
-			<span>{value}</span>
-		</div>
-	)
-}
+}: {
+	charItem: ProjectCharacteristic
+}) => (
+	<div className='flex flex-col gap-1 text-xl'>
+		<span className='font-semibold uppercase'>{charItem.characteristic}</span>
+		<span>{charItem.value}</span>
+	</div>
+)
 
 export default ProjectCharacteristicItem

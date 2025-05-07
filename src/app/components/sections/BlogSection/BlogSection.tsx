@@ -1,6 +1,5 @@
 'use client'
 
-import React from 'react'
 import Button from '@/components/UI/Button/Button'
 import ArticleItem from '@/components/ArticleItem/ArticleItem'
 import { BLOG_ARTICLES } from '@/const/const'
@@ -9,29 +8,24 @@ import styles from './BlogSection.module.css'
 import ModalButton from '@/components/ModalButton/ModalButton'
 import AnimatedWrapper from '@/components/AnimatedWrapper/AnimatedWrapper'
 
-const BlogSection: React.FC = () => {
+const BlogSection = () => {
 	const toggleModalOpen = useAppStore((state) => state.toggleModalOpen)
-
-	const handleOpenModal = () => {
-		toggleModalOpen()
-	}
 
 	return (
 		<section
 			id='blog'
-			className='mx-auto px-4'>
-			<div className='topline mb-14 mx-auto container md:px-10 lg:px-20'>
-				<h2 className='leading-tight font-semibold'>Blog</h2>
-				<Button onClickProp={handleOpenModal}>Show&nbsp;More</Button>
+			className='px-4 mx-auto'>
+			<div className='container mx-auto topline mb-14 md:px-10 lg:px-20'>
+				<h2 className='font-semibold leading-tight'>Blog</h2>
+				<Button onClickProp={toggleModalOpen}>Show&nbsp;More</Button>
 			</div>
 
-			<div className='mx-auto container md:px-10 lg:px-20 mb-14 grid gap-10 lg:grid-cols-2 2xl:max-w-screen-xl'>
+			<div className='container grid gap-10 mx-auto md:px-10 lg:px-20 mb-14 lg:grid-cols-2 2xl:max-w-screen-xl'>
 				{BLOG_ARTICLES.map((article, index) => (
 					<ModalButton
-						classNames={styles.button}
+						className={styles.button}
 						key={`${article.title}`}>
-						<AnimatedWrapper
-							delay={(index + index) * 0.1}>
+						<AnimatedWrapper delay={(index + index) * 0.1}>
 							<ArticleItem article={article} />
 						</AnimatedWrapper>
 					</ModalButton>

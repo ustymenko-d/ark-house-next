@@ -5,14 +5,7 @@
 }
 
 .button {
-	/* cursor: pointer; */
 	transition: all 0.2s;
-
-	/* &:hover,
-	&:focus-visible {
-		outline: 1px solid var(--dark-color);
-		outline-offset: 4px;
-	} */
 
 	@media screen and (min-width: 768px) {
 		&:nth-of-type(1) {

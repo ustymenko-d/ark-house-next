@@ -1,8 +1,9 @@
 .hero {
+	min-height: 40rem;
 	height: calc(100dvh - 78px);
-	min-height: 46rem;
 	max-height: 800px;
-	transition: height 0.5s;
+	transition: height 0.5 ease-in-out;
+	will-change: height;
 
 	&::before {
 		content: '';

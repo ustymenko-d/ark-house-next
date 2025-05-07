@@ -1,32 +1,23 @@
 'use client'
 
-import React from 'react'
 import ReactFocusLock from 'react-focus-lock'
 import Image from 'next/image'
-import Button from '../UI/Button/Button'
 import { useAppStore } from '@/store/store'
-import styles from './ProjectModal.module.css'
+import Button from '../UI/Button/Button'
 import AnimatedWrapper from '../AnimatedWrapper/AnimatedWrapper'
+import styles from './ProjectModal.module.css'
 
-interface ProjectModalProps {
-	imageSrc: string
-}
-
-const ProjectModal: React.FC<ProjectModalProps> = ({ imageSrc }) => {
+const ProjectModal = ({ imageSrc }: { imageSrc: string }) => {
 	const projectModalOpen = useAppStore((state) => state.projectModalOpen)
 	const toggleProjectModalOpen = useAppStore(
 		(state) => state.toggleProjectModalOpen
 	)
 
-	const handleClose = () => {
-		toggleProjectModalOpen()
-	}
-
 	return (
 		<div
 			className={`${styles.dialogWrapper} fixed inset-0 w-screen h-lvh overflow-y-auto overflow-x-hidden flex items-center justify-center`}>
 			<div
-				onClick={handleClose}
+				onClick={toggleProjectModalOpen}
 				className={`${styles.backdrop} absolute inset-0 w-full h-full`}></div>
 
 			<AnimatedWrapper
@@ -38,7 +29,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ imageSrc }) => {
 					role='dialog'
 					onKeyDown={(e) => {
 						if (e.code === 'Escape') {
-							handleClose()
+							toggleProjectModalOpen()
 						}
 					}}
 					aria-modal={true}
@@ -66,7 +57,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ imageSrc }) => {
 									<Image
 										width={896}
 										height={985}
-										className='aspect-auto w-full h-full min-h-20 bg-dark-color object-contain shadow'
+										className='object-contain w-full h-full shadow aspect-auto min-h-20 bg-dark-color'
 										src={`${imageSrc}.jpg`}
 										alt='Project case'
 										loading='lazy'
@@ -74,7 +65,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ imageSrc }) => {
 								</picture>
 							</div>
 							<div className='flex flex-col gap-4 md:items-start lg:grid lg:grid-cols-2'>
-								<Button onClickProp={handleClose}>
+								<Button onClickProp={toggleProjectModalOpen}>
 									Close&nbsp;modal&nbsp;window
 								</Button>
 								<Button linkHref='https://ustymenko.vercel.app'>

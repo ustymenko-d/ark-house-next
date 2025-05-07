@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import clsx from 'clsx'
 import Header from '@/components/Header/Header'
 import Footer from '@/components/Footer/Footer'
 import ToTopButton from '@/components/UI/ToTopButton/ToTopButton'
@@ -17,22 +18,22 @@ const inter = Inter({
 	variable: '--font-inter',
 })
 
-export default function RootLayout({
+const RootLayout = ({
 	children,
 }: Readonly<{
 	children: React.ReactNode
-}>) {
-	return (
-		<html
-			lang='en'
-			className={`${inter.variable} font-sans overflow-x-clip h-fit`}>
-			<body className='overflow-x-clip h-full flex flex-col text-neutral-950 bg-white'>
-				<Header />
-				{children}
-				<Footer />
-				<ToTopButton />
-				<Modal />
-			</body>
-		</html>
-	)
-}
+}>) => (
+	<html
+		lang='en'
+		className={clsx(inter.variable, 'font-sans overflow-x-clip h-fit')}>
+		<body className='flex flex-col h-full bg-white overflow-x-clip text-neutral-950'>
+			<Header />
+			{children}
+			<Footer />
+			<ToTopButton />
+			<Modal />
+		</body>
+	</html>
+)
+
+export default RootLayout
