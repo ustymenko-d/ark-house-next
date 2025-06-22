@@ -1,6 +1,4 @@
 .button {
-	transition: all 0.1s;
-
 	&::before {
 		content: url(../../../assets/icons/arrow-up-right.svg);
 		position: absolute;
@@ -26,8 +24,6 @@
 	}
 
 	&:focus-visible {
-		outline: 0.125rem solid var(--dark-color);
-		outline-offset: 0.125rem;
 		&::before {
 			animation: goTopRight 0.4s forwards;
 		}
@@ -35,9 +31,6 @@
 
 	@media (hover: hover) {
 		&:hover {
-			outline: 0.125rem solid var(--dark-color);
-			outline-offset: 0.125rem;
-
 			&::before {
 				animation: goTopRight 0.4s forwards;
 			}

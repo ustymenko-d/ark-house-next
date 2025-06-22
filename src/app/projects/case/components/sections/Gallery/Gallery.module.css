@@ -1,12 +1,4 @@
-.grid {
-	@media screen and (min-width: 768px) {
-		grid-template-rows: 1fr 0.7fr 0.25fr 1fr;
-	}
-}
-
 .button {
-	transition: all 0.2s;
-
 	@media screen and (min-width: 768px) {
 		&:nth-of-type(1) {
 			grid-column: 1/8;

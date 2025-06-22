@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 import Image from 'next/image'
-import AnimatedWrapper from '@/components/AnimatedWrapper/AnimatedWrapper'
+import AnimatedWrapper from '@/components/AnimatedWrapper'
 import { OneTabContent } from '@/const/const.types'
 import styles from './ServicesTypeContent.module.css'
 

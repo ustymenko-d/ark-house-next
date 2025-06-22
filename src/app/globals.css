@@ -117,6 +117,11 @@ html:has(.isNavOpen) {
 	overflow: hidden;
 }
 
+html:has(.dialog) {
+	background-color: rgba(23, 23, 23, 0.5);
+	overflow-y: hidden;
+}
+
 body {
 	padding-left: calc(100vw - 100%);
 }

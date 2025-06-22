@@ -9,7 +9,7 @@ const TeamSection = () => (
 		className='px-4 mb-14'>
 		<div className='container mx-auto topline mb-14 md:px-10 lg:px-20'>
 			<h2 className='font-semibold leading-tight'>Our team</h2>
-			<Button linkHref='/contact'>Discover&nbsp;All</Button>
+			<Button to='/contact'>Discover&nbsp;All</Button>
 		</div>
 
 		<div className={`${styles.teamWrapper} relative w-full bg-neutral-100`}>

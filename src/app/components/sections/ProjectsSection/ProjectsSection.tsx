@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import Button from '@/components/UI/Button/Button'
-import Banner from '@/components/Banner/Banner'
+import Banner from '@/components/Banner'
 import ProjectCard from '@/components/ProjectCard/ProjectCard'
-import AnimatedWrapper from '@/components/AnimatedWrapper/AnimatedWrapper'
+import AnimatedWrapper from '@/components/AnimatedWrapper'
 import { PROJECTS_CASES } from '@/const/const'
 import styles from './ProjectsSection.module.css'
 
@@ -17,7 +17,7 @@ const ProjectsSection = () => {
 			className='px-4 mb-14'>
 			<div className='container mx-auto topline mb-14 md:px-10 lg:px-20'>
 				<h2 className='font-semibold leading-tight'>Recent Projects</h2>
-				<Button linkHref='/projects'>Discover&nbsp;All</Button>
+				<Button to='/projects'>Discover&nbsp;All</Button>
 			</div>
 
 			<div className='container mx-auto md:px-10 lg:px-20'>
@@ -112,7 +112,7 @@ const ProjectsSection = () => {
 
 				<div className='text-center'>
 					<p className={`${styles.title} mb-6`}>Start a Project?</p>
-					<Button linkHref='/contact'>Contact&nbsp;Us</Button>
+					<Button to='/contact'>Contact&nbsp;Us</Button>
 				</div>
 			</div>
 		</section>

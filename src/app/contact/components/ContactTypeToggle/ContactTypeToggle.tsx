@@ -2,7 +2,7 @@ import clsx from 'clsx'
 import { useBreakpoints } from '@/hooks/useBreakpoints'
 import styles from './ContactTypeToggle.module.css'
 
-interface ContactTypeToggleProps {
+interface IContactTypeToggleProps {
 	phoneType: boolean
 	toggleContactType: () => void
 }
@@ -10,7 +10,7 @@ interface ContactTypeToggleProps {
 const ContactTypeToggle = ({
 	phoneType,
 	toggleContactType,
-}: ContactTypeToggleProps) => {
+}: IContactTypeToggleProps) => {
 	const breakpoints = useBreakpoints([640])
 
 	return (

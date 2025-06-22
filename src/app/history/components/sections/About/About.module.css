@@ -1,6 +1,0 @@
-.about {
-	@media screen and (min-width: 1280px) {
-		grid-template-columns: 61.3% auto;
-		grid-template-rows: auto 1fr;
-	}
-}

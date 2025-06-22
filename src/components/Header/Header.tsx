@@ -1,15 +1,15 @@
 'use client'
 
+import clsx from 'clsx'
 import Link from 'next/link'
 import { useAppStore } from '@/store/store'
 import FocusLock from 'react-focus-lock'
 import Navigation from '../Navigation/Navigation'
-import Logo from '../UI/Logo/Logo'
+import Logo from '../UI/Logo'
 import styles from './Header.module.css'
-import clsx from 'clsx'
 
 const Header = () => {
-	const headerNavVisible = useAppStore((state) => state.headerNavVisible)
+	const headerNavVisible = useAppStore((s) => s.headerNavVisible)
 
 	return (
 		<header className={clsx('z-40', { isNavOpen: headerNavVisible })}>

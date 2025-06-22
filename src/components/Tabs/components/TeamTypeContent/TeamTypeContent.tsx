@@ -1,5 +1,5 @@
-import TeamMemberCard from '@/components/TeamMemberCard/TeamMemberCard'
-import AnimatedWrapper from '@/components/AnimatedWrapper/AnimatedWrapper'
+import TeamMemberCard from '@/components/TeamMemberCard'
+import AnimatedWrapper from '@/components/AnimatedWrapper'
 import { OneTabContent, TeamMember } from '@/const/const.types'
 import clsx from 'clsx'
 

@@ -4,7 +4,7 @@ const TeamMemberCard = ({ teamMember }: { teamMember: TeamMember }) => {
 	const { imgSrc, name, role } = teamMember
 
 	return (
-		<div className=''>
+		<div>
 			<picture>
 				<source
 					media='(max-width: 1250px)'

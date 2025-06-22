@@ -2,13 +2,12 @@
 
 import { useAppStore } from '@/store/store'
 
-interface ModalButtonProps {
+interface ModalButtonProps extends React.HTMLAttributes<HTMLDivElement> {
 	children: React.ReactNode
-	className: string
 }
 
 const ModalButton = ({ children, className }: ModalButtonProps) => {
-	const toggleModalOpen = useAppStore((state) => state.toggleModalOpen)
+	const toggleModalOpen = useAppStore((s) => s.toggleModalOpen)
 
 	return (
 		<div

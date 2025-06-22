@@ -3,29 +3,20 @@
 import { AnimatePresence } from 'framer-motion'
 import { useAppStore } from '@/store/store'
 import ReactFocusLock from 'react-focus-lock'
-import Button from '../UI/Button/Button'
-import AnimatedWrapper from '../AnimatedWrapper/AnimatedWrapper'
-import styles from './Modal.module.css'
-import clsx from 'clsx'
+import Button from './UI/Button/Button'
+import AnimatedWrapper from './AnimatedWrapper'
 
 const Modal = () => {
-	const modalOpen = useAppStore((state) => state.modalOpen)
-	const toggleModalOpen = useAppStore((state) => state.toggleModalOpen)
+	const modalOpen = useAppStore((s) => s.modalOpen)
+	const toggleModalOpen = useAppStore((s) => s.toggleModalOpen)
 
 	return (
 		<AnimatePresence mode='wait'>
 			{modalOpen && (
-				<div
-					className={clsx(
-						styles.dialogWrapper,
-						'fixed inset-0 w-screen h-lvh overflow-y-auto overflow-x-hidden p-4 flex items-center justify-center'
-					)}>
+				<div className='z-[100] fixed inset-0 w-screen h-lvh overflow-y-auto overflow-x-hidden p-4 flex items-center justify-center'>
 					<div
 						onClick={toggleModalOpen}
-						className={clsx(
-							styles.backdrop,
-							'absolute inset-0 w-full h-full'
-						)}></div>
+						className='absolute inset-0 w-full h-full bg-black/50'></div>
 
 					<AnimatedWrapper
 						motionKey='modal'
@@ -33,7 +24,7 @@ const Modal = () => {
 						duration={0.2}
 						additionalClasses='flex items-center justify-center'>
 						<div
-							className={clsx(styles.dialog, 'p-4 bg-white shadow-xl md:p-8')}
+							className='z-[95] p-4 bg-white shadow-xl md:p-8 md:max-w-screen-sm'
 							role='dialog'
 							onKeyDown={(e) => {
 								if (e.code === 'Escape') {
@@ -58,10 +49,10 @@ const Modal = () => {
 										</p>
 									</div>
 									<div className='flex flex-col gap-4 md:items-start'>
-										<Button onClickProp={toggleModalOpen}>
+										<Button onClick={toggleModalOpen}>
 											Close&nbsp;modal&nbsp;window
 										</Button>
-										<Button linkHref='https://ustymenko.vercel.app'>
+										<Button to='https://ustymenko.vercel.app'>
 											Back&nbsp;to&nbsp;portfolio
 										</Button>
 									</div>

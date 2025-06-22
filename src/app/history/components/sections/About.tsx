@@ -1,11 +1,9 @@
-import clsx from 'clsx'
 import Image from 'next/image'
 import Button from '@/components/UI/Button/Button'
-import AnimatedWrapper from '@/components/AnimatedWrapper/AnimatedWrapper'
-import styles from './About.module.css'
+import AnimatedWrapper from '@/components/AnimatedWrapper'
 
 const About = () => (
-	<section className={clsx(styles.about, 'mb-16 xl:grid xl:gap-x-6')}>
+	<section className='mb-16 xl:grid xl:gap-x-6 xl:grid-cols-[61.3%_auto] xl:grid-rows-[auto_1fr]'>
 		<h2 className='mb-4 text-5xl font-semibold leading-normal tracking-tight xl:col-span-2'>
 			Who we are
 		</h2>
@@ -55,7 +53,7 @@ const About = () => (
 				</p>
 			</AnimatedWrapper>
 			<AnimatedWrapper delay={0.2}>
-				<Button linkHref='/contact'>Our&nbsp;Vacancies</Button>
+				<Button to='/contact'>Our&nbsp;Vacancies</Button>
 			</AnimatedWrapper>
 		</div>
 	</section>

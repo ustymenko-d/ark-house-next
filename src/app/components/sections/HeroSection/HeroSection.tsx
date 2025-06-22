@@ -1,6 +1,6 @@
 import Button from '@/components/UI/Button/Button'
 import SocialLinks from '@/components/UI/SocialLinks/SocialLinks'
-import AnimatedWrapper from '@/components/AnimatedWrapper/AnimatedWrapper'
+import AnimatedWrapper from '@/components/AnimatedWrapper'
 import styles from './HeroSection.module.css'
 
 const HeroSection = () => (
@@ -26,7 +26,7 @@ const HeroSection = () => (
 			</AnimatedWrapper>
 		</div>
 		<div className='z-10 flex flex-col items-start gap-8 px-4 lg:items-end lg:px-0 lg:self-center xl:self-start xl:gap-20 xl:items-end'>
-			<Button linkHref='/contact'>Contact&nbsp;us</Button>
+			<Button to='/contact'>Contact&nbsp;us</Button>
 			<SocialLinks />
 		</div>
 

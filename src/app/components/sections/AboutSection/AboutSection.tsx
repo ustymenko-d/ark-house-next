@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Button from '@/components/UI/Button/Button'
-import AnimatedWrapper from '@/components/AnimatedWrapper/AnimatedWrapper'
+import AnimatedWrapper from '@/components/AnimatedWrapper'
 import styles from './AboutSection.module.css'
 
 const imagesNames: string[] = ['about-1', 'about-2', 'about-3']
@@ -51,7 +51,7 @@ const AboutSection = () => (
 				architecture that remains relevant - not based on trends, fads or dates
 				- but on timeless human truths.
 			</p>
-			<Button linkHref='/history'>Our&nbsp;History</Button>
+			<Button to='/history'>Our&nbsp;History</Button>
 		</div>
 	</section>
 )

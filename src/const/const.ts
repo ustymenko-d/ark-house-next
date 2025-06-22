@@ -1,4 +1,5 @@
 import {
+	Address,
 	Article,
 	NavigationLink,
 	ProjectCase,
@@ -419,5 +420,25 @@ export const ONE_PROJECT: ProjectCase[] = [
 		title: 'Hanging balconies',
 		subtitle: 'London',
 		imgSrc: '/img/project/sixth',
+	},
+]
+
+export const ADDRESSES: Address[] = [
+	{
+		title: 'North',
+		lines: [
+			'AFL Architects',
+			'St Georges House 56',
+			'Peter Street',
+			'Manchester',
+		],
+		phone: '+44 (0)161 236 6263',
+		href: 'tel:+4401612366263',
+	},
+	{
+		title: 'Midlands',
+		lines: ['AFL Architects', 'Unit 12 133', 'Newhall Street', 'Birmingham'],
+		phone: '+44 (0)121 289 4363',
+		href: 'tel:+4401212894363',
 	},
 ]

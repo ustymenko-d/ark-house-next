@@ -1,7 +1,5 @@
-import clsx from 'clsx'
 import Image from 'next/image'
 import { Article } from '@/const/const.types'
-import styles from './ArticleItem.module.css'
 
 const ArticleItem = ({ article }: { article: Article }) => {
 	const { title, content, dateTime, imgSrc } = article
@@ -23,7 +21,7 @@ const ArticleItem = ({ article }: { article: Article }) => {
 					type='image/webp'
 				/>
 				<Image
-					className={clsx(styles.image, 'flex-grow bg-dark-color')}
+					className='aspect-[7/5] flex-grow bg-dark-color'
 					src={`${imgSrc}.jpg`}
 					loading='lazy'
 					alt=''
@@ -34,7 +32,7 @@ const ArticleItem = ({ article }: { article: Article }) => {
 
 			<div className='p-4'>
 				<time
-					className={clsx(styles.date, 'mb-1 text-xl')}
+					className='mb-1 text-xl text-zinc-800'
 					dateTime={dateTime}>
 					{dateTime}
 				</time>

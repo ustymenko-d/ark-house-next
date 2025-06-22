@@ -1,10 +1,10 @@
 'use client'
 
+import clsx from 'clsx'
 import { AnimatePresence } from 'framer-motion'
 import useScrollBeyondThreshold from '@/hooks/useScrollBeyondThreshold'
-import AnimatedWrapper from '@/components/AnimatedWrapper/AnimatedWrapper'
+import AnimatedWrapper from '@/components/AnimatedWrapper'
 import styles from './ToTopButton.module.css'
-import clsx from 'clsx'
 
 const ToTopButton = () => {
 	const hasScrolledBeyond = useScrollBeyondThreshold(50)
@@ -23,10 +23,13 @@ const ToTopButton = () => {
 						additionalClasses='h-full'>
 						<button
 							onClick={handleGoToTop}
-							aria-label='To top button'
+							aria-label='Scroll to top'
 							className={clsx(
 								styles.toTop,
-								'pointer-events-auto box-content w-5 h-5 fixed bottom-4 right-4 border border-dark-color p-4 transition-all duration-300 text-dark-color shadow'
+								'x-[3] bg-[#f8f8f8] pointer-events-auto box-content w-5 h-5 fixed bottom-4 right-4 border border-dark-color p-4 transition-all duration-300 text-dark-color shadow',
+								'focus-visible:outline focus-visible:outline-1 focus-visible:outline-[var(--dark-color)] focus-visible:outline-offset-4',
+								'hover:outline hover:outline-1 hover:outline-[var(--dark-color)] hover:outline-offset-4',
+								'active:outline active:outline-1 active:outline-[var(--dark-color)] active:outline-offset-4'
 							)}></button>
 					</AnimatedWrapper>
 				</div>

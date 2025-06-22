@@ -1,7 +1,4 @@
 .toTop {
-	z-index: 3;
-	background-color: #f8f8f8;
-
 	&::after {
 		content: url(../../../assets/icons/arrow-up-right.svg);
 		position: absolute;
@@ -11,24 +8,5 @@
 		top: 0;
 		transform: scale(0.7);
 		transition: all 0.4s;
-	}
-
-	&:focus-visible {
-		outline: 1px solid var(--dark-color);
-		outline-offset: 4px;
-	}
-
-	@media (hover: hover) {
-		&:hover {
-			outline: 1px solid var(--dark-color);
-			outline-offset: 4px;
-		}
-	}
-
-	@media (hover: none) {
-		&:active {
-			outline: 1px solid var(--dark-color);
-			outline-offset: 4px;
-		}
 	}
 }

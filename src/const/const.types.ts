@@ -38,3 +38,10 @@ export interface ProjectCharacteristic {
 	characteristic: string
 	value: string
 }
+
+export interface Address {
+	title: string
+	lines: string[]
+	phone: string
+	href: string
+}

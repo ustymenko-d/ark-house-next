@@ -1,5 +1,5 @@
 import Button from '@/components/UI/Button/Button'
-import Banner from '@/components/Banner/Banner'
+import Banner from '@/components/Banner'
 import Tabs from '@/components/Tabs/Tabs'
 import { SERVICES_TABS } from '@/const/const'
 import styles from './ServicesSection.module.css'
@@ -25,7 +25,7 @@ const ServicesSection = () => (
 		className='px-4 mb-14'>
 		<div className='container mx-auto topline mb-14 md:px-10 lg:px-20'>
 			<h2 className='font-semibold leading-tight'>Services</h2>
-			<Button linkHref='/projects'>Discover&nbsp;All</Button>
+			<Button to='/projects'>Discover&nbsp;All</Button>
 		</div>
 
 		<div
@@ -46,7 +46,7 @@ const ServicesSection = () => (
 					To&nbsp;love. To&nbsp;image. To&nbsp;wonder. To&nbsp;guide.
 					To&nbsp;jest. To&nbsp;rule. To&nbsp;serve. To&nbsp;belong.
 				</p>
-				<Button linkHref='/contact'>Contact&nbsp;Us</Button>
+				<Button to='/contact'>Contact&nbsp;Us</Button>
 			</div>
 		</div>
 	</section>

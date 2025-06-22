@@ -1,16 +1,14 @@
 import React from 'react'
 import Image from 'next/image'
-import clsx from 'clsx'
-import ProjectCharacteristicItem from '../../ProjectCharacteristicItem/ProjectCharacteristicItem'
+import ProjectCharacteristicItem from '../ProjectCharacteristicItem'
 import { PROJECT_CHARACTERISTICS } from '@/const/const'
-import styles from './HeroSection.module.css'
 
-const HeroSection = () => (
+const Hero = () => (
 	<section className='pt-8 mb-14'>
 		<div className='container px-4 mx-auto md:px-10 lg:px-20'>
 			<h1 className='mb-4 text-5xl font-semibold'>Central Saint Giles</h1>
 
-			<div className={clsx(styles.grid, 'mb-4 grid gap-6')}>
+			<div className='mb-4 grid gap-6 sm:grid-cols-[1fr_auto] xl:grid-cols-[73%_auto]'>
 				<picture className='lg:row-span-full'>
 					<source
 						media='(max-width: 1023px)'
@@ -53,4 +51,4 @@ const HeroSection = () => (
 	</section>
 )
 
-export default HeroSection
+export default Hero

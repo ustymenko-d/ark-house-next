@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Logo from '../UI/Logo/Logo'
+import Logo from '../UI/Logo'
 import { ProjectCase } from '@/const/const.types'
 import styles from './ProjectCard.module.css'
 import clsx from 'clsx'

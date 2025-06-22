@@ -4,7 +4,7 @@ import ReactFocusLock from 'react-focus-lock'
 import Image from 'next/image'
 import { useAppStore } from '@/store/store'
 import Button from '../UI/Button/Button'
-import AnimatedWrapper from '../AnimatedWrapper/AnimatedWrapper'
+import AnimatedWrapper from '../AnimatedWrapper'
 import styles from './ProjectModal.module.css'
 
 const ProjectModal = ({ imageSrc }: { imageSrc: string }) => {
@@ -65,10 +65,10 @@ const ProjectModal = ({ imageSrc }: { imageSrc: string }) => {
 								</picture>
 							</div>
 							<div className='flex flex-col gap-4 md:items-start lg:grid lg:grid-cols-2'>
-								<Button onClickProp={toggleProjectModalOpen}>
+								<Button onClick={toggleProjectModalOpen}>
 									Close&nbsp;modal&nbsp;window
 								</Button>
-								<Button linkHref='https://ustymenko.vercel.app'>
+								<Button to='https://ustymenko.vercel.app'>
 									Back&nbsp;to&nbsp;portfolio
 								</Button>
 							</div>
