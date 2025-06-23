@@ -1,9 +1,11 @@
 import Link from 'next/link'
-import Button from '@/components/UI/Button/Button'
+
+import AnimatedWrapper from '@/components/AnimatedWrapper'
 import Banner from '@/components/Banner'
 import ProjectCard from '@/components/ProjectCard/ProjectCard'
-import AnimatedWrapper from '@/components/AnimatedWrapper'
+import Button from '@/components/UI/Button/Button'
 import { PROJECTS_CASES } from '@/const/const'
+
 import styles from './ProjectsSection.module.css'
 
 const ProjectsSection = () => {

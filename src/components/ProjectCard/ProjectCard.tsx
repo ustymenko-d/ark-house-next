@@ -1,8 +1,10 @@
-import Image from 'next/image'
-import Logo from '../UI/Logo'
-import { ProjectCase } from '@/const/const.types'
-import styles from './ProjectCard.module.css'
 import clsx from 'clsx'
+import Image from 'next/image'
+
+import { ProjectCase } from '@/const/const.types'
+
+import Logo from '../UI/Logo'
+import styles from './ProjectCard.module.css'
 
 const ProjectCard = ({ projectCase }: { projectCase: ProjectCase }) => {
 	const { title, subtitle, imgSrc } = projectCase

@@ -1,4 +1,5 @@
 import clsx from 'clsx'
+
 import styles from './Popup.module.css'
 
 const Popup = ({ closePopup }: { closePopup: () => void }) => (

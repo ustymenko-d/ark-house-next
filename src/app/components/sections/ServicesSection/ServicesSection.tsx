@@ -1,7 +1,8 @@
-import Button from '@/components/UI/Button/Button'
 import Banner from '@/components/Banner'
 import Tabs from '@/components/Tabs/Tabs'
+import Button from '@/components/UI/Button/Button'
 import { SERVICES_TABS } from '@/const/const'
+
 import styles from './ServicesSection.module.css'
 
 const bannerNumber = (

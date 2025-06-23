@@ -1,5 +1,7 @@
 import clsx from 'clsx'
+
 import { useBreakpoints } from '@/hooks/useBreakpoints'
+
 import styles from './ContactTypeToggle.module.css'
 
 interface IContactTypeToggleProps {

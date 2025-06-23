@@ -1,7 +1,9 @@
-import React from 'react'
 import Image from 'next/image'
-import ProjectCharacteristicItem from '../ProjectCharacteristicItem'
+import React from 'react'
+
 import { PROJECT_CHARACTERISTICS } from '@/const/const'
+
+import ProjectCharacteristicItem from '../ProjectCharacteristicItem'
 
 const Hero = () => (
 	<section className='pt-8 mb-14'>

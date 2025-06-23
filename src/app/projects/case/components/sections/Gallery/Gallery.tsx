@@ -1,9 +1,11 @@
-import Button from '@/components/UI/Button/Button'
-import ProjectCard from '@/components/ProjectCard/ProjectCard'
-import AnimatedWrapper from '@/components/AnimatedWrapper'
-import { ONE_PROJECT } from '@/const/const'
-import styles from './Gallery.module.css'
 import clsx from 'clsx'
+
+import AnimatedWrapper from '@/components/AnimatedWrapper'
+import ProjectCard from '@/components/ProjectCard/ProjectCard'
+import Button from '@/components/UI/Button/Button'
+import { ONE_PROJECT } from '@/const/const'
+
+import styles from './Gallery.module.css'
 
 const Gallery = () => (
 	<section className='mb-14 md:mb-20'>

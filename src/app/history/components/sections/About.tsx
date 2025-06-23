@@ -1,6 +1,7 @@
 import Image from 'next/image'
-import Button from '@/components/UI/Button/Button'
+
 import AnimatedWrapper from '@/components/AnimatedWrapper'
+import Button from '@/components/UI/Button/Button'
 
 const About = () => (
 	<section className='mb-16 xl:grid xl:gap-x-6 xl:grid-cols-[61.3%_auto] xl:grid-rows-[auto_1fr]'>

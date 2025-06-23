@@ -1,6 +1,8 @@
 import clsx from 'clsx'
-import NavigationItem from '../NavigationItem/NavigationItem'
+
 import { NAVIGATION_LINKS } from '@/const/const'
+
+import NavigationItem from '../NavigationItem/NavigationItem'
 import styles from './NavigationList.module.css'
 
 interface NavigationListProps {

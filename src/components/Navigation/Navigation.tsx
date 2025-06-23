@@ -2,8 +2,10 @@
 
 import clsx from 'clsx'
 import { useCallback, useEffect } from 'react'
+
 import { useBreakpoints } from '@/hooks/useBreakpoints'
 import { useAppStore } from '@/store/store'
+
 import NavigationList from './components/NavigationList/NavigationList'
 import styles from './Navigation.module.css'
 

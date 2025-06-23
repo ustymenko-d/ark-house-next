@@ -2,8 +2,10 @@
 
 import clsx from 'clsx'
 import { AnimatePresence } from 'framer-motion'
-import useScrollBeyondThreshold from '@/hooks/useScrollBeyondThreshold'
+
 import AnimatedWrapper from '@/components/AnimatedWrapper'
+import useScrollBeyondThreshold from '@/hooks/useScrollBeyondThreshold'
+
 import styles from './ToTopButton.module.css'
 
 const ToTopButton = () => {

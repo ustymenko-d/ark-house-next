@@ -1,4 +1,5 @@
 import Image from 'next/image'
+
 import { Article } from '@/const/const.types'
 
 const ArticleItem = ({ article }: { article: Article }) => {

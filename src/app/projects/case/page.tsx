@@ -1,9 +1,10 @@
 import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs'
-import Hero from './components/sections/Hero'
-import Gallery from './components/sections/Gallery/Gallery'
 import Tabs from '@/components/Tabs/Tabs'
 import Button from '@/components/UI/Button/Button'
 import { TEAM_TABS } from '@/const/const'
+
+import Gallery from './components/sections/Gallery/Gallery'
+import Hero from './components/sections/Hero'
 
 const navItems = [
 	{

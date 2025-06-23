@@ -1,8 +1,10 @@
 import clsx from 'clsx'
 import Link from 'next/link'
-import ProjectCard from '@/components/ProjectCard/ProjectCard'
+
 import AnimatedWrapper from '@/components/AnimatedWrapper'
+import ProjectCard from '@/components/ProjectCard/ProjectCard'
 import { OneTabContent, ProjectCase } from '@/const/const.types'
+
 import styles from './ProjectsTypeContent.module.css'
 
 interface ProjectsTypeContentProps {

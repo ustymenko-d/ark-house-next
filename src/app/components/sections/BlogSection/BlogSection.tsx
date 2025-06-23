@@ -1,12 +1,13 @@
 'use client'
 
-import Button from '@/components/UI/Button/Button'
+import AnimatedWrapper from '@/components/AnimatedWrapper'
 import ArticleItem from '@/components/ArticleItem'
+import ModalButton from '@/components/ModalButton'
+import Button from '@/components/UI/Button/Button'
 import { BLOG_ARTICLES } from '@/const/const'
 import { useAppStore } from '@/store/store'
+
 import styles from './BlogSection.module.css'
-import ModalButton from '@/components/ModalButton'
-import AnimatedWrapper from '@/components/AnimatedWrapper'
 
 const BlogSection = () => {
 	const toggleModalOpen = useAppStore((state) => state.toggleModalOpen)

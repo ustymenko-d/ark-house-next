@@ -2,10 +2,12 @@
 
 import { useState } from 'react'
 import { z } from 'zod'
+
 import Button from '@/components/UI/Button/Button'
+
+import ContactTypeToggle from './components/ContactTypeToggle/ContactTypeToggle'
 import Input from './components/Input/Input'
 import Popup from './components/Popup/Popup'
-import ContactTypeToggle from './components/ContactTypeToggle/ContactTypeToggle'
 
 const nameSchema = z
 	.string()

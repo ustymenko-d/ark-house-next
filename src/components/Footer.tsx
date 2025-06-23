@@ -1,8 +1,10 @@
 import { Fragment } from 'react'
+
+import { ADDRESSES, PROJECT_DESCRIPTION } from '@/const/const'
+
+import NavigationList from './Navigation/components/NavigationList/NavigationList'
 import Button from './UI/Button/Button'
 import SocialLinks from './UI/SocialLinks/SocialLinks'
-import NavigationList from './Navigation/components/NavigationList/NavigationList'
-import { ADDRESSES, PROJECT_DESCRIPTION } from '@/const/const'
 
 const LIST_CLASSES: string =
 	'relative min-h-fit left-0 top-0 py-5 px-0 flex flex-row flex-wrap justify-start items-center gap-8 transition-none text-xl' as const

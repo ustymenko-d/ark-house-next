@@ -1,6 +1,8 @@
 import Image from 'next/image'
-import Button from '@/components/UI/Button/Button'
+
 import AnimatedWrapper from '@/components/AnimatedWrapper'
+import Button from '@/components/UI/Button/Button'
+
 import styles from './AboutSection.module.css'
 
 const imagesNames: string[] = ['about-1', 'about-2', 'about-3']

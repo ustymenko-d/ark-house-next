@@ -1,10 +1,12 @@
 'use client'
 
-import ReactFocusLock from 'react-focus-lock'
 import Image from 'next/image'
+import ReactFocusLock from 'react-focus-lock'
+
 import { useAppStore } from '@/store/store'
-import Button from '../UI/Button/Button'
+
 import AnimatedWrapper from '../AnimatedWrapper'
+import Button from '../UI/Button/Button'
 import styles from './ProjectModal.module.css'
 
 const ProjectModal = ({ imageSrc }: { imageSrc: string }) => {

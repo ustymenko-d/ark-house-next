@@ -1,12 +1,14 @@
+import './globals.css'
+
+import clsx from 'clsx'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import clsx from 'clsx'
-import Header from '@/components/Header/Header'
+
 import Footer from '@/components/Footer'
-import ToTopButton from '@/components/UI/ToTopButton/ToTopButton'
+import Header from '@/components/Header/Header'
 import Modal from '@/components/Modal'
+import ToTopButton from '@/components/UI/ToTopButton/ToTopButton'
 import { PROJECT_DESCRIPTION } from '@/const/const'
-import './globals.css'
 
 export const metadata: Metadata = {
 	title: 'Ark-House',

@@ -1,6 +1,7 @@
+import AnimatedWrapper from '@/components/AnimatedWrapper'
 import Button from '@/components/UI/Button/Button'
 import SocialLinks from '@/components/UI/SocialLinks/SocialLinks'
-import AnimatedWrapper from '@/components/AnimatedWrapper'
+
 import styles from './HeroSection.module.css'
 
 const HeroSection = () => (

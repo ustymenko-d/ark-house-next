@@ -1,11 +1,13 @@
 'use client'
 
-import { useState } from 'react'
 import clsx from 'clsx'
-import ServicesTypeContent from './components/ServicesTypeContent/ServicesTypeContent'
-import ProjectsTypeContent from './components/ProjectsTypeContent/ProjectsTypeContent'
-import TeamTypeContent from './components/TeamTypeContent/TeamTypeContent'
+import { useState } from 'react'
+
 import { TabList } from '@/const/const.types'
+
+import ProjectsTypeContent from './components/ProjectsTypeContent/ProjectsTypeContent'
+import ServicesTypeContent from './components/ServicesTypeContent/ServicesTypeContent'
+import TeamTypeContent from './components/TeamTypeContent/TeamTypeContent'
 import styles from './Tabs.module.css'
 
 interface TabsProps {

@@ -1,7 +1,9 @@
 'use client'
 
 import clsx from 'clsx'
+
 import { useAppStore } from '@/store/store'
+
 import styles from './SocialLinks.module.css'
 
 const SOCIAL: string[] = ['Instagram', 'Twitter', 'Linkedin']

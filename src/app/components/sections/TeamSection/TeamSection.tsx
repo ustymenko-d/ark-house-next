@@ -1,6 +1,7 @@
-import Button from '@/components/UI/Button/Button'
 import Tabs from '@/components/Tabs/Tabs'
+import Button from '@/components/UI/Button/Button'
 import { TEAM_TABS } from '@/const/const'
+
 import styles from './TeamSection.module.css'
 
 const TeamSection = () => (

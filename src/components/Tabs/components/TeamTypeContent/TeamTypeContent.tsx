@@ -1,7 +1,8 @@
-import TeamMemberCard from '@/components/TeamMemberCard'
-import AnimatedWrapper from '@/components/AnimatedWrapper'
-import { OneTabContent, TeamMember } from '@/const/const.types'
 import clsx from 'clsx'
+
+import AnimatedWrapper from '@/components/AnimatedWrapper'
+import TeamMemberCard from '@/components/TeamMemberCard'
+import { OneTabContent, TeamMember } from '@/const/const.types'
 
 interface TeamTypeContentProps {
 	tabsContent: OneTabContent[]

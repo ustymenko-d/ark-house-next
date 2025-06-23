@@ -2,8 +2,10 @@
 
 import clsx from 'clsx'
 import Link from 'next/link'
-import { useAppStore } from '@/store/store'
 import FocusLock from 'react-focus-lock'
+
+import { useAppStore } from '@/store/store'
+
 import Navigation from '../Navigation/Navigation'
 import Logo from '../UI/Logo'
 import styles from './Header.module.css'

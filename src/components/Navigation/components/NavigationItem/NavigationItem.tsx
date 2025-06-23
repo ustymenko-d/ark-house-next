@@ -3,7 +3,9 @@
 import clsx from 'clsx'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+
 import { NavigationLink } from '@/const/const.types'
+
 import styles from './NavigationItem.module.css'
 
 type NavigationItemProps = {

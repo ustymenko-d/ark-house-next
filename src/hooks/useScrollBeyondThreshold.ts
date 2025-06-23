@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useEffect,useState } from 'react'
 
 const useScrollBeyondThreshold = (threshold = 100, delay = 200) => {
 	const [hasScrolledBeyondThreshold, setHasScrolledBeyondThreshold] =

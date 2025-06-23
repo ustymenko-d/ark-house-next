@@ -1,10 +1,12 @@
 'use client'
 
 import { AnimatePresence } from 'framer-motion'
-import { useAppStore } from '@/store/store'
 import ReactFocusLock from 'react-focus-lock'
-import Button from './UI/Button/Button'
+
+import { useAppStore } from '@/store/store'
+
 import AnimatedWrapper from './AnimatedWrapper'
+import Button from './UI/Button/Button'
 
 const Modal = () => {
 	const modalOpen = useAppStore((s) => s.modalOpen)

@@ -1,8 +1,8 @@
 'use client'
 
 import clsx from 'clsx'
-import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
+import { useRef } from 'react'
 
 type AnimatedWrapperProps = {
 	children: React.ReactNode
