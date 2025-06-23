@@ -2,19 +2,11 @@ import clsx from 'clsx'
 import Image from 'next/image'
 
 import AnimatedWrapper from '@/components/AnimatedWrapper'
-import { OneTabContent } from '@/const/const.types'
+import { ITabContentProps } from '@/const/const.types'
 
 import styles from './ServicesTypeContent.module.css'
 
-interface ServicesTypeContentProps {
-	tabsContent: OneTabContent[]
-	activeTab: string
-}
-
-const ServicesTypeContent = ({
-	tabsContent,
-	activeTab,
-}: ServicesTypeContentProps) =>
+const ServicesTypeContent = ({ tabsContent, activeTab }: ITabContentProps) =>
 	tabsContent.map((item, index) => {
 		const { tabName, content } = item
 

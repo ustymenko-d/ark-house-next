@@ -10,19 +10,16 @@ import NavigationList from './components/NavigationList/NavigationList'
 import styles from './Navigation.module.css'
 
 const Navigation = () => {
-	const headerNavVisible = useAppStore((state) => state.headerNavVisible)
-	const toggleHeaderNav = useAppStore((state) => state.toggleHeaderNav)
+	const headerNavVisible = useAppStore((s) => s.headerNavVisible)
+	const toggleHeaderNav = useAppStore((s) => s.toggleHeaderNav)
+
 	const breakpoints = useBreakpoints([767])
 
-	const toggleNavListVisible = useCallback(() => {
-		if (!headerNavVisible) {
-			window.scrollTo({
-				top: 0,
-				left: 0,
-				behavior: 'smooth',
-			})
-		}
+	const isMobile = breakpoints === 0
+	const shouldAutoClose = breakpoints === 1 && headerNavVisible
 
+	const toggleNavListVisible = useCallback(() => {
+		if (!headerNavVisible) window.scrollTo({ top: 0, behavior: 'smooth' })
 		toggleHeaderNav()
 	}, [headerNavVisible, toggleHeaderNav])
 
@@ -38,14 +35,12 @@ const Navigation = () => {
 	}, [headerNavVisible, toggleNavListVisible])
 
 	useEffect(() => {
-		if (breakpoints === 1 && headerNavVisible) {
-			toggleNavListVisible()
-		}
+		if (shouldAutoClose) toggleNavListVisible()
 	})
 
 	return (
 		<nav>
-			{breakpoints === 0 && (
+			{isMobile && (
 				<button
 					className={clsx(
 						styles.toggler,

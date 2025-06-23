@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 
-const Logo = ({ className }: { className?: string }) => (
+const Logo = ({ className }: React.HTMLAttributes<HTMLDivElement>) => (
 	<div className={clsx(className, 'inline-block py-3 px-3 bg-neutral-950')}>
 		<svg
 			className='w-full h-auto'

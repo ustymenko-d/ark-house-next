@@ -2,12 +2,12 @@ import Link from 'next/link'
 
 import styles from './Breadcrumbs.module.css'
 
-interface NavItem {
+interface INavItem {
 	name: string
 	href?: string
 }
 
-const Breadcrumbs = ({ navItems }: { navItems: NavItem[] }) => (
+const Breadcrumbs = ({ navItems }: { navItems: INavItem[] }) => (
 	<nav
 		className='pt-12 mb-8'
 		aria-label='Breadcrumb'>

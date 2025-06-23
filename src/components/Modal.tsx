@@ -24,7 +24,7 @@ const Modal = () => {
 						motionKey='modal'
 						typeFade={false}
 						duration={0.2}
-						additionalClasses='flex items-center justify-center'>
+						className='flex items-center justify-center'>
 						<div
 							className='z-[95] p-4 bg-white shadow-xl md:p-8 md:max-w-screen-sm'
 							role='dialog'

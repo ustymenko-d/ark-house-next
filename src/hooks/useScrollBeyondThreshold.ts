@@ -1,31 +1,34 @@
-import { useEffect,useState } from 'react'
+'use client'
 
-const useScrollBeyondThreshold = (threshold = 100, delay = 200) => {
+import { useEffect, useRef, useState } from 'react'
+
+const useScrollBeyondThreshold = (
+	threshold: number = 100,
+	delay: number = 200
+) => {
 	const [hasScrolledBeyondThreshold, setHasScrolledBeyondThreshold] =
 		useState(false)
-	const [timer, setTimer] = useState<NodeJS.Timeout | null>(null)
+	const timerRef = useRef<NodeJS.Timeout | null>(null)
 
 	useEffect(() => {
 		const handleScroll = () => {
 			const scrollPosition = window.scrollY
 			const thresholdInPixels = window.innerHeight * (threshold / 100)
 
-			if (timer) clearTimeout(timer)
+			if (timerRef.current) clearTimeout(timerRef.current)
 
-			const newTimer = setTimeout(() => {
+			timerRef.current = setTimeout(() => {
 				setHasScrolledBeyondThreshold(scrollPosition > thresholdInPixels)
 			}, delay)
-
-			setTimer(newTimer)
 		}
 
 		window.addEventListener('scroll', handleScroll)
 
 		return () => {
 			window.removeEventListener('scroll', handleScroll)
-			if (timer) clearTimeout(timer)
+			if (timerRef.current) clearTimeout(timerRef.current)
 		}
-	}, [threshold, delay, timer])
+	}, [threshold, delay])
 
 	return hasScrolledBeyondThreshold
 }

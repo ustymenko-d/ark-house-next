@@ -23,8 +23,8 @@ const Gallery = () => (
 				<div
 					key={`oneProject-${index}`}
 					className={clsx(styles.button, 'duration-200')}>
-					<AnimatedWrapper additionalClasses='h-full'>
-						<ProjectCard projectCase={oneProject} />
+					<AnimatedWrapper className='h-full'>
+						<ProjectCard {...oneProject} />
 					</AnimatedWrapper>
 				</div>
 			))}

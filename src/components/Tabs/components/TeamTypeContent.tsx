@@ -2,14 +2,9 @@ import clsx from 'clsx'
 
 import AnimatedWrapper from '@/components/AnimatedWrapper'
 import TeamMemberCard from '@/components/TeamMemberCard'
-import { OneTabContent, TeamMember } from '@/const/const.types'
+import { ITabContentProps, TeamMember } from '@/const/const.types'
 
-interface TeamTypeContentProps {
-	tabsContent: OneTabContent[]
-	activeTab: string
-}
-
-const TeamTypeContent = ({ tabsContent, activeTab }: TeamTypeContentProps) =>
+const TeamTypeContent = ({ tabsContent, activeTab }: ITabContentProps) =>
 	tabsContent.map((item, index) => (
 		<div
 			key={`${item.tabName}-${index}`}
@@ -28,7 +23,7 @@ const TeamTypeContent = ({ tabsContent, activeTab }: TeamTypeContentProps) =>
 							typeFade={false}
 							key={`${member.name}-${memberIndex}`}
 							delay={(memberIndex + memberIndex) * 0.1}>
-							<TeamMemberCard teamMember={member} />
+							<TeamMemberCard {...member} />
 						</AnimatedWrapper>
 					)
 				)}

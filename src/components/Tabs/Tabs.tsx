@@ -7,53 +7,33 @@ import { TabList } from '@/const/const.types'
 
 import ProjectsTypeContent from './components/ProjectsTypeContent/ProjectsTypeContent'
 import ServicesTypeContent from './components/ServicesTypeContent/ServicesTypeContent'
-import TeamTypeContent from './components/TeamTypeContent/TeamTypeContent'
+import TeamTypeContent from './components/TeamTypeContent'
 import styles from './Tabs.module.css'
 
-interface TabsProps {
+interface ITabsProps {
 	tabsType: 'services' | 'projects' | 'team'
 	tabsList: TabList
 }
 
-const Tabs = ({ tabsType, tabsList }: TabsProps) => {
+const CONTENT_COMPONENTS = {
+	services: ServicesTypeContent,
+	projects: ProjectsTypeContent,
+	team: TeamTypeContent,
+} as const
+
+const Tabs = ({ tabsType, tabsList }: ITabsProps) => {
 	const { tabs, tabsContent } = tabsList
-	const [activeTab, setActiveTab] = useState<string>(tabs[0])
+
+	const [activeTab, setActiveTab] = useState(tabs[0])
+
 	const isProjects = tabsType === 'projects'
 	const isServices = tabsType === 'services'
 
-	const handleChangeTab = (newActiveTab: string | null) => {
-		if (newActiveTab) {
-			setActiveTab(newActiveTab)
-		}
+	const handleChangeTab = (tab: string | null) => {
+		if (tab) setActiveTab(tab)
 	}
 
-	const renderContent = () => {
-		switch (tabsType) {
-			case 'services':
-				return (
-					<ServicesTypeContent
-						tabsContent={tabsContent}
-						activeTab={activeTab}
-					/>
-				)
-			case 'projects':
-				return (
-					<ProjectsTypeContent
-						tabsContent={tabsContent}
-						activeTab={activeTab}
-					/>
-				)
-			case 'team':
-				return (
-					<TeamTypeContent
-						tabsContent={tabsContent}
-						activeTab={activeTab}
-					/>
-				)
-			default:
-				return null
-		}
-	}
+	const ContentComponent = CONTENT_COMPONENTS[tabsType]
 
 	return (
 		<div
@@ -75,27 +55,32 @@ const Tabs = ({ tabsType, tabsList }: TabsProps) => {
 					}
 				)}
 				role='tablist'>
-				{tabs.map((tabName, index) => (
+				{tabs.map((tab, index) => (
 					<button
-						key={`${tabName}-${index}`}
+						key={`${tab}-${index}`}
 						id={`${tabsType}-tab-${index}`}
 						className={clsx(
-							{ [styles.tabButton_active]: activeTab === tabName },
+							{ [styles.tabButton_active]: activeTab === tab },
 							'animatedUnderline text-2xl font-semibold bg-transparent text-dark-color'
 						)}
-						onClick={(e) =>
-							handleChangeTab((e.target as HTMLButtonElement).textContent)
-						}
+						onClick={() => handleChangeTab(tab)}
 						role='tab'
-						aria-selected={activeTab === tabName}
+						aria-selected={activeTab === tab}
 						aria-controls={`${tabsType}-tabpanel-${index}`}
-						aria-label={`Set ${tabName} tab`}>
-						{tabName}
+						aria-label={`Set ${tab} tab`}>
+						{tab}
 					</button>
 				))}
 			</div>
 
-			<div>{renderContent()}</div>
+			<div>
+				{ContentComponent && (
+					<ContentComponent
+						tabsContent={tabsContent}
+						activeTab={activeTab}
+					/>
+				)}
+			</div>
 		</div>
 	)
 }

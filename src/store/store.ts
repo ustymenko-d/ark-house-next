@@ -1,7 +1,7 @@
 import { create } from 'zustand'
 import { devtools } from 'zustand/middleware'
 
-interface AppState {
+interface IAppState {
 	headerNavVisible: boolean
 	toggleHeaderNav: () => void
 
@@ -12,7 +12,7 @@ interface AppState {
 	toggleProjectModalOpen: () => void
 }
 
-export const useAppStore = create<AppState>()(
+export const useAppStore = create<IAppState>()(
 	devtools(
 		(set) => ({
 			headerNavVisible: false,

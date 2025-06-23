@@ -5,8 +5,7 @@ import { NAVIGATION_LINKS } from '@/const/const'
 import NavigationItem from '../NavigationItem/NavigationItem'
 import styles from './NavigationList.module.css'
 
-interface NavigationListProps {
-	className: string
+interface INavigationListProps extends React.HTMLAttributes<HTMLUListElement> {
 	navListVisible?: boolean
 	header?: boolean
 	toggleNavListVisible?: () => void
@@ -17,7 +16,7 @@ const NavigationList = ({
 	navListVisible,
 	header,
 	toggleNavListVisible,
-}: NavigationListProps) => (
+}: INavigationListProps) => (
 	<ul
 		id={header ? 'navigation-list' : 'footer-navigation-list'}
 		className={clsx(className, {

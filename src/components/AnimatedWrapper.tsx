@@ -4,13 +4,12 @@ import clsx from 'clsx'
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 
-type AnimatedWrapperProps = {
+interface IAnimatedWrapperProps extends React.HTMLAttributes<HTMLDivElement> {
 	children: React.ReactNode
 	motionKey?: string
 	delay?: number
 	duration?: number
 	typeFade?: boolean
-	additionalClasses?: string
 }
 
 const AnimatedWrapper = ({
@@ -19,8 +18,8 @@ const AnimatedWrapper = ({
 	delay = 0,
 	duration = 0.4,
 	typeFade = true,
-	additionalClasses,
-}: AnimatedWrapperProps) => {
+	className,
+}: IAnimatedWrapperProps) => {
 	const motionRef = useRef<HTMLDivElement | null>(null)
 	const isInView = useInView(motionRef, { once: true })
 
@@ -37,7 +36,7 @@ const AnimatedWrapper = ({
 	return (
 		<motion.div
 			key={motionKey}
-			className={clsx(additionalClasses)}
+			className={clsx(className)}
 			ref={motionRef}
 			initial='hidden'
 			animate={isInView ? 'visible' : 'hidden'}

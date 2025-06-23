@@ -1,8 +1,8 @@
 'use client'
 
 import AnimatedWrapper from '@/components/AnimatedWrapper'
+import ArticleButton from '@/components/ArticleButton'
 import ArticleItem from '@/components/ArticleItem'
-import ModalButton from '@/components/ModalButton'
 import Button from '@/components/UI/Button/Button'
 import { BLOG_ARTICLES } from '@/const/const'
 import { useAppStore } from '@/store/store'
@@ -10,7 +10,7 @@ import { useAppStore } from '@/store/store'
 import styles from './BlogSection.module.css'
 
 const BlogSection = () => {
-	const toggleModalOpen = useAppStore((state) => state.toggleModalOpen)
+	const toggleModalOpen = useAppStore((s) => s.toggleModalOpen)
 
 	return (
 		<section
@@ -23,13 +23,13 @@ const BlogSection = () => {
 
 			<div className='container grid gap-10 mx-auto md:px-10 lg:px-20 mb-14 lg:grid-cols-2 2xl:max-w-screen-xl'>
 				{BLOG_ARTICLES.map((article, index) => (
-					<ModalButton
+					<ArticleButton
 						className={styles.button}
 						key={`${article.title}`}>
 						<AnimatedWrapper delay={(index + index) * 0.1}>
-							<ArticleItem article={article} />
+							<ArticleItem {...article} />
 						</AnimatedWrapper>
-					</ModalButton>
+					</ArticleButton>
 				))}
 			</div>
 		</section>

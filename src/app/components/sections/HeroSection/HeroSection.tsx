@@ -12,17 +12,15 @@ const HeroSection = () => (
 			<span className='absolute top-0 mr-4 text-lg font-medium tracking-wide right-3'>
 				Since&nbsp;1975&nbsp;-
 			</span>
-			<AnimatedWrapper additionalClasses='max-h-fit'>
-				Architecture.
-			</AnimatedWrapper>
+			<AnimatedWrapper className='max-h-fit'>Architecture.</AnimatedWrapper>
 			<AnimatedWrapper
 				delay={0.3}
-				additionalClasses='max-h-fit'>
+				className='max-h-fit'>
 				Planning.
 			</AnimatedWrapper>
 			<AnimatedWrapper
 				delay={0.5}
-				additionalClasses='max-h-fit'>
+				className='max-h-fit'>
 				Design.
 			</AnimatedWrapper>
 		</div>

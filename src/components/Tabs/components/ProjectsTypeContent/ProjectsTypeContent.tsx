@@ -3,19 +3,11 @@ import Link from 'next/link'
 
 import AnimatedWrapper from '@/components/AnimatedWrapper'
 import ProjectCard from '@/components/ProjectCard/ProjectCard'
-import { OneTabContent, ProjectCase } from '@/const/const.types'
+import { ITabContentProps, ProjectCase } from '@/const/const.types'
 
 import styles from './ProjectsTypeContent.module.css'
 
-interface ProjectsTypeContentProps {
-	tabsContent: OneTabContent[]
-	activeTab: string
-}
-
-const ProjectsTypeContent = ({
-	tabsContent,
-	activeTab,
-}: ProjectsTypeContentProps) =>
+const ProjectsTypeContent = ({ tabsContent, activeTab }: ITabContentProps) =>
 	tabsContent.map((item, index) => (
 		<div
 			key={`${item.tabName}-${index}`}
@@ -35,8 +27,8 @@ const ProjectsTypeContent = ({
 							className={styles.link}
 							key={`${projectCase.title}-${projectCaseIndex}`}
 							href='/projects/case'>
-							<AnimatedWrapper additionalClasses='h-full'>
-								<ProjectCard projectCase={projectCase} />
+							<AnimatedWrapper className='h-full'>
+								<ProjectCard {...projectCase} />
 							</AnimatedWrapper>
 						</Link>
 					)

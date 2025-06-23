@@ -8,36 +8,22 @@ import Button from '@/components/UI/Button/Button'
 import ContactTypeToggle from './components/ContactTypeToggle/ContactTypeToggle'
 import Input from './components/Input/Input'
 import Popup from './components/Popup/Popup'
-
-const nameSchema = z
-	.string()
-	.regex(/^[A-Za-z\s]+$/, 'Name should contain only letters')
-	.min(1, 'Name field is required')
-
-const phoneSchema = z
-	.string()
-	.regex(
-		/^\+(\d{1,3})(\(\d{3}\))? ?\d{3}-?\d{4}$|^\+\d{1,3}\d{7,10}$/,
-		'Invalid phone format +1(800) 555-5555'
-	)
-
-const emailSchema = z.string().email('Invalid email format')
+import ContactSchemas from './contact.schemas'
 
 const ContactPage = () => {
 	const [phoneType, setPhoneType] = useState(true)
 	const [showPopup, setShowPopup] = useState(false)
-	const [formData, setFormData] = useState<{ name: string; contact: string }>({
-		name: '',
-		contact: '',
-	})
+	const [formData, setFormData] = useState({ name: '', contact: '' })
 	const [errors, setErrors] = useState<{ name?: string; contact?: string }>({})
 
 	const contactSchema = z.object({
-		name: nameSchema,
-		contact: phoneType ? phoneSchema : emailSchema,
+		name: ContactSchemas.nameSchema,
+		contact: phoneType
+			? ContactSchemas.phoneSchema
+			: ContactSchemas.emailSchema,
 	})
 
-	const toggleContactType = (): void => {
+	const toggleContactType = () => {
 		setPhoneType((prev) => !prev)
 		setFormData((prev) => ({ ...prev, contact: '' }))
 		setErrors({})
@@ -49,7 +35,7 @@ const ContactPage = () => {
 		setErrors((prev) => ({ ...prev, [name]: undefined }))
 	}
 
-	const handleSubmit = (e: React.FormEvent): void => {
+	const handleSubmit = (e: React.FormEvent) => {
 		e.preventDefault()
 
 		try {
@@ -59,17 +45,15 @@ const ContactPage = () => {
 			setFormData({ name: '', contact: '' })
 
 			setTimeout(() => setShowPopup(false), 3000)
-		} catch (validationError) {
-			if (validationError instanceof z.ZodError) {
-				const fieldErrors: { name?: string; contact?: string } = {}
-				validationError.errors.forEach((err) => {
-					if (err.path[0] === 'name') {
-						fieldErrors.name = err.message
-					}
-					if (err.path[0] === 'contact') {
-						fieldErrors.contact = err.message
-					}
+		} catch (error) {
+			if (error instanceof z.ZodError) {
+				const fieldErrors: typeof errors = {}
+
+				error.errors.forEach(({ path, message }) => {
+					const field = path[0] as keyof typeof errors
+					fieldErrors[field] = message
 				})
+
 				setErrors(fieldErrors)
 			}
 		}

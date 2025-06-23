@@ -8,7 +8,7 @@ import { NavigationLink } from '@/const/const.types'
 
 import styles from './NavigationItem.module.css'
 
-type NavigationItemProps = {
+interface INavigationItemProps {
 	link: NavigationLink
 	index: number
 	toggleNavListVisible?: () => void
@@ -18,15 +18,15 @@ const NavigationItem = ({
 	link,
 	index,
 	toggleNavListVisible,
-}: NavigationItemProps) => {
+}: INavigationItemProps) => {
 	const { title, href } = link
 	const pathname = usePathname()
-	const hrefValue = pathname === '/' ? href : `/${href}`
+	const to = pathname === '/' ? href : `/${href}`
 
 	return (
 		<Link
 			className={clsx(styles.navItem, 'text-black animatedUnderline')}
-			href={hrefValue}
+			href={to}
 			data-number={index}
 			onClick={() => {
 				if (toggleNavListVisible) {

@@ -30,8 +30,8 @@ const ProjectsSection = () => {
 							className={styles.projectLink}
 							key={`${projectCase.title}-${index}`}
 							href='/projects/case'>
-							<AnimatedWrapper additionalClasses='h-full'>
-								<ProjectCard projectCase={projectCase} />
+							<AnimatedWrapper className='h-full'>
+								<ProjectCard {...projectCase} />
 							</AnimatedWrapper>
 						</Link>
 					))}
@@ -65,8 +65,8 @@ const ProjectsSection = () => {
 							className={styles.projectLink}
 							key={`${projectCase.title}-${index}`}
 							href='/projects/case'>
-							<AnimatedWrapper additionalClasses='h-full'>
-								<ProjectCard projectCase={projectCase} />
+							<AnimatedWrapper className='h-full'>
+								<ProjectCard {...projectCase} />
 							</AnimatedWrapper>
 						</Link>
 					))}
@@ -106,8 +106,8 @@ const ProjectsSection = () => {
 					<Link
 						className={styles.projectLink}
 						href='/projects/case'>
-						<AnimatedWrapper additionalClasses='h-full'>
-							<ProjectCard projectCase={lastProjectCase} />
+						<AnimatedWrapper className='h-full'>
+							<ProjectCard {...lastProjectCase} />
 						</AnimatedWrapper>
 					</Link>
 				</div>

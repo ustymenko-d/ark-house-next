@@ -29,6 +29,11 @@ export interface OneTabContent {
 	content: TeamMember[] | string | ProjectCase[]
 }
 
+export interface ITabContentProps {
+	tabsContent: OneTabContent[]
+	activeTab: string
+}
+
 export interface TabList {
 	tabs: string[]
 	tabsContent: OneTabContent[]

@@ -11,9 +11,7 @@ import styles from './ToTopButton.module.css'
 const ToTopButton = () => {
 	const hasScrolledBeyond = useScrollBeyondThreshold(50)
 
-	const handleGoToTop = () => {
-		window.scrollTo({ top: 0, behavior: 'smooth' })
-	}
+	const handleGoToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 
 	return (
 		<AnimatePresence mode='wait'>
@@ -22,7 +20,7 @@ const ToTopButton = () => {
 					<AnimatedWrapper
 						typeFade={false}
 						duration={0.2}
-						additionalClasses='h-full'>
+						className='h-full'>
 						<button
 							onClick={handleGoToTop}
 							aria-label='Scroll to top'
