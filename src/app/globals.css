@@ -117,7 +117,7 @@ html:has(.isNavOpen) {
 	overflow: hidden;
 }
 
-html:has(.dialog) {
+html:has(.isDialogOpen) {
 	background-color: rgba(23, 23, 23, 0.5);
 	overflow-y: hidden;
 }

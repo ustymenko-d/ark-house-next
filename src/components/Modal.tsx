@@ -1,5 +1,6 @@
 'use client'
 
+import clsx from 'clsx'
 import { AnimatePresence } from 'framer-motion'
 import ReactFocusLock from 'react-focus-lock'
 
@@ -15,7 +16,11 @@ const Modal = () => {
 	return (
 		<AnimatePresence mode='wait'>
 			{modalOpen && (
-				<div className='z-[100] fixed inset-0 w-screen h-lvh overflow-y-auto overflow-x-hidden p-4 flex items-center justify-center'>
+				<div
+					className={clsx(
+						'z-[100] fixed inset-0 w-screen h-lvh overflow-y-auto overflow-x-hidden p-4 flex items-center justify-center',
+						modalOpen && 'isDialogOpen'
+					)}>
 					<div
 						onClick={toggleModalOpen}
 						className='absolute inset-0 w-full h-full bg-black/50'></div>
