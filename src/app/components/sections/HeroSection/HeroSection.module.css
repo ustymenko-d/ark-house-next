@@ -1,9 +1,8 @@
 .hero {
 	min-height: 40rem;
-	height: calc(100dvh - 78px);
+	min-height: calc(100svh - 78px);
 	max-height: 800px;
-	transition: height 0.5 ease-in-out;
-	will-change: height;
+	transition: all 0.6 ease;
 
 	&::before {
 		content: '';
@@ -18,7 +17,7 @@
 
 		@media screen and (min-width: 1024px) {
 			width: calc(100% - 160px);
-			height: 63%;
+			min-height: 63%;
 			margin-inline: auto;
 		}
 	}
