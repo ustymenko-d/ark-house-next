@@ -7,24 +7,16 @@ interface IAppState {
 
 	modalOpen: boolean
 	toggleModalOpen: () => void
-
-	projectModalOpen: boolean
-	toggleProjectModalOpen: () => void
 }
 
 export const useAppStore = create<IAppState>()(
 	devtools(
-		(set) => ({
+		set => ({
 			headerNavVisible: false,
-			toggleHeaderNav: () =>
-				set((state) => ({ headerNavVisible: !state.headerNavVisible })),
+			toggleHeaderNav: () => set(state => ({ headerNavVisible: !state.headerNavVisible })),
 
 			modalOpen: false,
-			toggleModalOpen: () => set((state) => ({ modalOpen: !state.modalOpen })),
-
-			projectModalOpen: false,
-			toggleProjectModalOpen: () =>
-				set((state) => ({ projectModalOpen: !state.projectModalOpen })),
+			toggleModalOpen: () => set(state => ({ modalOpen: !state.modalOpen })),
 		}),
 		{ name: 'AppStore' }
 	)
