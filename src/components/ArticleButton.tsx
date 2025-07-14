@@ -1,6 +1,6 @@
 'use client'
 
-import { useAppStore } from '@/store/store'
+import { useAppStore } from '@/store'
 
 interface IArticleButtonProps
 	extends React.ButtonHTMLAttributes<HTMLButtonElement> {

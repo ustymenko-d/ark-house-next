@@ -5,7 +5,7 @@ import ArticleButton from '@/components/ArticleButton'
 import ArticleItem from '@/components/ArticleItem'
 import Button from '@/components/UI/Button/Button'
 import { BLOG_ARTICLES } from '@/const/const'
-import { useAppStore } from '@/store/store'
+import { useAppStore } from '@/store'
 
 import styles from './BlogSection.module.css'
 

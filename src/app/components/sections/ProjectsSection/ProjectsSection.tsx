@@ -39,6 +39,7 @@ const ProjectsSection = () => {
 					<Banner
 						className={styles.banner}
 						svgImage={
+							
 							<svg
 								className='w-full'
 								width='580'

@@ -2,7 +2,7 @@
 
 import clsx from 'clsx'
 
-import { useAppStore } from '@/store/store'
+import { useAppStore } from '@/store'
 
 import styles from './SocialLinks.module.css'
 

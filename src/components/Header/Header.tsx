@@ -4,7 +4,7 @@ import clsx from 'clsx'
 import Link from 'next/link'
 import FocusLock from 'react-focus-lock'
 
-import { useAppStore } from '@/store/store'
+import { useAppStore } from '@/store'
 
 import Navigation from '../Navigation/Navigation'
 import Logo from '../UI/Logo'

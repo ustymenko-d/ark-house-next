@@ -4,7 +4,7 @@ import clsx from 'clsx'
 import { AnimatePresence } from 'framer-motion'
 import ReactFocusLock from 'react-focus-lock'
 
-import { useAppStore } from '@/store/store'
+import { useAppStore } from '@/store'
 
 import AnimatedWrapper from './AnimatedWrapper'
 import Button from './UI/Button/Button'
