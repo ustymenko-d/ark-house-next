@@ -2,12 +2,9 @@
 
 import { useEffect, useRef, useState } from 'react'
 
-const useScrollBeyondThreshold = (
-	threshold: number = 100,
-	delay: number = 200
-) => {
-	const [hasScrolledBeyondThreshold, setHasScrolledBeyondThreshold] =
-		useState(false)
+const useScrollBeyondThreshold = (threshold: number = 100, delay: number = 200) => {
+	const [hasScrolledBeyondThreshold, setHasScrolledBeyondThreshold] = useState(false)
+
 	const timerRef = useRef<NodeJS.Timeout | null>(null)
 
 	useEffect(() => {

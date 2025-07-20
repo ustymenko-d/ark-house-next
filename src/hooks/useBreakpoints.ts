@@ -1,37 +1,28 @@
 'use client'
 
-import { useCallback, useEffect, useRef, useState } from 'react'
+import debounce from 'lodash.debounce'
+import { useEffect, useState } from 'react'
 
 export const useBreakpoints = (breakpoints: number[]): number => {
 	const [index, setIndex] = useState(0)
-	const timeoutId = useRef<number | null>(null)
-
-	const updateIndex = useCallback(() => {
-		const width = window.innerWidth
-		const newIndex = breakpoints.findIndex((bp) => width <= bp)
-		if (newIndex !== index) {
-			setIndex(newIndex === -1 ? breakpoints.length : newIndex)
-		}
-	}, [breakpoints, index])
 
 	useEffect(() => {
-		const handleResize = () => {
-			if (timeoutId.current !== null) {
-				clearTimeout(timeoutId.current)
-			}
-			timeoutId.current = window.setTimeout(updateIndex, 150)
+		const updateIndex = () => {
+			const width = window.innerWidth
+			const newIndex = breakpoints.findLastIndex(bp => width >= bp) + 1
+			setIndex(newIndex)
 		}
+
+		const debouncedUpdate = debounce(updateIndex, 150)
 
 		updateIndex()
-		window.addEventListener('resize', handleResize)
+		window.addEventListener('resize', debouncedUpdate)
 
 		return () => {
-			window.removeEventListener('resize', handleResize)
-			if (timeoutId.current !== null) {
-				clearTimeout(timeoutId.current)
-			}
+			window.removeEventListener('resize', debouncedUpdate)
+			debouncedUpdate.cancel()
 		}
-	}, [updateIndex])
+	}, [breakpoints])
 
 	return index
 }
