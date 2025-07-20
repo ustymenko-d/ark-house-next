@@ -1,6 +1,6 @@
 .toTop {
 	&::after {
-		content: url(../../../assets/icons/arrow-up-right.svg);
+		content: url(../../../assets/icons/arrow-up.svg);
 		position: absolute;
 		width: 100%;
 		height: 100%;
