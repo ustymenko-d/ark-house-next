@@ -7,7 +7,7 @@ import ReactFocusLock from 'react-focus-lock'
 import { useAppStore } from '@/store'
 
 import AnimatedWrapper from './AnimatedWrapper'
-import Button from './UI/Button/Button'
+import Button from './UI/Button'
 
 const Modal = () => {
 	const modalOpen = useAppStore((s) => s.modalOpen)

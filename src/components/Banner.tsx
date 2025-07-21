@@ -6,12 +6,7 @@ interface BannerProps extends React.HTMLAttributes<HTMLDivElement> {
 	bottomLineText: string
 }
 
-const Banner = ({
-	svgImage,
-	topLineText,
-	bottomLineText,
-	className,
-}: BannerProps) => (
+const Banner = ({ svgImage, topLineText, bottomLineText, className }: BannerProps) => (
 	<div
 		className={clsx(
 			className,

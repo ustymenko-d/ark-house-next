@@ -3,11 +3,8 @@ import { Fragment } from 'react'
 import { ADDRESSES, PROJECT_DESCRIPTION } from '@/const/const'
 
 import NavigationList from './Navigation/components/NavigationList/NavigationList'
-import Button from './UI/Button/Button'
+import Button from './UI/Button'
 import SocialLinks from './UI/SocialLinks/SocialLinks'
-
-const LIST_CLASSES: string =
-	'relative min-h-fit left-0 top-0 py-5 px-0 flex flex-row flex-wrap justify-start items-center gap-8 transition-none text-xl' as const
 
 const Footer = () => (
 	<footer className='px-4'>
@@ -50,7 +47,7 @@ const Footer = () => (
 				</div>
 
 				<div className='lg:col-start-1 lg:col-end-4 lg:row-start-2 lg:row-end-3'>
-					<NavigationList className={LIST_CLASSES} />
+					<NavigationList className='relative top-0 left-0 flex flex-row flex-wrap items-center justify-start gap-8 px-0 py-5 text-xl transition-none min-h-fit' />
 				</div>
 
 				<div className='lg:col-start-4 lg:-col-end-1 lg:row-start-2 lg:row-end-3 lg:self-center'>
@@ -60,9 +57,7 @@ const Footer = () => (
 
 			<div className='mb-12 leading-5 md:px-10 lg:px-20'>
 				<p className='pb-5'>{PROJECT_DESCRIPTION}</p>
-				<Button to='https://ustymenko.vercel.app'>
-					Back&nbsp;to&nbsp;portfolio
-				</Button>
+				<Button to='https://ustymenko.vercel.app'>Back&nbsp;to&nbsp;portfolio</Button>
 			</div>
 		</div>
 	</footer>

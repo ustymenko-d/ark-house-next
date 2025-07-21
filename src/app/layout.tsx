@@ -5,9 +5,9 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
 import Footer from '@/components/Footer'
-import Header from '@/components/Header/Header'
+import Header from '@/components/Header'
 import Modal from '@/components/Modal'
-import ToTopButton from '@/components/UI/ToTopButton/ToTopButton'
+import ToTopButton from '@/components/UI/ToTopButton'
 import { PROJECT_DESCRIPTION } from '@/const/const'
 
 export const metadata: Metadata = {

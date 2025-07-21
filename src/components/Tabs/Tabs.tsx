@@ -6,9 +6,8 @@ import { useState } from 'react'
 import { TabList } from '@/const/const.types'
 
 import ProjectsTypeContent from './components/ProjectsTypeContent/ProjectsTypeContent'
-import ServicesTypeContent from './components/ServicesTypeContent/ServicesTypeContent'
+import ServicesTypeContent from './components/ServicesTypeContent'
 import TeamTypeContent from './components/TeamTypeContent'
-import styles from './Tabs.module.css'
 
 interface ITabsProps {
 	tabsType: 'services' | 'projects' | 'team'
@@ -39,8 +38,9 @@ const Tabs = ({ tabsType, tabsList }: ITabsProps) => {
 		<div
 			className={clsx(
 				{
-					[styles.tabs_services]: isServices,
-					[styles.tabs_team]: !isServices,
+					'grid-rows-[auto_minmax(auto,640px)] xl:grid-cols-[auto_66.66%] xl:grid-rows-[auto]':
+						isServices,
+					'xl:grid-cols-[auto_1fr]': !isServices,
 				},
 				'grid gap-6 xl:gap-12'
 			)}>
@@ -59,10 +59,8 @@ const Tabs = ({ tabsType, tabsList }: ITabsProps) => {
 					<button
 						key={`${tab}-${index}`}
 						id={`${tabsType}-tab-${index}`}
-						className={clsx(
-							{ [styles.tabButton_active]: activeTab === tab },
-							'animatedUnderline text-2xl font-semibold bg-transparent text-dark-color'
-						)}
+						style={{ backgroundSize: activeTab === tab ? '100% 1px' : '' }}
+						className='text-2xl font-semibold bg-transparent animatedUnderline text-dark-color'
 						onClick={() => handleChangeTab(tab)}
 						role='tab'
 						aria-selected={activeTab === tab}

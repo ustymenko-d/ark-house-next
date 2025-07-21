@@ -1,16 +1,8 @@
-import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs'
+import Breadcrumbs from '@/components/Breadcrumbs'
 import Tabs from '@/components/Tabs/Tabs'
 import { PROJECTS_TABS } from '@/const/const'
 
-const navItems = [
-	{
-		name: 'Home',
-		href: '/',
-	},
-	{
-		name: 'Projects',
-	},
-]
+const navItems = [{ name: 'Home', href: '/' }, { name: 'Projects' }]
 
 const ProjectsPage = () => (
 	<main className='flex-auto'>
@@ -23,10 +15,9 @@ const ProjectsPage = () => (
 					Our projects are examples of attitudes rather than design
 				</p>
 				<p className='text-xl mb-14 lg:w-4/5'>
-					They are samples in a series of contextual examination rather than
-					isolated masterpieces. They are associative rather than symbolic. They
-					are comments rather than statements. Every story told is a shared
-					experience of contemporary conditions set within a given frame.
+					They are samples in a series of contextual examination rather than isolated masterpieces.
+					They are associative rather than symbolic. They are comments rather than statements. Every
+					story told is a shared experience of contemporary conditions set within a given frame.
 				</p>
 
 				<Tabs

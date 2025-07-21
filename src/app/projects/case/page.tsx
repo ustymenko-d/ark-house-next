@@ -1,23 +1,15 @@
-import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs'
+import Breadcrumbs from '@/components/Breadcrumbs'
 import Tabs from '@/components/Tabs/Tabs'
-import Button from '@/components/UI/Button/Button'
+import Button from '@/components/UI/Button'
 import { TEAM_TABS } from '@/const/const'
 
-import Gallery from './components/sections/Gallery/Gallery'
+import Gallery from './components/sections/Gallery'
 import Hero from './components/sections/Hero'
 
 const navItems = [
-	{
-		name: 'Home',
-		href: '/',
-	},
-	{
-		name: 'Projects',
-		href: '/projects',
-	},
-	{
-		name: 'Central Saint Giles',
-	},
+	{ name: 'Home', href: '/' },
+	{ name: 'Projects', href: '/projects' },
+	{ name: 'Central Saint Giles' },
 ]
 
 const ProjectPage = () => (

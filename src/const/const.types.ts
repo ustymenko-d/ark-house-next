@@ -3,25 +3,33 @@ export type NavigationLink = {
 	href: string
 }
 
+type Media = {
+	src: string
+	alt: string
+	width?: number
+	height?: number
+	sizes?: string
+}
+
 export interface Article {
 	title: string
 	content: string
 	dateTime: string
 	date: string
-	imgSrc: string
+	media: Media
 }
 
 export interface ProjectCase {
 	title: string
 	subtitle: string
-	imgSrc: string
+	media: Media
 	category?: string
 }
 
 export interface TeamMember {
-	imgSrc: string
 	name: string
 	role: string
+	media: Media
 }
 
 export interface OneTabContent {

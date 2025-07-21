@@ -1,18 +1,18 @@
-import AboutSection from './components/sections/AboutSection/AboutSection'
-import BlogSection from './components/sections/BlogSection/BlogSection'
-import HeroSection from './components/sections/HeroSection/HeroSection'
-import ProjectsSection from './components/sections/ProjectsSection/ProjectsSection'
-import ServicesSection from './components/sections/ServicesSection/ServicesSection'
-import TeamSection from './components/sections/TeamSection/TeamSection'
+import About from './components/sections/About'
+import Blog from './components/sections/Blog'
+import Hero from './components/sections/Hero/Hero'
+import Projects from './components/sections/Projects/Projects'
+import Services from './components/sections/Services'
+import Team from './components/sections/Team'
 
 const Home = () => (
 	<main>
-		<HeroSection />
-		<AboutSection />
-		<ServicesSection />
-		<ProjectsSection />
-		<TeamSection />
-		<BlogSection />
+		<Hero />
+		<About />
+		<Services />
+		<Projects />
+		<Team />
+		<Blog />
 	</main>
 )
 

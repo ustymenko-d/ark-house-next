@@ -1,4 +1,4 @@
-import Button from '@/components/UI/Button/Button'
+import Button from '@/components/UI/Button'
 
 const NotFound = () => (
 	<main className='flex flex-col items-center justify-center flex-auto gap-4 px-4 text-center min-h-80'>
