@@ -1,10 +1,10 @@
-import Image from 'next/image'
+import ImageWithSkeleton from '@/components/UI/ImageWithSkeleton'
 
 const History = () => (
 	<section className='mb-16'>
 		<h2 className='mb-4 text-5xl font-semibold leading-normal tracking-tight'>Our history</h2>
 
-		<Image
+		<ImageWithSkeleton
 			className='w-full mb-4 bg-dark-color'
 			src='/img/history-page/builders.jpg'
 			width={1376}

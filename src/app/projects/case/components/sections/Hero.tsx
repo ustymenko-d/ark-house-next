@@ -1,6 +1,6 @@
-import Image from 'next/image'
 import React from 'react'
 
+import ImageWithSkeleton from '@/components/UI/ImageWithSkeleton'
 import { PROJECT_CHARACTERISTICS } from '@/const/const'
 
 import Characteristics from '../Characteristics'
@@ -11,7 +11,7 @@ const Hero = () => (
 			<h1 className='mb-4 text-5xl font-semibold'>Central Saint Giles</h1>
 
 			<div className='mb-4 grid gap-6 sm:grid-cols-[1fr_auto] xl:grid-cols-[73%_auto]'>
-				<Image
+				<ImageWithSkeleton
 					src='/img/project/hero.jpg'
 					alt='Central Saint Giles'
 					width={1005}

@@ -1,9 +1,9 @@
 'use client'
 
 import { AnimatePresence } from 'framer-motion'
-import Image from 'next/image'
 
 import AnimatedWrapper from '@/components/AnimatedWrapper'
+import ImageWithSkeleton from '@/components/UI/ImageWithSkeleton'
 import { ITabContentProps } from '@/const/const.types'
 
 const ServicesTypeContent = ({ tabsContent, activeTab }: ITabContentProps) => (
@@ -17,20 +17,19 @@ const ServicesTypeContent = ({ tabsContent, activeTab }: ITabContentProps) => (
 				<AnimatedWrapper
 					key={`${tabName}-${index}`}
 					typeFade={false}
-					duration={0.3}
-					className='relative bg-dark-color'>
+					duration={0.3}>
 					<div
 						id={`services-tabpanel-${index}`}
 						role='tabpanel'
 						aria-labelledby={`services-tab-${index}`}
-						className='relative w-full h-[400px] md:h-[600px] xl:h-[700px]'>
-						<Image
-							className='object-cover'
+						className='relative w-full h-full'>
+						<ImageWithSkeleton
+							className='h-full object-cover'
+							src={content as string}
+							alt={`${tabName} image`}
 							fill
 							sizes='(max-width: 639px) 587px, (max-width: 767px) 640px, (max-width: 1023px) 688px, (max-width: 1279px) 573x, 519px'
 							quality={100}
-							src={content as string}
-							alt={`${tabName} image`}
 							loading='lazy'
 						/>
 					</div>

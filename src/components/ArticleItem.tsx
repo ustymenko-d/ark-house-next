@@ -1,10 +1,10 @@
-import Image from 'next/image'
-
 import { Article } from '@/const/const.types'
+
+import ImageWithSkeleton from './UI/ImageWithSkeleton'
 
 const ArticleItem = ({ title, content, dateTime, media }: Article) => (
 	<div className='relative flex flex-col h-full bg-neutral-100'>
-		<Image
+		<ImageWithSkeleton
 			className='aspect-[7/5] w-full flex-grow bg-dark-color'
 			src={media.src}
 			alt={media.alt}

@@ -1,7 +1,6 @@
-import Image from 'next/image'
-
 import AnimatedWrapper from '@/components/AnimatedWrapper'
 import Button from '@/components/UI/Button'
+import ImageWithSkeleton from '@/components/UI/ImageWithSkeleton'
 
 const About = () => (
 	<section className='mb-16 xl:grid xl:gap-x-6 xl:grid-cols-[61.3%_auto] xl:grid-rows-[auto_1fr]'>
@@ -9,7 +8,7 @@ const About = () => (
 			Who we are
 		</h2>
 
-		<Image
+		<ImageWithSkeleton
 			className='w-full h-full mb-4 bg-dark-color xl:mb-0'
 			src='/img/history-page/meet.jpg'
 			width={844}

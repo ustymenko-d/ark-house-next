@@ -1,10 +1,10 @@
-import Image from 'next/image'
-
 import { TeamMember } from '@/const/const.types'
+
+import ImageWithSkeleton from './UI/ImageWithSkeleton'
 
 const TeamMemberCard = ({ name, role, media }: TeamMember) => (
 	<div className='relative'>
-		<Image
+		<ImageWithSkeleton
 			className='block w-full shadow aspect-square bg-dark-color'
 			src={media.src}
 			alt={media.alt}

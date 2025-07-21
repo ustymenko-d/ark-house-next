@@ -1,7 +1,6 @@
-import Image from 'next/image'
-
 import { ProjectCase } from '@/const/const.types'
 
+import ImageWithSkeleton from './UI/ImageWithSkeleton'
 import Logo from './UI/Logo'
 
 const ProjectCard = ({ title, subtitle, media }: ProjectCase) => (
@@ -10,7 +9,7 @@ const ProjectCard = ({ title, subtitle, media }: ProjectCase) => (
 			<div
 				className={`relative w-full grow`}
 				style={{ aspectRatio: `${media.width} / ${media.height}` }}>
-				<Image
+				<ImageWithSkeleton
 					src={media.src}
 					alt={media.alt}
 					fill
