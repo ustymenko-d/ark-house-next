@@ -21,7 +21,7 @@ const Gallery = () => (
 			<Button to='/contact'>Contact&nbsp;Us</Button>
 		</div>
 
-		<div className='container mx-auto px-4 md:px-10 lg:px-20 grid md:grid-cols-12 gap-x-4 gap-y-7 xl:grid-rows-3 xl:gap-8 md:grid-rows-[1fr_0.7fr_0.25fr_1fr]'>
+		<div className='container mx-auto px-4 md:px-10 lg:px-20 grid md:grid-cols-12 gap-x-4 gap-y-7 xl:grid-rows-3 xl:gap-8 md:grid-rows-[1fr_0.7fr_0.3fr_1fr]'>
 			{ONE_PROJECT.map((project, idx) => (
 				<div
 					key={`project-${idx}`}
