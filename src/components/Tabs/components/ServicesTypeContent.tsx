@@ -28,7 +28,7 @@ const ServicesTypeContent = ({ tabsContent, activeTab }: ITabContentProps) => (
 							src={content as string}
 							alt={`${tabName} image`}
 							fill
-							sizes='(max-width: 639px) 587px, (max-width: 767px) 640px, (max-width: 1023px) 688px, (max-width: 1279px) 573x, 519px'
+							sizes='(max-width: 639px) 587px, (max-width: 767px) 640px, (max-width: 1023px) 688px, (max-width: 1279px) 573px, 519px'
 							quality={100}
 							loading='lazy'
 						/>

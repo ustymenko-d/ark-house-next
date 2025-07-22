@@ -8,10 +8,11 @@ import { useAppStore } from '@/store'
 
 import AnimatedWrapper from './AnimatedWrapper'
 import Button from './UI/Button'
+import CloseButton from './UI/CloseButton'
 
 const Modal = () => {
-	const modalOpen = useAppStore((s) => s.modalOpen)
-	const toggleModalOpen = useAppStore((s) => s.toggleModalOpen)
+	const modalOpen = useAppStore(s => s.modalOpen)
+	const toggleModalOpen = useAppStore(s => s.toggleModalOpen)
 
 	return (
 		<AnimatePresence mode='wait'>
@@ -33,7 +34,7 @@ const Modal = () => {
 						<div
 							className='z-[95] p-4 bg-white shadow-xl md:p-8 md:max-w-screen-sm'
 							role='dialog'
-							onKeyDown={(e) => {
+							onKeyDown={e => {
 								if (e.code === 'Escape') {
 									toggleModalOpen()
 								}
@@ -46,23 +47,20 @@ const Modal = () => {
 								disabled={!modalOpen}>
 								<div className='min-h-full'>
 									<div>
-										<h2 className='mb-2 text-xl md:text-4xl'>
-											This is an example page
-										</h2>
-										<p className='mb-4 md:text-2xl'>
-											So this link is not real. You can continue viewing the
-											page by closing this modal window or return to the
-											portfolio.
+										<div className='flex gap-4 justify-between'>
+											<h2 className='mb-2 text-2xl md:text-4xl'>This is an example page</h2>
+											<CloseButton
+												onClick={toggleModalOpen}
+												aria-label='Close modal'
+											/>
+										</div>
+										<p className='mb-4 md:text-lg'>
+											So this link is not real. You can continue viewing the page by closing this
+											modal window or return to the portfolio.
 										</p>
 									</div>
-									<div className='flex flex-col gap-4 md:items-start'>
-										<Button onClick={toggleModalOpen}>
-											Close&nbsp;modal&nbsp;window
-										</Button>
-										<Button to='https://ustymenko.vercel.app'>
-											Back&nbsp;to&nbsp;portfolio
-										</Button>
-									</div>
+
+									<Button to='https://ustymenko.vercel.app'>Back&nbsp;to&nbsp;portfolio</Button>
 								</div>
 							</ReactFocusLock>
 						</div>

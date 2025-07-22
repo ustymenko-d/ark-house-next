@@ -135,7 +135,7 @@ export const HOME_PROJECTS: ProjectCase[] = [
 			width: 896,
 			height: 985,
 			sizes:
-				'(max-width: 639px) 92vw, (max-width: 767px) 640px, (max-width: 1023px) 688px, (max-width: 1279px) 566x, (max-width: 1535px) 736x, 896px',
+				'(max-width: 639px) 92vw, (max-width: 767px) 640px, (max-width: 1023px) 688px, (max-width: 1279px) 566px, (max-width: 1535px) 736x, 896px',
 		},
 	},
 	{
@@ -724,7 +724,7 @@ export const ONE_PROJECT: ProjectCase[] = [
 			width: 790,
 			height: 832,
 			sizes:
-				'(max-width: 639px) 92vw, (max-width: 767px) 608px, (max-width: 1023px) 395px, (max-width: 1279px) 498x, 790px',
+				'(max-width: 639px) 92vw, (max-width: 767px) 608px, (max-width: 1023px) 395px, (max-width: 1279px) 498px, 790px',
 		},
 	},
 	{
