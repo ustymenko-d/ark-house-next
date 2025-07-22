@@ -71,14 +71,12 @@ const Tabs = ({ tabsType, tabsList }: ITabsProps) => {
 				))}
 			</div>
 
-			{/* <div> */}
-				{ContentComponent && (
-					<ContentComponent
-						tabsContent={tabsContent}
-						activeTab={activeTab}
-					/>
-				)}
-			{/* </div> */}
+			{ContentComponent && (
+				<ContentComponent
+					tabsContent={tabsContent}
+					activeTab={activeTab}
+				/>
+			)}
 		</div>
 	)
 }
