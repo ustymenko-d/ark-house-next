@@ -135,7 +135,7 @@ export const HOME_PROJECTS: ProjectCase[] = [
 			width: 896,
 			height: 985,
 			sizes:
-				'(max-width: 639px) 92vw, (max-width: 767px) 640px, (max-width: 1023px) 688px, (max-width: 1279px) 566px, (max-width: 1535px) 736x, 896px',
+				'(max-width: 639px) 92vw, (max-width: 767px) 640px, (max-width: 1023px) 688px, (max-width: 1279px) 566px, (max-width: 1535px) 736px, 896px',
 		},
 	},
 	{
@@ -671,7 +671,7 @@ export const BLOG_ARTICLES: Article[] = [
 			width: 540,
 			height: 386,
 			sizes:
-				'(max-width: 639px) 587px, (max-width: 767px) 640px, (max-width: 1023px) 688px, (max-width: 1279px) 412x, 540px',
+				'(max-width: 639px) 587px, (max-width: 767px) 640px, (max-width: 1023px) 688px, (max-width: 1279px) 412px, 540px',
 		},
 	},
 	{
@@ -686,7 +686,7 @@ export const BLOG_ARTICLES: Article[] = [
 			width: 540,
 			height: 386,
 			sizes:
-				'(max-width: 639px) 587px, (max-width: 767px) 640px, (max-width: 1023px) 688px, (max-width: 1279px) 412x, 540px',
+				'(max-width: 639px) 587px, (max-width: 767px) 640px, (max-width: 1023px) 688px, (max-width: 1279px) 412px, 540px',
 		},
 	},
 ]
