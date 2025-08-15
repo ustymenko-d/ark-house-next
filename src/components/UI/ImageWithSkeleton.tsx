@@ -14,7 +14,7 @@ const ImageWithSkeleton = ({ className, alt, ...rest }: ImageProps) => {
 			<Image
 				{...rest}
 				alt={alt}
-				onLoadingComplete={() => setLoading(false)}
+				onLoad={() => setLoading(false)}
 				className={clsx('w-full h-full transition-opacity duration-300', loading ? 'opacity-0' : 'opacity-100')}
 			/>
 		</div>
