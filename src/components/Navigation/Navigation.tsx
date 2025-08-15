@@ -1,6 +1,7 @@
 'use client'
 
 import clsx from 'clsx'
+import { useLenis } from 'lenis/react'
 import { useCallback, useEffect } from 'react'
 
 import { useBreakpoints } from '@/hooks/useBreakpoints'
@@ -10,18 +11,21 @@ import NavigationList from './components/NavigationList/NavigationList'
 import styles from './Navigation.module.css'
 
 const Navigation = () => {
-	const headerNavVisible = useAppStore((s) => s.headerNavVisible)
-	const toggleHeaderNav = useAppStore((s) => s.toggleHeaderNav)
+	const headerNavVisible = useAppStore(s => s.headerNavVisible)
+	const toggleHeaderNav = useAppStore(s => s.toggleHeaderNav)
 
 	const breakpoints = useBreakpoints([767])
-
 	const isMobile = breakpoints === 0
 	const shouldAutoClose = breakpoints === 1 && headerNavVisible
 
+	const lenis = useLenis()
+
 	const toggleNavListVisible = useCallback(() => {
-		if (!headerNavVisible) window.scrollTo({ top: 0, behavior: 'smooth' })
+		if (!headerNavVisible && lenis) {
+			lenis.scrollTo(0, { duration: 1 })
+		}
 		toggleHeaderNav()
-	}, [headerNavVisible, toggleHeaderNav])
+	}, [headerNavVisible, toggleHeaderNav, lenis])
 
 	useEffect(() => {
 		const handleEsc = (event: KeyboardEvent) => {

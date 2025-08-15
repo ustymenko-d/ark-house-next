@@ -2,6 +2,8 @@
 
 import clsx from 'clsx'
 import { AnimatePresence } from 'framer-motion'
+import { useLenis } from 'lenis/react'
+import { useState } from 'react'
 
 import AnimatedWrapper from '@/components/AnimatedWrapper'
 import useScrollBeyondThreshold from '@/hooks/useScrollBeyondThreshold'
@@ -9,7 +11,23 @@ import useScrollBeyondThreshold from '@/hooks/useScrollBeyondThreshold'
 const ToTopButton = () => {
 	const hasScrolledBeyond = useScrollBeyondThreshold(50)
 
-	const handleGoToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
+	const lenis = useLenis()
+
+	const [isDisabled, setIsDisabled] = useState(false)
+
+	const handleGoToTop = () => {
+		if (!lenis) return
+
+		setIsDisabled(true)
+
+		lenis.scrollTo(0, {
+			duration: 1,
+		})
+
+		setTimeout(() => {
+			setIsDisabled(false)
+		}, 1000)
+	}
 
 	return (
 		<AnimatePresence mode='wait'>
@@ -20,6 +38,7 @@ const ToTopButton = () => {
 						duration={0.2}
 						className='h-full'>
 						<button
+							disabled={isDisabled}
 							onClick={handleGoToTop}
 							aria-label='Scroll to top'
 							className={clsx(

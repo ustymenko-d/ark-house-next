@@ -1,6 +1,7 @@
 import './globals.css'
 
 import clsx from 'clsx'
+import ReactLenis from 'lenis/react'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
@@ -35,6 +36,7 @@ const RootLayout = ({
 			<Footer />
 			<ToTopButton />
 			<Modal />
+			<ReactLenis root />
 		</body>
 	</html>
 )
