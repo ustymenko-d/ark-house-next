@@ -745,10 +745,10 @@ export const ONE_PROJECT: ProjectCase[] = [
 		media: {
 			src: '/img/project/third.jpg',
 			alt: 'Facades close up',
-			width: 320,
+			width: 555,
 			height: 832,
 			sizes:
-				'(max-width: 639px) 92vw, (max-width: 767px) 608px, (max-width: 1023px) 160px, (max-width: 1279px) 204px, 320px',
+				'(max-width: 639px) 92vw, (max-width: 767px) 608px, (max-width: 1023px) 278px, (max-width: 1279px) 351px, 100%',
 		},
 	},
 	{
@@ -757,10 +757,10 @@ export const ONE_PROJECT: ProjectCase[] = [
 		media: {
 			src: '/img/project/fourth.jpg',
 			alt: 'Facades close up',
-			width: 1024,
+			width: 790,
 			height: 1778,
 			sizes:
-				'(max-width: 639px) 92vw, (max-width: 767px) 608px, (max-width: 1023px) 512px, (max-width: 1279px) 644px, 1024px',
+				'(max-width: 639px) 92vw, (max-width: 767px) 608px, (max-width: 1023px) 395px, (max-width: 1279px) 498px, 790px',
 		},
 	},
 	{
@@ -769,10 +769,10 @@ export const ONE_PROJECT: ProjectCase[] = [
 		media: {
 			src: '/img/project/fifth.jpg',
 			alt: 'Side glass panels',
-			width: 672,
+			width: 790,
 			height: 504,
 			sizes:
-				'(max-width: 639px) 92vw, (max-width: 767px) 608px, (max-width: 1023px) 336px, (max-width: 1279px) 424px, 672px',
+				'(max-width: 639px) 92vw, (max-width: 767px) 608px, (max-width: 1023px) 395px, (max-width: 1279px) 498px, 790px',
 		},
 	},
 	{
@@ -781,10 +781,10 @@ export const ONE_PROJECT: ProjectCase[] = [
 		media: {
 			src: '/img/project/sixth.jpg',
 			alt: 'Hanging balconies',
-			width: 672,
+			width: 555,
 			height: 504,
 			sizes:
-				'(max-width: 639px) 92vw, (max-width: 767px) 608px, (max-width: 1023px) 336px, (max-width: 1279px) 424px, 672px',
+				'(max-width: 639px) 92vw, (max-width: 767px) 608px, (max-width: 1023px) 278px, (max-width: 1279px) 351px, 100%',
 		},
 	},
 ]
