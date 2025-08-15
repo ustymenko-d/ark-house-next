@@ -47,8 +47,8 @@ const Modal = () => {
 								disabled={!modalOpen}>
 								<div className='min-h-full'>
 									<div>
-										<div className='flex gap-4 justify-between'>
-											<h2 className='mb-2 text-2xl md:text-4xl'>This is an example page</h2>
+										<div className='flex justify-between gap-4'>
+											<h2 className='mb-6 text-2xl md:text-4xl'>This is an example page</h2>
 											<CloseButton
 												onClick={toggleModalOpen}
 												aria-label='Close modal'
