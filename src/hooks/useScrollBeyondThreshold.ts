@@ -1,31 +1,25 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import debounce from 'lodash.debounce'
+import { useEffect, useState } from 'react'
 
-const useScrollBeyondThreshold = (threshold: number = 100, delay: number = 200) => {
+const useScrollBeyondThreshold = (thresholdPercent: number = 100, debounceDelay: number = 200) => {
 	const [hasScrolledBeyondThreshold, setHasScrolledBeyondThreshold] = useState(false)
 
-	const timerRef = useRef<NodeJS.Timeout | null>(null)
-
 	useEffect(() => {
-		const handleScroll = () => {
-			const scrollPosition = window.scrollY
-			const thresholdInPixels = window.innerHeight * (threshold / 100)
+		const thresholdInPixels = window.innerHeight * (thresholdPercent / 100)
 
-			if (timerRef.current) clearTimeout(timerRef.current)
+		const handleScroll = debounce(() => {
+			setHasScrolledBeyondThreshold(window.scrollY > thresholdInPixels)
+		}, debounceDelay)
 
-			timerRef.current = setTimeout(() => {
-				setHasScrolledBeyondThreshold(scrollPosition > thresholdInPixels)
-			}, delay)
-		}
-
-		window.addEventListener('scroll', handleScroll)
+		window.addEventListener('scroll', handleScroll, { passive: true })
 
 		return () => {
 			window.removeEventListener('scroll', handleScroll)
-			if (timerRef.current) clearTimeout(timerRef.current)
+			handleScroll.cancel()
 		}
-	}, [threshold, delay])
+	}, [thresholdPercent, debounceDelay])
 
 	return hasScrolledBeyondThreshold
 }
