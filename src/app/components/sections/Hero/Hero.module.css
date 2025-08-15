@@ -1,8 +1,7 @@
 .hero {
-	min-height: fit-content;
-	height: calc(100svh - 78px);
+	min-height: calc(100dvh - 78px);
 	max-height: 800px;
-	transition: all 0.6 ease;
+	transition: all 0.6s ease;
 
 	&::before {
 		content: '';
