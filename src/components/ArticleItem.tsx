@@ -14,13 +14,13 @@ const ArticleItem = ({ title, content, dateTime, media }: Article) => (
 			sizes={media?.sizes}
 		/>
 
-		<div className='flex flex-col gap-2 p-4'>
+		<div className='flex flex-col gap-1 p-4'>
 			<time
-				className='text-base text-gray-600 md:text-lg'
+				className='text-sm text-gray-600 md:text-base'
 				dateTime={dateTime}>
 				{dateTime}
 			</time>
-			<h3 className='mb-2 text-2xl font-semibold'>{title}</h3>
+			<h3 className='mb-4 text-2xl font-semibold'>{title}</h3>
 			<p className='text-base text-gray-800 md:text-lg'>{content}</p>
 		</div>
 	</div>
