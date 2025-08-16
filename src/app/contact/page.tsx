@@ -76,7 +76,7 @@ const ContactPage = () => {
 			<form
 				className='flex flex-col items-center justify-center h-full gap-y-6'
 				onSubmit={handleSubmit}>
-				<h1 className='mb-8 text-4xl font-semibold text-center lg:text-5xl'>
+				<h1 className='mb-8 text-4xl font-semibold leading-tight tracking-tight text-center md:text-5xl'>
 					We will be glad to contact&nbsp;you
 				</h1>
 
@@ -85,7 +85,7 @@ const ContactPage = () => {
 					toggleContactType={toggleContactType}
 				/>
 
-				<p className='text-2xl text-center sm:max-w-80'>
+				<p className='text-2xl text-center text-gray-800 sm:max-w-80'>
 					{`Give us your ${phoneType ? 'number' : 'email'} and we will ${
 						phoneType ? 'call you' : 'write to you'
 					} now`}

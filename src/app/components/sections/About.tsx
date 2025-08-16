@@ -20,7 +20,7 @@ const AboutSection = () => (
 				How do you want to make people feel?
 			</p>
 
-			<div className='grid grid-cols-3 mb-8 sm:mb-8 sm:gap-5 lg:gap-10'>
+			<div className='grid grid-cols-3 mb-8 sm:gap-5 lg:gap-10'>
 				{imagesNames.map((item, index) => (
 					<div
 						key={`${item}-${index}`}
@@ -43,7 +43,7 @@ const AboutSection = () => (
 				))}
 			</div>
 
-			<p className='mb-6 text-xl tracking-tight md:text-2xl md:w-3/4 md:mx-auto xl:w-1/2'>
+			<p className='mb-6 text-base tracking-tight text-gray-800 md:text-lg md:w-3/4 md:mx-auto xl:w-1/2'>
 				In the face of changing trends and technologies, ARK House creates architecture that remains
 				relevant - not based on trends, fads or dates - but on timeless human truths.
 			</p>

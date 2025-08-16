@@ -1,3 +1,4 @@
+import clsx from 'clsx'
 import Link from 'next/link'
 
 interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -5,16 +6,16 @@ interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	children: string
 }
 
-const Button = ({ to, children, onClick }: IButtonProps) =>
+const Button = ({ to, children, onClick, className }: IButtonProps) =>
 	to ? (
 		<Link
 			href={to}
-			className='button-with-icon'>
+			className={clsx(className, 'button-with-icon')}>
 			{children}
 		</Link>
 	) : (
 		<button
-			className='button-with-icon'
+			className={clsx(className, 'button-with-icon')}
 			onClick={onClick}>
 			{children}
 		</button>

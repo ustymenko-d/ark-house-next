@@ -20,7 +20,7 @@ const TeamSection = () => (
 				'after:content-[""] after:block after:absolute after:top-0 after:right-0 after:h-full after:pointer-events-none after:w-[calc(100vw-100%)] after:bg-[rgba(245,245,245)] after:translate-x-full'
 			)}>
 			<div className='container py-12 mx-auto mb-14 md:px-10 lg:px-20'>
-				<p className='mb-10 text-2xl xl:max-w-5xl'>
+				<p className='mb-8 text-base text-gray-800 md:text-lg xl:max-w-5xl'>
 					Our team of expert architects and builders, with over 45 years of combined experience,
 					will bring your vision to life. Trust us to deliver functional and beautiful structures
 					that exceed expectations.

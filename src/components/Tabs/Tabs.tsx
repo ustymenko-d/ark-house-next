@@ -51,7 +51,8 @@ const Tabs = ({ tabsType, tabsList }: ITabsProps) => {
 					'xl:flex-col xl:items-start xl:mb-0',
 					{
 						'xl:justify-start xl:gap-y-8': isProjects,
-						'xl:justify-evenly': !isProjects,
+						'xl:justify-evenly': isServices,
+						'xl:justify-start xl:gap-y-10': !isProjects && !isServices,
 					}
 				)}
 				role='tablist'>

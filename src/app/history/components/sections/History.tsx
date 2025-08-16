@@ -1,11 +1,11 @@
 import ImageWithSkeleton from '@/components/UI/ImageWithSkeleton'
 
 const History = () => (
-	<section className='mb-16'>
-		<h2 className='mb-4 text-5xl font-semibold leading-normal tracking-tight'>Our history</h2>
+	<section className='flex flex-col gap-6 mb-10'>
+		<h2 className='text-4xl font-semibold leading-tight tracking-tight md:text-5xl'>Our history</h2>
 
 		<ImageWithSkeleton
-			className='w-full mb-4 bg-dark-color'
+			className='w-full bg-dark-color'
 			src='/img/history-page/builders.jpg'
 			width={1376}
 			height={860}
@@ -13,7 +13,7 @@ const History = () => (
 			alt='Building'
 		/>
 
-		<p className='text-xl'>
+		<p className='text-base leading-relaxed text-gray-800 md:text-lg'>
 			For over four decades, ARK House, founded by renowned architect John Smith in 1975, has been a
 			leader in the industry known for its innovative designs and commitment to client satisfaction.
 			The agency&apos;s early work, including the Smith Tower in Seattle, established Smith&apos;s
