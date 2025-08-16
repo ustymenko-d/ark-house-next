@@ -27,7 +27,8 @@ const ServicesTypeContent = ({ tabsContent, activeTab }: ITabContentProps) => (
 							className='h-full object-cover'
 							src={content as string}
 							alt={`${tabName} image`}
-							fill
+							width={519}
+							height={640}
 							sizes='(max-width: 639px) 587px, (max-width: 767px) 640px, (max-width: 1023px) 688px, (max-width: 1279px) 573px, 519px'
 							quality={100}
 							loading='lazy'

@@ -42,7 +42,7 @@ export const HOME_PROJECTS: ProjectCase[] = [
 			src: '/img/projects-page/arc/classroom.jpg',
 			alt: 'UVU Classroom Building',
 			width: 896,
-			height: 985,
+			height: 800,
 			sizes:
 				'(max-width: 639px) 92vw, (max-width: 767px) 640px, (max-width: 1023px) 688px, (max-width: 1279px) 566px, (max-width: 1535px) 736px, 896px',
 		},
@@ -55,7 +55,7 @@ export const HOME_PROJECTS: ProjectCase[] = [
 			src: '/img/projects-page/arc/monson.jpg',
 			alt: 'Thomas S. Monson Center',
 			width: 416,
-			height: 985,
+			height: 800,
 			sizes:
 				'(max-width: 639px) 92vw, (max-width: 767px) 640px, (max-width: 1023px) 688px, (max-width: 1279px) 267px, (max-width: 1535px) 352px, 416px',
 		},
@@ -68,7 +68,7 @@ export const HOME_PROJECTS: ProjectCase[] = [
 			src: '/img/projects-page/arc/swaner.jpg',
 			alt: 'USU Swaner Preserve and Ecocenter',
 			width: 656,
-			height: 985,
+			height: 800,
 			sizes:
 				'(max-width: 639px) 92vw, (max-width: 767px) 640px, (max-width: 1023px) 688px, (max-width: 1279px) 416px, (max-width: 1535px) 544px, 656px',
 		},
@@ -94,7 +94,7 @@ export const HOME_PROJECTS: ProjectCase[] = [
 			src: '/img/projects-page/arc/college.jpg',
 			alt: 'USU College of Agriculture',
 			width: 1016,
-			height: 989,
+			height: 800,
 			sizes:
 				'(max-width: 639px) 92vw, (max-width: 767px) 640px, (max-width: 1023px) 688px, (max-width: 1279px) 640px, (max-width: 1535px) 832px, 1016px',
 		},
@@ -107,7 +107,7 @@ export const HOME_PROJECTS: ProjectCase[] = [
 			src: '/img/projects-page/arc/sugar-house.jpg',
 			alt: 'Sugar House Monument Plaza',
 			width: 656,
-			height: 985,
+			height: 800,
 			sizes:
 				'(max-width: 639px) 92vw, (max-width: 767px) 640px, (max-width: 1023px) 688px, (max-width: 1279px) 416px, (max-width: 1535px) 544px, 656px',
 		},
@@ -120,7 +120,7 @@ export const HOME_PROJECTS: ProjectCase[] = [
 			src: '/img/projects-page/arc/trax.jpg',
 			alt: 'UTA TRAX: Mid-Jordan Line',
 			width: 656,
-			height: 985,
+			height: 800,
 			sizes:
 				'(max-width: 639px) 92vw, (max-width: 767px) 640px, (max-width: 1023px) 688px, (max-width: 1279px) 416px, (max-width: 1535px) 544px, 656px',
 		},
@@ -133,7 +133,7 @@ export const HOME_PROJECTS: ProjectCase[] = [
 			src: '/img/projects-page/arc/lab.jpg',
 			alt: 'Unified State Laboratory - Module 2',
 			width: 896,
-			height: 985,
+			height: 800,
 			sizes:
 				'(max-width: 639px) 92vw, (max-width: 767px) 640px, (max-width: 1023px) 688px, (max-width: 1279px) 566px, (max-width: 1535px) 736px, 896px',
 		},
@@ -159,7 +159,7 @@ export const HOME_PROJECTS: ProjectCase[] = [
 			src: '/img/projects-page/arc/s-line.jpg',
 			alt: 'S - Line',
 			width: 656,
-			height: 985,
+			height: 800,
 			sizes:
 				'(max-width: 639px) 92vw, (max-width: 767px) 640px, (max-width: 1023px) 688px, (max-width: 1279px) 416px, (max-width: 1535px) 544px, 656px',
 		},
