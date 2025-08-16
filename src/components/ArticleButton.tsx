@@ -27,7 +27,7 @@ const ArticleButton = ({ children, ...rest }: IArticleButtonProps) => {
 			aria-expanded={isModalOpen}
 			tabIndex={0}
 			className={clsx(
-				'cursor-pointer transition-[outline-offset] duration-150',
+				'bg-neutral-100 cursor-pointer transition-[outline-offset] duration-150',
 				'hover:outline hover:outline-2 hover:outline-dark-color hover:outline-offset-2',
 				'focus-visible:outline focus-visible:outline-2 focus-visible:outline-dark-color focus-visible:outline-offset-2'
 			)}

@@ -22,7 +22,9 @@ const Blog = () => {
 			<div className='container grid gap-10 mx-auto md:px-10 lg:px-20 mb-14 lg:grid-cols-2 2xl:max-w-screen-xl'>
 				{BLOG_ARTICLES.map((article, index) => (
 					<ArticleButton key={`${article.title}`}>
-						<AnimatedWrapper delay={(index + index) * 0.1}>
+						<AnimatedWrapper
+							delay={(index + index) * 0.1}
+							className='h-full'>
 							<ArticleItem {...article} />
 						</AnimatedWrapper>
 					</ArticleButton>
