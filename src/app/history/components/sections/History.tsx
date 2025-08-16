@@ -1,7 +1,7 @@
 import ImageWithSkeleton from '@/components/UI/ImageWithSkeleton'
 
 const History = () => (
-	<section className='flex flex-col gap-6 mb-14'>
+	<section className='flex flex-col gap-6 mb-10'>
 		<h2 className='text-4xl font-semibold leading-tight tracking-tight md:text-5xl'>Our history</h2>
 
 		<ImageWithSkeleton

@@ -18,13 +18,13 @@ const About = () => (
 			alt='Meet'
 		/>
 
-		<div className='flex flex-col gap-4 text-base md:text-lg'>
-			<p className='text-gray-800 text-balance'>
+		<div className='flex flex-col gap-4 '>
+			<p className='text-base text-gray-800 text-balance md:text-lg'>
 				We are dedicated individuals from a range of different countries. Based in Oslo, with
 				offices in Copenhagen, London and Reykjavik, we are actively involved in projects in various
 				countries across Europe, Africa, the Middle East and Asia.
 			</p>
-			<p className='text-gray-800 text-balance'>
+			<p className='text-base text-gray-800 text-balance md:text-lg'>
 				Together, we are a community with a culture for beautiful and outstanding architecture, a
 				culture that is Powered by Commitment.
 			</p>

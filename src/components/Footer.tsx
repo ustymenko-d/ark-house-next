@@ -9,17 +9,19 @@ import SocialLinks from './UI/SocialLinks/SocialLinks'
 const Footer = () => (
 	<footer className='px-4'>
 		<div className='container mx-auto'>
-			<div className='mb-12 topline'>
+			<div className='mb-8 topline'>
 				<h2 className='font-semibold'>Start a Project?</h2>
 				<Button to='/contact'>Contact&nbsp;us</Button>
 			</div>
 
-			<div className='grid gap-6 pb-6 mb-12 border-b border-b-dark-color md:px-10 lg:px-20 lg:pb-12 lg:grid-cols-5 lg:gap-14 lg:text-4xl'>
-				<div className='lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-2'>
-					<h3 className='mb-4 text-xl font-semibold md:text-3xl'>
-						Support is available 24&nbsp;hours
-					</h3>
-					<Button to='/contact'>Contact&nbsp;us</Button>
+			<div className='grid pb-8 mb-8 border-b gap-x-6 gap-y-8 sm:gap-8 border-b-dark-color md:px-10 lg:px-20 lg:pb-10 lg:grid-cols-5 lg:gap-14 lg:text-4xl'>
+				<div className='lg:flex lg:flex-col lg:items-start lg:gap-6 lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-2'>
+					<h3 className='text-xl font-semibold sm:text-3xl'>Support is available 24&nbsp;hours</h3>
+					<Button
+						className='max-lg:hidden'
+						to='/contact'>
+						Contact&nbsp;us
+					</Button>
 				</div>
 
 				<div className='flex flex-wrap lg:col-start-3 lg:-col-end-1 lg:row-start-1 lg:row-end-2 gap-x-8 sm:gap-x-20 gap-y-8 text-dark-color md:flex-row md:gap-x-16 md:gap-y-5 lg:justify-end lg:gap-x-16'>
@@ -27,7 +29,7 @@ const Footer = () => (
 						<address
 							key={title}
 							className='flex flex-col items-start text-lg not-italic gap-y-3 lg:justify-start'>
-							<p className='lg:leading-7'>
+							<p className='text-base text-gray-800 md:text-lg'>
 								<b>{title}</b>
 								<br />
 								{lines.map((line, idx) => (
@@ -38,7 +40,7 @@ const Footer = () => (
 								))}
 							</p>
 							<a
-								className='animatedUnderline text-dark-color'
+								className='text-base animatedUnderline text-dark-color md:text-lg'
 								href={href}>
 								{phone}
 							</a>
@@ -55,8 +57,8 @@ const Footer = () => (
 				</div>
 			</div>
 
-			<div className='mb-12 leading-5 md:px-10 lg:px-20'>
-				<p className='pb-5'>{PROJECT_DESCRIPTION}</p>
+			<div className='flex flex-col items-start gap-6 leading-5 mb-14 md:px-10 lg:px-20'>
+				<p className='text-base text-gray-800 md:text-lg'>{PROJECT_DESCRIPTION}</p>
 				<Button to='https://ustymenko.vercel.app'>Back&nbsp;to&nbsp;portfolio</Button>
 			</div>
 		</div>
