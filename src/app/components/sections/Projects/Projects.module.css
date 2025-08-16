@@ -1,6 +1,6 @@
 .projectsGrid {
 	@media screen and (min-width: 1536px) {
-		grid-template-rows: repeat(2, 1fr) repeat(2, 0.45fr) 1fr repeat(2, 0.45fr) 1fr;
+		grid-template-rows: repeat(2, 1fr) repeat(2, auto) 1fr repeat(2, auto) 1fr;
 	}
 }
 
