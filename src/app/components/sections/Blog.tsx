@@ -14,8 +14,8 @@ const Blog = () => {
 		<section
 			id='blog'
 			className='px-4 mx-auto'>
-			<div className='container mx-auto topline mb-14 md:px-10 lg:px-20'>
-				<h2 className='font-semibold leading-tight'>Blog</h2>
+			<div className='container mx-auto mb-10 topline md:px-10 lg:px-20'>
+				<h2 className='font-semibold'>Blog</h2>
 				<Button onClick={toggleModalOpen}>Show&nbsp;More</Button>
 			</div>
 

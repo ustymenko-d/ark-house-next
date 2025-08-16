@@ -25,7 +25,7 @@ const ServicesSection = () => (
 				tabsList={SERVICES_TABS}
 			/>
 			<div className='lg:col-start-2 lg:row-start-2 xl:max-w-[66.66%] xl:ml-auto'>
-				<p className='mb-4 text-xl'>
+				<p className='mb-4 text-base text-gray-800 md:text-lg text-balance'>
 					At the heart of everything we do is the human experience to feel. To&nbsp;love.
 					To&nbsp;image. To&nbsp;wonder. To&nbsp;guide. To&nbsp;jest. To&nbsp;rule. To&nbsp;serve.
 					To&nbsp;belong.
