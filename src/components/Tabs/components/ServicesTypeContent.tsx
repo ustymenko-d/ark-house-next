@@ -24,11 +24,10 @@ const ServicesTypeContent = ({ tabsContent, activeTab }: ITabContentProps) => (
 						aria-labelledby={`services-tab-${index}`}
 						className='h-full'>
 						<ImageWithSkeleton
-							className='h-full object-cover'
+							className='object-cover h-full'
 							src={content as string}
 							alt={`${tabName} image`}
-							width={519}
-							height={640}
+							fill
 							sizes='(max-width: 639px) 587px, (max-width: 767px) 640px, (max-width: 1023px) 688px, (max-width: 1279px) 573px, 519px'
 							quality={100}
 							loading='lazy'
