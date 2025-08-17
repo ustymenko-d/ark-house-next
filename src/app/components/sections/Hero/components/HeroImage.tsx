@@ -37,6 +37,7 @@ const HeroImage = () => {
 					key={media}
 					media={media}
 					srcSet={imageProps[index].srcSet}
+					sizes={commonProps.sizes}
 				/>
 			))}
 			<img
