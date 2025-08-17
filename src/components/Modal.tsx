@@ -25,8 +25,7 @@ const Modal = () => {
 				>
 					<div
 						onClick={toggleModalOpen}
-						className='absolute inset-0 h-full w-full bg-black/40'
-					></div>
+						className='absolute inset-0 h-full w-full bg-black/40'></div>
 
 					<AnimatedWrapper
 						motionKey='modal'
@@ -44,8 +43,7 @@ const Modal = () => {
 							}}
 							aria-modal={true}
 							aria-labelledby='dialog-title'
-							aria-describedby='dialog-description'
-						>
+							aria-describedby='dialog-description'>
 							<ReactFocusLock returnFocus disabled={!modalOpen}>
 								<div className='flex flex-col gap-6'>
 									<div className='flex justify-between gap-4'>

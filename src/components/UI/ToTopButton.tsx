@@ -44,8 +44,7 @@ const ToTopButton = () => {
 								'hover:outline hover:outline-1 hover:outline-offset-4',
 								'active:outline active:outline-1 active:outline-offset-4',
 								'after:absolute after:inset-0 after:h-full after:w-full after:scale-75 after:content-[url("/img/icons/arrow-up.svg")]'
-							)}
-						></button>
+							)}></button>
 					</AnimatedWrapper>
 				</div>
 			)}

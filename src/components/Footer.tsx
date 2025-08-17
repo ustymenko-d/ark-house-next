@@ -28,8 +28,7 @@ const Footer = () => (
 					{ADDRESSES.map(({ title, lines, phone, href }) => (
 						<address
 							key={title}
-							className='flex flex-col items-start gap-y-3 text-lg not-italic lg:justify-start'
-						>
+							className='flex flex-col items-start gap-y-3 text-lg not-italic lg:justify-start'>
 							<p className='text-base text-gray-800 md:text-lg'>
 								<b>{title}</b>
 								<br />
@@ -42,8 +41,7 @@ const Footer = () => (
 							</p>
 							<a
 								className='animatedUnderline text-base text-dark-color md:text-lg'
-								href={href}
-							>
+								href={href}>
 								{phone}
 							</a>
 						</address>

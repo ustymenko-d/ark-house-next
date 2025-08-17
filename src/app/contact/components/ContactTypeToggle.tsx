@@ -43,8 +43,7 @@ const ContactTypeToggle = ({
 							selected ? 'text-white' : 'text-dark-color',
 							!selected &&
 								'hover:border-transparent focus-visible:border-transparent active:border-transparent'
-						)}
-					>
+						)}>
 						{breakpoints ? (isPhone ? 'Phone Number' : 'Email') : label}
 					</button>
 				);

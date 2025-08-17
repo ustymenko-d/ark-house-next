@@ -17,8 +17,7 @@ const ServicesTypeContent = ({ tabsContent, activeTab }: ITabContentProps) => (
 					className={clsx('absolute inset-0 transition-opacity duration-300', {
 						'pointer-events-auto visible opacity-100': isActive,
 						'pointer-events-none invisible opacity-0': !isActive,
-					})}
-				>
+					})}>
 					<div
 						id={`services-tabpanel-${index}`}
 						role='tabpanel'

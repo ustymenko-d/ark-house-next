@@ -15,14 +15,12 @@ const Hero = () => (
 			'duration-500',
 			'before:absolute before:bottom-0 before:left-0 before:right-0 before:z-0 before:h-[70%] before:w-full before:bg-[#f8f8f8] before:content-[""]',
 			'lg:before:mx-auto lg:before:min-h-[63%] lg:before:w-[calc(100%-160px)]'
-		)}
-	>
+		)}>
 		<div
 			className={clsx(
 				'relative z-10 mb-10 px-4 pt-4 text-[clamp(2.625rem,1.0179rem+8.0357vw,4.875rem)] font-bold',
 				'md:text-8xl lg:px-0'
-			)}
-		>
+			)}>
 			<span className='absolute right-3 top-0 mr-4 text-lg font-medium tracking-wide'>
 				Since&nbsp;1975&nbsp;-
 			</span>
@@ -41,8 +39,7 @@ const Hero = () => (
 			className={clsx(
 				'z-10 flex flex-col items-start gap-8 px-4 lg:items-end lg:self-center lg:px-0',
 				'xl:items-end xl:gap-20 xl:self-start'
-			)}
-		>
+			)}>
 			<Button to='/contact'>Contact&nbsp;us</Button>
 			<SocialLinks />
 		</div>

@@ -24,8 +24,7 @@ const Breadcrumbs = ({ navItems }: { navItems: INavItem[] }) => (
 						className={clsx(
 							'relative mr-10 leading-tight md:mr-8',
 							'after:pointer-events-none after:absolute after:right-[-40px] after:top-1/2 after:translate-y-[-50%] after:leading-[0] after:content-[url("/img/icons/arrow.svg")]'
-						)}
-					>
+						)}>
 						<Link
 							className='animatedUnderline text-dark-color'
 							href={item.href || '#'}

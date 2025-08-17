@@ -16,8 +16,7 @@ const Banner = ({
 		className={clsx(
 			className,
 			'flex flex-col items-center justify-center gap-4 text-center text-dark-color'
-		)}
-	>
+		)}>
 		{svgImage}
 		<p className='text-3xl font-bold leading-none tracking-tight md:text-[2.5rem] 2xl:text-[3.5rem]'>
 			{topLineText}

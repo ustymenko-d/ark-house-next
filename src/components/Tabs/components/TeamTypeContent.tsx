@@ -25,8 +25,7 @@ const TeamTypeContent = ({ tabsContent, activeTab }: ITabContentProps) => (
 					className={clsx('w-full overflow-hidden', {
 						'pointer-events-auto h-auto': isActive,
 						'pointer-events-none h-0': !isActive,
-					})}
-				>
+					})}>
 					<div className='grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3'>
 						{(item.content as TeamMember[]).map((member, memberIndex) => (
 							<AnimatedWrapper
