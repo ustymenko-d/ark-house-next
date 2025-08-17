@@ -1,13 +1,26 @@
 {
-  "extends": [
-    "next/core-web-vitals",
-    "next/typescript"
-  ],
-  "plugins": [
-    "simple-import-sort"
-  ],
-  "rules": {
-    "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error"
-  }
+	"extends": ["next/core-web-vitals", "next/typescript", "prettier"],
+	"plugins": ["simple-import-sort"],
+	"rules": {
+		"simple-import-sort/imports": [
+			"error",
+			{
+				"groups": [
+					// 1. Side effect imports at the start
+					["^\\u0000"],
+					// 2. `react` and packages: Things that start with a letter (or digit or underscore), or `@` followed by a letter
+					["^react$", "^@?\\w"],
+					// 3. Absolute imports and other imports
+					["^@", "^"],
+					// 4. relative imports from same folder "./"
+					["^\\./"],
+					// 5. style module imports
+					["^.+\\.(module.css|module.scss)$"],
+					// 6. media imports
+					["^.+\\.(gif|png|svg|jpg)$"]
+				]
+			}
+		],
+		"simple-import-sort/exports": "error"
+	}
 }

@@ -1,14 +1,15 @@
-import clsx from 'clsx'
+import clsx from 'clsx';
 
 const Logo = ({ className }: React.HTMLAttributes<HTMLDivElement>) => (
-	<div className={clsx(className, 'inline-block py-3 px-3 bg-neutral-950')}>
+	<div className={clsx(className, 'inline-block bg-neutral-950 px-3 py-3')}>
 		<svg
-			className='w-full h-auto'
+			className='h-auto w-full'
 			width='60'
 			height='32'
 			viewBox='0 0 60 32'
 			fill='none'
-			xmlns='http://www.w3.org/2000/svg'>
+			xmlns='http://www.w3.org/2000/svg'
+		>
 			<path
 				d='M8.50098 14.4902C8.11655 13.0539 7.70265 11.7426 7.25927 10.5564H2.08368L0.62263 14.4902H0L4.13906 3.5235L5.38078 0.00354004H5.79468C6.87248 2.99639 7.62482 5.06592 8.0517 6.21211C8.47858 7.35831 8.90663 8.4314 9.33587 9.43138C9.76274 10.4337 10.5139 12.1212 11.5894 14.4938L8.50098 14.4902ZM7.08592 10.1425C6.75338 9.27219 6.26991 8.17551 5.63549 6.85243C5.19446 5.95387 4.80885 5.11191 4.47867 4.32655L2.28533 10.1425H7.08592Z'
 				fill='white'
@@ -43,6 +44,6 @@ const Logo = ({ className }: React.HTMLAttributes<HTMLDivElement>) => (
 			/>
 		</svg>
 	</div>
-)
+);
 
-export default Logo
+export default Logo;

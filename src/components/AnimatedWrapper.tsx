@@ -1,15 +1,15 @@
-'use client'
+'use client';
 
-import clsx from 'clsx'
-import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { useRef } from 'react';
+import clsx from 'clsx';
+import { motion, useInView } from 'framer-motion';
 
 interface IAnimatedWrapperProps extends React.HTMLAttributes<HTMLDivElement> {
-	children: React.ReactNode
-	motionKey?: string
-	delay?: number
-	duration?: number
-	typeFade?: boolean
+	children: React.ReactNode;
+	motionKey?: string;
+	delay?: number;
+	duration?: number;
+	typeFade?: boolean;
 }
 
 const AnimatedWrapper = ({
@@ -20,18 +20,18 @@ const AnimatedWrapper = ({
 	typeFade = true,
 	className,
 }: IAnimatedWrapperProps) => {
-	const motionRef = useRef<HTMLDivElement | null>(null)
-	const isInView = useInView(motionRef, { once: true })
+	const motionRef = useRef<HTMLDivElement | null>(null);
+	const isInView = useInView(motionRef, { once: true });
 
 	const fadeInBottom = {
 		hidden: { opacity: 0, y: 50 },
 		visible: { opacity: 1, y: 0 },
-	}
+	};
 
 	const opacityScale = {
 		hidden: { opacity: 0, scale: 0.98 },
 		visible: { opacity: 1, scale: 1 },
-	}
+	};
 
 	return (
 		<motion.div
@@ -42,10 +42,11 @@ const AnimatedWrapper = ({
 			animate={isInView ? 'visible' : 'hidden'}
 			exit='hidden'
 			variants={typeFade ? fadeInBottom : opacityScale}
-			transition={{ duration, ease: 'easeOut', delay }}>
+			transition={{ duration, ease: 'easeOut', delay }}
+		>
 			{children}
 		</motion.div>
-	)
-}
+	);
+};
 
-export default AnimatedWrapper
+export default AnimatedWrapper;

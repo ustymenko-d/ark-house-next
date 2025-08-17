@@ -1,9 +1,9 @@
-import { Article } from '@/const/const.types'
+import { Article } from '@/const/const.types';
 
-import ImageWithSkeleton from './UI/ImageWithSkeleton'
+import ImageWithSkeleton from './UI/ImageWithSkeleton';
 
 const ArticleItem = ({ title, content, dateTime, media }: Article) => (
-	<div className='relative flex flex-col h-full bg-neutral-100'>
+	<div className='relative flex h-full flex-col bg-neutral-100'>
 		<ImageWithSkeleton
 			className='aspect-[7/5] w-full bg-dark-color'
 			src={media.src}
@@ -15,15 +15,13 @@ const ArticleItem = ({ title, content, dateTime, media }: Article) => (
 		/>
 
 		<div className='flex flex-col gap-1 p-4'>
-			<time
-				className='text-sm text-gray-600 md:text-base'
-				dateTime={dateTime}>
+			<time className='text-sm text-gray-600 md:text-base' dateTime={dateTime}>
 				{dateTime}
 			</time>
 			<h3 className='mb-4 text-2xl font-semibold'>{title}</h3>
 			<p className='text-base text-gray-800 md:text-lg'>{content}</p>
 		</div>
 	</div>
-)
+);
 
-export default ArticleItem
+export default ArticleItem;

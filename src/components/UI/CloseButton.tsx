@@ -1,9 +1,12 @@
-'use client'
+'use client';
 
-import clsx from 'clsx'
+import clsx from 'clsx';
 
-const CloseButton = ({ onClick, ...rest }: React.ButtonHTMLAttributes<HTMLButtonElement>) => {
-	const { 'aria-label': ariaLabel, ...buttonProps } = rest
+const CloseButton = ({
+	onClick,
+	...rest
+}: React.ButtonHTMLAttributes<HTMLButtonElement>) => {
+	const { 'aria-label': ariaLabel, ...buttonProps } = rest;
 
 	return (
 		<button
@@ -17,22 +20,22 @@ const CloseButton = ({ onClick, ...rest }: React.ButtonHTMLAttributes<HTMLButton
 				'focus-visible:outline focus-visible:outline-1 focus-visible:outline-dark-color',
 				'focus-visible:outline-offset-[1.5px]',
 
-				'w-8 h-8 aspect-square shadow',
+				'aspect-square h-8 w-8 shadow',
 
 				"before:content-['']",
-				'before:absolute before:top-1/2 before:left-1/2',
+				'before:absolute before:left-1/2 before:top-1/2',
 				'before:translate-x-[-50%] before:translate-y-[-50%]',
 				'before:rotate-[45deg]',
 				'before:block before:h-[2px] before:w-1/2 before:bg-[var(--dark-color)]',
 
 				"after:content-['']",
-				'after:absolute after:top-1/2 after:left-1/2',
+				'after:absolute after:left-1/2 after:top-1/2',
 				'after:translate-x-[-50%] after:translate-y-[-50%]',
 				'after:rotate-[-45deg]',
 				'after:block after:h-[2px] after:w-1/2 after:bg-[var(--dark-color)]'
 			)}
 			{...buttonProps}
 		/>
-	)
-}
-export default CloseButton
+	);
+};
+export default CloseButton;

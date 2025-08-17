@@ -197,7 +197,7 @@ body::-webkit-scrollbar-thumb {
 
 @layer utilities {
 	.button-with-icon {
-		@apply relative inline-block overflow-hidden py-3 pl-8 pr-16 bg-neutral-950 text-neutral-50 font-medium text-base tracking-wide text-center shadow transition-[outline-offset] duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--dark-color)] focus-visible:outline-offset-2 hover:outline hover:outline-2 hover:outline-[var(--dark-color)] hover:outline-offset-2;
+		@apply relative inline-block overflow-hidden bg-neutral-950 py-3 pl-8 pr-16 text-center text-base font-medium tracking-wide text-neutral-50 shadow transition-[outline-offset] duration-150 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-[var(--dark-color)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--dark-color)];
 	}
 
 	.button-with-icon::before {

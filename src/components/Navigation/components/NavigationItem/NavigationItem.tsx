@@ -1,17 +1,17 @@
-'use client'
+'use client';
 
-import clsx from 'clsx'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import clsx from 'clsx';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
-import { NavigationLink } from '@/const/const.types'
+import { NavigationLink } from '@/const/const.types';
 
-import styles from './NavigationItem.module.css'
+import styles from './NavigationItem.module.css';
 
 interface INavigationItemProps {
-	link: NavigationLink
-	index: number
-	toggleNavListVisible?: () => void
+	link: NavigationLink;
+	index: number;
+	toggleNavListVisible?: () => void;
 }
 
 const NavigationItem = ({
@@ -19,23 +19,24 @@ const NavigationItem = ({
 	index,
 	toggleNavListVisible,
 }: INavigationItemProps) => {
-	const { title, href } = link
-	const pathname = usePathname()
-	const to = pathname === '/' ? href : `/${href}`
+	const { title, href } = link;
+	const pathname = usePathname();
+	const to = pathname === '/' ? href : `/${href}`;
 
 	return (
 		<Link
-			className={clsx(styles.navItem, 'text-black animatedUnderline')}
+			className={clsx(styles.navItem, 'animatedUnderline text-black')}
 			href={to}
 			data-number={index}
 			onClick={() => {
 				if (toggleNavListVisible) {
-					toggleNavListVisible()
+					toggleNavListVisible();
 				}
-			}}>
+			}}
+		>
 			{title}
 		</Link>
-	)
-}
+	);
+};
 
-export default NavigationItem
+export default NavigationItem;

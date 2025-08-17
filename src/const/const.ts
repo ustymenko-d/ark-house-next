@@ -5,10 +5,10 @@ import {
 	ProjectCase,
 	ProjectCharacteristic,
 	TabList,
-} from './const.types'
+} from './const.types';
 
 export const PROJECT_DESCRIPTION: string =
-	'The project is built with React and Next.js. TypeScript ensures type safety and code reliability, while TailwindCSS enables fast, consistent styling. Zustand handles global state management, and Zod provides data validation.'
+	'The project is built with React and Next.js. TypeScript ensures type safety and code reliability, while TailwindCSS enables fast, consistent styling. Zustand handles global state management, and Zod provides data validation.';
 
 export const NAVIGATION_LINKS: NavigationLink[] = [
 	{
@@ -31,7 +31,7 @@ export const NAVIGATION_LINKS: NavigationLink[] = [
 		title: 'Blog',
 		href: '#blog',
 	},
-]
+];
 
 export const HOME_PROJECTS: ProjectCase[] = [
 	{
@@ -164,7 +164,7 @@ export const HOME_PROJECTS: ProjectCase[] = [
 				'(max-width: 639px) 92vw, (max-width: 767px) 640px, (max-width: 1023px) 688px, (max-width: 1279px) 416px, (max-width: 1535px) 544px, 656px',
 		},
 	},
-]
+];
 
 export const PROJECTS_CASES: ProjectCase[] = [
 	{
@@ -434,7 +434,7 @@ export const PROJECTS_CASES: ProjectCase[] = [
 			height: 676,
 		},
 	},
-]
+];
 
 export const SERVICES_TABS: TabList = {
 	tabs: ['Architecture', 'Landscape', 'Interior', 'Design'],
@@ -444,7 +444,7 @@ export const SERVICES_TABS: TabList = {
 		{ tabName: 'Interior', content: '/img/home-page/services-interior.jpg' },
 		{ tabName: 'Design', content: '/img/home-page/services-design.jpg' },
 	],
-}
+};
 
 export const TEAM_TABS: TabList = {
 	tabs: ['Management', 'Architects', 'Engineers', 'Builders'],
@@ -638,14 +638,20 @@ export const TEAM_TABS: TabList = {
 			],
 		},
 	],
-}
+};
 
 const ARCHITECTURE_CASES = PROJECTS_CASES.filter(
-	projectCase => projectCase.category === 'Architecture'
-)
-const LANDSCAPE_CASES = PROJECTS_CASES.filter(projectCase => projectCase.category === 'Landscape')
-const INTERIOR_CASES = PROJECTS_CASES.filter(projectCase => projectCase.category === 'Interior')
-const DESIGN_CASES = PROJECTS_CASES.filter(projectCase => projectCase.category === 'Design')
+	(projectCase) => projectCase.category === 'Architecture'
+);
+const LANDSCAPE_CASES = PROJECTS_CASES.filter(
+	(projectCase) => projectCase.category === 'Landscape'
+);
+const INTERIOR_CASES = PROJECTS_CASES.filter(
+	(projectCase) => projectCase.category === 'Interior'
+);
+const DESIGN_CASES = PROJECTS_CASES.filter(
+	(projectCase) => projectCase.category === 'Design'
+);
 
 export const PROJECTS_TABS: TabList = {
 	tabs: ['All Projects', 'Architecture', 'Landscape', 'Interior', 'Design'],
@@ -656,7 +662,7 @@ export const PROJECTS_TABS: TabList = {
 		{ tabName: 'Interior', content: INTERIOR_CASES },
 		{ tabName: 'Design', content: DESIGN_CASES },
 	],
-}
+};
 
 export const BLOG_ARTICLES: Article[] = [
 	{
@@ -689,7 +695,7 @@ export const BLOG_ARTICLES: Article[] = [
 				'(max-width: 639px) 587px, (max-width: 767px) 640px, (max-width: 1023px) 688px, (max-width: 1279px) 412px, 540px',
 		},
 	},
-]
+];
 
 export const PROJECT_CHARACTERISTICS: ProjectCharacteristic[] = [
 	{
@@ -712,7 +718,7 @@ export const PROJECT_CHARACTERISTICS: ProjectCharacteristic[] = [
 		characteristic: 'Year',
 		value: '2018',
 	},
-]
+];
 
 export const ONE_PROJECT: ProjectCase[] = [
 	{
@@ -787,12 +793,17 @@ export const ONE_PROJECT: ProjectCase[] = [
 				'(max-width: 639px) 92vw, (max-width: 767px) 608px, (max-width: 1023px) 278px, (max-width: 1279px) 351px, 100%',
 		},
 	},
-]
+];
 
 export const ADDRESSES: Address[] = [
 	{
 		title: 'North',
-		lines: ['AFL Architects', 'St Georges House 56', 'Peter Street', 'Manchester'],
+		lines: [
+			'AFL Architects',
+			'St Georges House 56',
+			'Peter Street',
+			'Manchester',
+		],
 		phone: '+44 (0)161 236 6263',
 		href: 'tel:+4401612366263',
 	},
@@ -802,4 +813,4 @@ export const ADDRESSES: Address[] = [
 		phone: '+44 (0)121 289 4363',
 		href: 'tel:+4401212894363',
 	},
-]
+];
