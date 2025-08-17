@@ -25,8 +25,7 @@ const AboutSection = () => (
 						className={clsx(
 							'relative aspect-square overflow-hidden',
 							'before:absolute before:bottom-0 before:left-0 before:right-0 before:h-3/4 before:w-full before:bg-[rgb(248,248,248)] before:content-[""]'
-						)}
-					>
+						)}>
 						<AnimatedWrapper delay={(index + (index + 2)) * 0.1}>
 							<Image
 								className='relative z-[1]'

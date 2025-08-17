@@ -75,8 +75,7 @@ const ContactPage = () => {
 		<main className='container mx-auto flex min-h-[700px] flex-auto flex-col justify-center px-4 md:px-10 lg:px-20'>
 			<form
 				className='flex h-full flex-col items-center justify-center gap-y-6'
-				onSubmit={handleSubmit}
-			>
+				onSubmit={handleSubmit}>
 				<h1 className='mb-8 text-center text-4xl font-semibold leading-tight tracking-tight md:text-5xl'>
 					We will be glad to contact&nbsp;you
 				</h1>

@@ -55,8 +55,7 @@ const Navigation = () => {
 					aria-expanded={headerNavVisible}
 					aria-controls='navigation-list'
 					aria-label={`${headerNavVisible ? 'Hide' : 'Show'}page navigation`}
-					onClick={toggleNavListVisible}
-				>
+					onClick={toggleNavListVisible}>
 					<span className={`${styles['toggler-text']}`}></span>
 				</button>
 			)}

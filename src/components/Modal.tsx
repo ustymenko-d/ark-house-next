@@ -21,19 +21,16 @@ const Modal = () => {
 					className={clsx(
 						'fixed inset-0 z-[100] flex h-lvh w-screen items-center justify-center overflow-y-auto overflow-x-hidden p-4',
 						modalOpen && 'isDialogOpen'
-					)}
-				>
+					)}>
 					<div
 						onClick={toggleModalOpen}
-						className='absolute inset-0 h-full w-full bg-black/40'
-					></div>
+						className='absolute inset-0 h-full w-full bg-black/40'></div>
 
 					<AnimatedWrapper
 						motionKey='modal'
 						typeFade={false}
 						duration={0.2}
-						className='flex items-center justify-center'
-					>
+						className='flex items-center justify-center'>
 						<div
 							className='z-[95] max-w-md bg-white p-6 shadow-xl md:max-w-lg md:p-10'
 							role='dialog'
@@ -44,8 +41,7 @@ const Modal = () => {
 							}}
 							aria-modal={true}
 							aria-labelledby='dialog-title'
-							aria-describedby='dialog-description'
-						>
+							aria-describedby='dialog-description'>
 							<ReactFocusLock returnFocus disabled={!modalOpen}>
 								<div className='flex flex-col gap-6'>
 									<div className='flex justify-between gap-4'>

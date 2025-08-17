@@ -8,8 +8,7 @@ const ProjectCard = ({ title, subtitle, media }: ProjectCase) => (
 		<div className='flex h-full flex-col justify-start gap-2 md:gap-4'>
 			<div
 				className='relative max-h-[640px] w-full grow xl:max-h-[800px]'
-				style={{ aspectRatio: `${media.width} / ${media.height}` }}
-			>
+				style={{ aspectRatio: `${media.width} / ${media.height}` }}>
 				<ImageWithSkeleton
 					src={media.src}
 					alt={media.alt}

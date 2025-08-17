@@ -23,15 +23,13 @@ const NavigationList = ({
 			[styles['navigation-list_header']]: header,
 			[styles['navigation-list_active']]: navListVisible,
 		})}
-		aria-hidden={navListVisible ? !navListVisible : false}
-	>
+		aria-hidden={navListVisible ? !navListVisible : false}>
 		{NAVIGATION_LINKS.map((link, index) => (
 			<li
 				key={`${link.title}-${index}`}
 				className={clsx('relative', {
 					'container sm:mx-auto sm:pl-4 md:pl-0': header,
-				})}
-			>
+				})}>
 				<NavigationItem
 					link={link}
 					index={++index}

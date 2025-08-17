@@ -16,8 +16,7 @@ const TeamSection = () => (
 				'relative w-full bg-neutral-100',
 				'before:pointer-events-none before:absolute before:top-0 before:block before:h-full before:w-[calc(100vw-100%)] before:-translate-x-full before:bg-[rgba(245,245,245)] before:content-[""]',
 				'after:pointer-events-none after:absolute after:right-0 after:top-0 after:block after:h-full after:w-[calc(100vw-100%)] after:translate-x-full after:bg-[rgba(245,245,245)] after:content-[""]'
-			)}
-		>
+			)}>
 			<div className='container mx-auto mb-14 py-12 md:px-10 lg:px-20'>
 				<p className='mb-8 text-base text-gray-800 md:text-lg xl:max-w-5xl'>
 					Our team of expert architects and builders, with over 45 years of

@@ -33,8 +33,7 @@ const ArticleButton = ({ children, ...rest }: IArticleButtonProps) => {
 			)}
 			onClick={toggleModalOpen}
 			onKeyDown={handleKeyDown}
-			{...rest}
-		>
+			{...rest}>
 			{children}
 		</div>
 	);

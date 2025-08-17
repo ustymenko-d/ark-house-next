@@ -32,8 +32,7 @@ const NavigationItem = ({
 				if (toggleNavListVisible) {
 					toggleNavListVisible();
 				}
-			}}
-		>
+			}}>
 			{title}
 		</Link>
 	);

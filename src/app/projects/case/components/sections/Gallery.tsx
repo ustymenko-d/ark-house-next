@@ -25,8 +25,7 @@ const Gallery = () => (
 			{ONE_PROJECT.map((project, idx) => (
 				<div
 					key={`project-${idx}`}
-					className={clsx(gridItemClasses[idx], 'duration-200')}
-				>
+					className={clsx(gridItemClasses[idx], 'duration-200')}>
 					<AnimatedWrapper className='h-full'>
 						<ProjectCard {...project} />
 					</AnimatedWrapper>

@@ -43,8 +43,7 @@ const Tabs = ({ tabsType, tabsList }: ITabsProps) => {
 					'xl:grid-cols-[auto_1fr]': !isServices,
 				},
 				'grid gap-6 xl:gap-12'
-			)}
-		>
+			)}>
 			<div
 				className={clsx(
 					'flex h-full w-full flex-wrap items-center gap-x-4 gap-y-2',
@@ -56,8 +55,7 @@ const Tabs = ({ tabsType, tabsList }: ITabsProps) => {
 						'xl:justify-start xl:gap-y-10': !isProjects && !isServices,
 					}
 				)}
-				role='tablist'
-			>
+				role='tablist'>
 				{tabs.map((tab, index) => (
 					<button
 						key={`${tab}-${index}`}
@@ -68,8 +66,7 @@ const Tabs = ({ tabsType, tabsList }: ITabsProps) => {
 						role='tab'
 						aria-selected={activeTab === tab}
 						aria-controls={`${tabsType}-tabpanel-${index}`}
-						aria-label={`Set ${tab} tab`}
-					>
+						aria-label={`Set ${tab} tab`}>
 						{tab}
 					</button>
 				))}

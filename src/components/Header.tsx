@@ -23,14 +23,12 @@ const Header = () => {
 							'has-[a:focus-visible]:before:translate-y-5',
 							'hover:before:translate-y-5',
 							'active:before:translate-y-5'
-						)}
-					>
+						)}>
 						<Link
 							href='/'
 							aria-label='Go Ark-House home'
 							className='inline-block'
-							replace
-						>
+							replace>
 							<Logo />
 						</Link>
 					</div>

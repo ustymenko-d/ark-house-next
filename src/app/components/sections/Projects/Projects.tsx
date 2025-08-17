@@ -23,14 +23,12 @@ const Projects = () => {
 
 			<div className='container mx-auto md:px-10 lg:px-20'>
 				<div
-					className={`${styles.projectsGrid} mb-14 grid gap-y-12 lg:grid-cols-12 lg:gap-8 2xl:gap-16`}
-				>
+					className={`${styles.projectsGrid} mb-14 grid gap-y-12 lg:grid-cols-12 lg:gap-8 2xl:gap-16`}>
 					{firstProjectsGroup.map((projectCase, index) => (
 						<Link
 							className={styles.projectLink}
 							key={`${projectCase.title}-${index}`}
-							href='/projects/case'
-						>
+							href='/projects/case'>
 							<AnimatedWrapper className='h-full'>
 								<ProjectCard {...projectCase} />
 							</AnimatedWrapper>
@@ -48,8 +46,7 @@ const Projects = () => {
 						<Link
 							className={styles.projectLink}
 							key={`${projectCase.title}-${index}`}
-							href='/projects/case'
-						>
+							href='/projects/case'>
 							<AnimatedWrapper className='h-full'>
 								<ProjectCard {...projectCase} />
 							</AnimatedWrapper>

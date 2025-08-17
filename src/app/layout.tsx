@@ -29,8 +29,7 @@ const RootLayout = ({
 }>) => (
 	<html
 		lang='en'
-		className={clsx(inter.variable, 'h-fit overflow-x-clip font-sans')}
-	>
+		className={clsx(inter.variable, 'h-fit overflow-x-clip font-sans')}>
 		<body className='flex h-full flex-col overflow-x-clip bg-white text-neutral-950'>
 			<Header />
 			{children}

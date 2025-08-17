@@ -24,8 +24,7 @@ const SocialLinks = () => {
 							'hover:outline hover:outline-2 hover:outline-offset-4',
 							'activeoutline-offset-4 active:outline active:outline-2',
 							styles[`SocialLinks-icon_${item}`]
-						)}
-					></button>
+						)}></button>
 				</li>
 			))}
 		</ul>

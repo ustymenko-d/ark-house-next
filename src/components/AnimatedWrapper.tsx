@@ -42,8 +42,7 @@ const AnimatedWrapper = ({
 			animate={isInView ? 'visible' : 'hidden'}
 			exit='hidden'
 			variants={typeFade ? fadeInBottom : opacityScale}
-			transition={{ duration, ease: 'easeOut', delay }}
-		>
+			transition={{ duration, ease: 'easeOut', delay }}>
 			{children}
 		</motion.div>
 	);
