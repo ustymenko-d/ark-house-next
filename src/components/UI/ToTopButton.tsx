@@ -1,9 +1,9 @@
 'use client';
 
+import { useState } from 'react';
 import clsx from 'clsx';
 import { AnimatePresence } from 'framer-motion';
 import { useLenis } from 'lenis/react';
-import { useState } from 'react';
 
 import AnimatedWrapper from '@/components/AnimatedWrapper';
 import useScrollBeyondThreshold from '@/hooks/useScrollBeyondThreshold';

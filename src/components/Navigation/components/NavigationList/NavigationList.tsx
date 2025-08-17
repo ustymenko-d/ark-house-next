@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 
 import { NAVIGATION_LINKS } from '@/const/const';
-
 import NavigationItem from '../NavigationItem/NavigationItem';
+
 import styles from './NavigationList.module.css';
 
 interface INavigationListProps extends React.HTMLAttributes<HTMLUListElement> {

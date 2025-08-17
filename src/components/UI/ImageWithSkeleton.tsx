@@ -1,8 +1,8 @@
 'use client';
 
+import { useState } from 'react';
 import clsx from 'clsx';
 import Image, { ImageProps } from 'next/image';
-import { useState } from 'react';
 
 const ImageWithSkeleton = ({ className, alt, ...rest }: ImageProps) => {
 	const [loading, setLoading] = useState(true);

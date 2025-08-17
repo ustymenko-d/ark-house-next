@@ -1,7 +1,7 @@
 'use client';
 
-import clsx from 'clsx';
 import { useState } from 'react';
+import clsx from 'clsx';
 
 import { TabList } from '@/const/const.types';
 

@@ -2,7 +2,6 @@ import React from 'react';
 
 import ImageWithSkeleton from '@/components/UI/ImageWithSkeleton';
 import { PROJECT_CHARACTERISTICS } from '@/const/const';
-
 import Characteristics from '../Characteristics';
 
 const Hero = () => (

@@ -1,8 +1,8 @@
 'use client';
 
+import { useRef } from 'react';
 import clsx from 'clsx';
 import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
 
 interface IAnimatedWrapperProps extends React.HTMLAttributes<HTMLDivElement> {
 	children: React.ReactNode;

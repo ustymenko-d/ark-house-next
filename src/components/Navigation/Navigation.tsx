@@ -1,13 +1,14 @@
 'use client';
 
+import { useCallback, useEffect } from 'react';
 import clsx from 'clsx';
 import { useLenis } from 'lenis/react';
-import { useCallback, useEffect } from 'react';
 
 import { useBreakpoints } from '@/hooks/useBreakpoints';
 import { useAppStore } from '@/store';
 
 import NavigationList from './components/NavigationList/NavigationList';
+
 import styles from './Navigation.module.css';
 
 const Navigation = () => {

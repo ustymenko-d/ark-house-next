@@ -1,7 +1,7 @@
 'use client';
 
-import debounce from 'lodash.debounce';
 import { useEffect, useState } from 'react';
+import debounce from 'lodash.debounce';
 
 const useScrollBeyondThreshold = (
 	thresholdPercent: number = 100,
