@@ -24,15 +24,15 @@ const Hero = () => (
 			<span className='absolute top-0 mr-4 text-lg font-medium tracking-wide right-3'>
 				Since&nbsp;1975&nbsp;-
 			</span>
-			<AnimatedWrapper className='max-h-fit'>Architecture.</AnimatedWrapper>
+			<AnimatedWrapper className='max-h-fit leading-tight'>Architecture.</AnimatedWrapper>
 			<AnimatedWrapper
 				delay={0.2}
-				className='max-h-fit'>
+				className='max-h-fit leading-tight'>
 				Planning.
 			</AnimatedWrapper>
 			<AnimatedWrapper
 				delay={0.4}
-				className='max-h-fit'>
+				className='max-h-fit leading-tight'>
 				Design.
 			</AnimatedWrapper>
 		</div>
