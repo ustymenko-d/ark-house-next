@@ -14,7 +14,7 @@ const Navigation = () => {
 	const headerNavVisible = useAppStore(s => s.headerNavVisible)
 	const toggleHeaderNav = useAppStore(s => s.toggleHeaderNav)
 
-	const breakpoints = useBreakpoints([767])
+	const breakpoints = useBreakpoints([768])
 	const isMobile = breakpoints === 0
 	const shouldAutoClose = breakpoints === 1 && headerNavVisible
 
