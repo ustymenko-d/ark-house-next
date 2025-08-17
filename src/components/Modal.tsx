@@ -45,22 +45,21 @@ const Modal = () => {
 							<ReactFocusLock
 								returnFocus
 								disabled={!modalOpen}>
-								<div className='min-h-full'>
-									<div>
-										<div className='flex justify-between gap-4'>
-											<h3 className='mb-6 text-2xl md:text-3xl font-semibold leading-tight'>
-												This is an example page
-											</h3>
-											<CloseButton
-												onClick={toggleModalOpen}
-												aria-label='Close modal'
-											/>
-										</div>
-										<p className='mb-6 text-base md:text-lg leading-relaxed'>
-											So this link is not real. You can continue viewing the page by closing this
-											modal window or return to the portfolio.
-										</p>
+								<div className='flex flex-col gap-6'>
+									<div className='flex justify-between gap-4'>
+										<h3 className='text-2xl font-semibold leading-tight md:text-3xl'>
+											This is an example page
+										</h3>
+										<CloseButton
+											onClick={toggleModalOpen}
+											aria-label='Close modal'
+										/>
 									</div>
+
+									<p className='text-base leading-relaxed md:text-lg'>
+										This link isn’t real. Close this window to keep viewing the page, or go back to
+										the portfolio.
+									</p>
 
 									<Button to='https://ustymenko.vercel.app'>Back&nbsp;to&nbsp;portfolio</Button>
 								</div>
