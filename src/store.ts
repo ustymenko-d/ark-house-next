@@ -1,23 +1,24 @@
-import { create } from 'zustand'
-import { devtools } from 'zustand/middleware'
+import { create } from 'zustand';
+import { devtools } from 'zustand/middleware';
 
 interface IAppState {
-	headerNavVisible: boolean
-	toggleHeaderNav: () => void
+	headerNavVisible: boolean;
+	toggleHeaderNav: () => void;
 
-	modalOpen: boolean
-	toggleModalOpen: () => void
+	modalOpen: boolean;
+	toggleModalOpen: () => void;
 }
 
 export const useAppStore = create<IAppState>()(
 	devtools(
-		set => ({
+		(set) => ({
 			headerNavVisible: false,
-			toggleHeaderNav: () => set(state => ({ headerNavVisible: !state.headerNavVisible })),
+			toggleHeaderNav: () =>
+				set((state) => ({ headerNavVisible: !state.headerNavVisible })),
 
 			modalOpen: false,
-			toggleModalOpen: () => set(state => ({ modalOpen: !state.modalOpen })),
+			toggleModalOpen: () => set((state) => ({ modalOpen: !state.modalOpen })),
 		}),
 		{ name: 'AppStore' }
 	)
-)
+);

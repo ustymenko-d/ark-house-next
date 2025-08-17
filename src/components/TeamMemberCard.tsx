@@ -1,11 +1,11 @@
-import { TeamMember } from '@/const/const.types'
+import { TeamMember } from '@/const/const.types';
 
-import ImageWithSkeleton from './UI/ImageWithSkeleton'
+import ImageWithSkeleton from './UI/ImageWithSkeleton';
 
 const TeamMemberCard = ({ name, role, media }: TeamMember) => (
 	<div className='relative'>
 		<ImageWithSkeleton
-			className='block w-full shadow aspect-square bg-dark-color'
+			className='block aspect-square w-full bg-dark-color shadow'
 			src={media.src}
 			alt={media.alt}
 			width={366}
@@ -16,9 +16,11 @@ const TeamMemberCard = ({ name, role, media }: TeamMember) => (
 		<p className='py-4 text-2xl'>
 			{name}
 			<br />
-			<span className='text-base leading-relaxed text-gray-800 md:text-lg'>{role}</span>
+			<span className='text-base leading-relaxed text-gray-800 md:text-lg'>
+				{role}
+			</span>
 		</p>
 	</div>
-)
+);
 
-export default TeamMemberCard
+export default TeamMemberCard;

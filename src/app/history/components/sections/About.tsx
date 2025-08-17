@@ -1,6 +1,6 @@
-import AnimatedWrapper from '@/components/AnimatedWrapper'
-import Button from '@/components/UI/Button'
-import ImageWithSkeleton from '@/components/UI/ImageWithSkeleton'
+import AnimatedWrapper from '@/components/AnimatedWrapper';
+import Button from '@/components/UI/Button';
+import ImageWithSkeleton from '@/components/UI/ImageWithSkeleton';
 
 const About = () => (
 	<section className='mb-14 grid gap-6 xl:grid-cols-[61.3%_auto] xl:grid-rows-[auto_1fr]'>
@@ -9,7 +9,7 @@ const About = () => (
 		</h1>
 
 		<ImageWithSkeleton
-			className='w-full h-full bg-dark-color'
+			className='h-full w-full bg-dark-color'
 			src='/img/history-page/meet.jpg'
 			width={844}
 			height={563}
@@ -18,15 +18,16 @@ const About = () => (
 			alt='Meet'
 		/>
 
-		<div className='flex flex-col gap-4 '>
-			<p className='text-base text-gray-800 text-balance md:text-lg'>
-				We are dedicated individuals from a range of different countries. Based in Oslo, with
-				offices in Copenhagen, London and Reykjavik, we are actively involved in projects in various
-				countries across Europe, Africa, the Middle East and Asia.
+		<div className='flex flex-col gap-4'>
+			<p className='text-balance text-base text-gray-800 md:text-lg'>
+				We are dedicated individuals from a range of different countries. Based
+				in Oslo, with offices in Copenhagen, London and Reykjavik, we are
+				actively involved in projects in various countries across Europe,
+				Africa, the Middle East and Asia.
 			</p>
-			<p className='text-base text-gray-800 text-balance md:text-lg'>
-				Together, we are a community with a culture for beautiful and outstanding architecture, a
-				culture that is Powered by Commitment.
+			<p className='text-balance text-base text-gray-800 md:text-lg'>
+				Together, we are a community with a culture for beautiful and
+				outstanding architecture, a culture that is Powered by Commitment.
 			</p>
 			<div className='flex flex-col gap-6 pt-4 xl:mt-auto'>
 				<AnimatedWrapper>
@@ -34,14 +35,12 @@ const About = () => (
 						Do you want to work with us?
 					</p>
 				</AnimatedWrapper>
-				<AnimatedWrapper
-					delay={0.2}
-					className='flex'>
+				<AnimatedWrapper delay={0.2} className='flex'>
 					<Button to='/contact'>Our&nbsp;Vacancies</Button>
 				</AnimatedWrapper>
 			</div>
 		</div>
 	</section>
-)
+);
 
-export default About
+export default About;

@@ -1,11 +1,11 @@
 const Loading = () => (
 	<div className='fixed inset-0 z-50 flex items-center justify-center bg-white'>
-		<div className='relative flex items-center justify-center overflow-hidden w-60 h-60'>
-			<div className='absolute w-full h-full bg-transparent border border-neutral-900'></div>
-			<div className='absolute w-9/12 bg-white border h-3/4 border-neutral-900'></div>
-			<div className='absolute rotate-45 -z-10 w-96 h-96 aspect-square animate-moveDiagonal bg-dark-color'></div>
+		<div className='relative flex h-60 w-60 items-center justify-center overflow-hidden'>
+			<div className='absolute h-full w-full border border-neutral-900 bg-transparent'></div>
+			<div className='absolute h-3/4 w-9/12 border border-neutral-900 bg-white'></div>
+			<div className='absolute -z-10 aspect-square h-96 w-96 rotate-45 animate-moveDiagonal bg-dark-color'></div>
 		</div>
 	</div>
-)
+);
 
-export default Loading
+export default Loading;

@@ -1,30 +1,32 @@
-import clsx from 'clsx'
-import { motion } from 'framer-motion'
+import clsx from 'clsx';
+import { motion } from 'framer-motion';
 
-import ImageWithSkeleton from '@/components/UI/ImageWithSkeleton'
-import { ITabContentProps } from '@/const/const.types'
+import ImageWithSkeleton from '@/components/UI/ImageWithSkeleton';
+import { ITabContentProps } from '@/const/const.types';
 
 const ServicesTypeContent = ({ tabsContent, activeTab }: ITabContentProps) => (
-	<div className='relative w-full h-full'>
+	<div className='relative h-full w-full'>
 		{tabsContent.map((item, index) => {
-			const { tabName, content } = item
-			const isActive = activeTab === tabName
+			const { tabName, content } = item;
+			const isActive = activeTab === tabName;
 
 			return (
 				<motion.div
 					key={`${tabName}-${index}`}
 					aria-hidden={!isActive}
 					className={clsx('absolute inset-0 transition-opacity duration-300', {
-						'opacity-100 pointer-events-auto visible': isActive,
-						'opacity-0 pointer-events-none invisible': !isActive,
-					})}>
+						'pointer-events-auto visible opacity-100': isActive,
+						'pointer-events-none invisible opacity-0': !isActive,
+					})}
+				>
 					<div
 						id={`services-tabpanel-${index}`}
 						role='tabpanel'
 						aria-labelledby={`services-tab-${index}`}
-						className='h-full'>
+						className='h-full'
+					>
 						<ImageWithSkeleton
-							className='object-cover h-full'
+							className='h-full object-cover'
 							src={content as string}
 							alt={`${tabName} image`}
 							fill
@@ -34,9 +36,9 @@ const ServicesTypeContent = ({ tabsContent, activeTab }: ITabContentProps) => (
 						/>
 					</div>
 				</motion.div>
-			)
+			);
 		})}
 	</div>
-)
+);
 
-export default ServicesTypeContent
+export default ServicesTypeContent;

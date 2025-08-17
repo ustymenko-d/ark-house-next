@@ -1,8 +1,10 @@
-import ImageWithSkeleton from '@/components/UI/ImageWithSkeleton'
+import ImageWithSkeleton from '@/components/UI/ImageWithSkeleton';
 
 const History = () => (
-	<section className='flex flex-col gap-6 mb-10'>
-		<h2 className='text-4xl font-semibold leading-tight tracking-tight md:text-5xl'>Our history</h2>
+	<section className='mb-10 flex flex-col gap-6'>
+		<h2 className='text-4xl font-semibold leading-tight tracking-tight md:text-5xl'>
+			Our history
+		</h2>
 
 		<ImageWithSkeleton
 			className='w-full bg-dark-color'
@@ -14,16 +16,18 @@ const History = () => (
 		/>
 
 		<p className='text-base leading-relaxed text-gray-800 md:text-lg'>
-			For over four decades, ARK House, founded by renowned architect John Smith in 1975, has been a
-			leader in the industry known for its innovative designs and commitment to client satisfaction.
-			The agency&apos;s early work, including the Smith Tower in Seattle, established Smith&apos;s
-			reputation as a leading architect. Over the years, ARK House has completed numerous
-			high-profile projects, including the iconic Guggenheim Museum in Bilbao, Spain. The
-			agency&apos;s success is due to its commitment to sustainability and community engagement, as
-			well as its adaptation to new trends and technologies. Today, ARK House continues to push
-			boundaries in architecture while setting new standards for innovation and excellence.
+			For over four decades, ARK House, founded by renowned architect John Smith
+			in 1975, has been a leader in the industry known for its innovative
+			designs and commitment to client satisfaction. The agency&apos;s early
+			work, including the Smith Tower in Seattle, established Smith&apos;s
+			reputation as a leading architect. Over the years, ARK House has completed
+			numerous high-profile projects, including the iconic Guggenheim Museum in
+			Bilbao, Spain. The agency&apos;s success is due to its commitment to
+			sustainability and community engagement, as well as its adaptation to new
+			trends and technologies. Today, ARK House continues to push boundaries in
+			architecture while setting new standards for innovation and excellence.
 		</p>
 	</section>
-)
+);
 
-export default History
+export default History;
