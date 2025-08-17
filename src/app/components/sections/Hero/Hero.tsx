@@ -26,12 +26,12 @@ const Hero = () => (
 			</span>
 			<AnimatedWrapper className='max-h-fit leading-tight'>Architecture.</AnimatedWrapper>
 			<AnimatedWrapper
-				delay={0.2}
+				delay={0.1}
 				className='max-h-fit leading-tight'>
 				Planning.
 			</AnimatedWrapper>
 			<AnimatedWrapper
-				delay={0.4}
+				delay={0.2}
 				className='max-h-fit leading-tight'>
 				Design.
 			</AnimatedWrapper>
