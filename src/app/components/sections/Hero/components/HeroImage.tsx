@@ -1,5 +1,7 @@
 import { getImageProps } from 'next/image';
 
+import AnimatedWrapper from '@/components/AnimatedWrapper';
+
 const commonProps = {
 	alt: 'Pyramid-shaped building',
 	sizes:
@@ -33,24 +35,28 @@ const HeroImage = () => {
 	);
 
 	return (
-		<picture>
-			{sources.map(({ media }, index) => (
-				<source
-					key={media}
-					media={media}
-					srcSet={imageProps[index].srcSet}
-					sizes={commonProps.sizes}
+		<AnimatedWrapper
+			duration={0.6}
+			className='absolute bottom-0 left-0 right-0 h-full w-full'>
+			<picture>
+				{sources.map(({ media }, index) => (
+					<source
+						key={media}
+						media={media}
+						srcSet={imageProps[index].srcSet}
+						sizes={commonProps.sizes}
+					/>
+				))}
+				<img
+					{...imageProps[0]}
+					alt={commonProps.alt}
+					className='pointer-events-none absolute bottom-0 left-0 right-0 h-auto w-full object-contain object-bottom lg:px-20'
+					loading='eager'
+					decoding='async'
+					fetchPriority='high'
 				/>
-			))}
-			<img
-				{...imageProps[0]}
-				alt={commonProps.alt}
-				className='pointer-events-none absolute bottom-0 left-0 right-0 h-auto w-full object-contain object-bottom lg:px-20'
-				loading='eager'
-				decoding='async'
-				fetchPriority='high'
-			/>
-		</picture>
+			</picture>
+		</AnimatedWrapper>
 	);
 };
 
