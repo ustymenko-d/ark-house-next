@@ -1,7 +1,11 @@
 {
 	"name": "ark-house-next",
-	"version": "0.1.0",
-	"private": true,
+	"version": "1.0.0",
+	"author": {
+		"name": "Denys Ustymenko",
+		"email": "ustymenko.denys@gmail.com",
+		"url": "https://ustymenko.vercel.app"
+	},
 	"scripts": {
 		"dev": "next dev --turbopack",
 		"build": "next build",
