@@ -4,11 +4,11 @@ import clsx from 'clsx';
 
 import { useAppStore } from '@/store';
 
-interface IArticleButtonProps extends React.HTMLAttributes<HTMLDivElement> {
+interface Props extends React.HTMLAttributes<HTMLDivElement> {
 	children: React.ReactNode;
 }
 
-const ArticleButton = ({ children, ...rest }: IArticleButtonProps) => {
+const ArticleButton = ({ children, ...rest }: Props) => {
 	const toggleModalOpen = useAppStore((s) => s.toggleModalOpen);
 	const isModalOpen = useAppStore((s) => s.modalOpen);
 

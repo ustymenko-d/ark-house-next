@@ -4,7 +4,7 @@ import { useRef } from 'react';
 import clsx from 'clsx';
 import { motion, useInView } from 'framer-motion';
 
-interface IAnimatedWrapperProps extends React.HTMLAttributes<HTMLDivElement> {
+interface Props extends React.HTMLAttributes<HTMLDivElement> {
 	children: React.ReactNode;
 	motionKey?: string;
 	delay?: number;
@@ -19,7 +19,7 @@ const AnimatedWrapper = ({
 	duration = 0.4,
 	typeFade = true,
 	className,
-}: IAnimatedWrapperProps) => {
+}: Props) => {
 	const motionRef = useRef<HTMLDivElement | null>(null);
 	const isInView = useInView(motionRef, { once: true });
 

@@ -1,4 +1,4 @@
-interface InputProps {
+interface Props {
 	name: 'name' | 'contact';
 	type: 'text' | 'email' | 'tel';
 	placeholder: string;
@@ -14,7 +14,7 @@ const Input = ({
 	formData,
 	errors,
 	handleChange,
-}: InputProps) => (
+}: Props) => (
 	<div className='w-full sm:w-3/5 lg:w-1/2'>
 		<input
 			name={name}

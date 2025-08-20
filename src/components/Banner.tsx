@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-interface BannerProps extends React.HTMLAttributes<HTMLDivElement> {
+interface Props extends React.HTMLAttributes<HTMLDivElement> {
 	svgImage: React.ReactNode;
 	topLineText: string;
 	bottomLineText: string;
@@ -11,7 +11,7 @@ const Banner = ({
 	topLineText,
 	bottomLineText,
 	className,
-}: BannerProps) => (
+}: Props) => (
 	<div
 		className={clsx(
 			className,

@@ -9,7 +9,7 @@ import ProjectsTypeContent from './components/ProjectsTypeContent/ProjectsTypeCo
 import ServicesTypeContent from './components/ServicesTypeContent';
 import TeamTypeContent from './components/TeamTypeContent';
 
-interface ITabsProps {
+interface Props {
 	tabsType: 'services' | 'projects' | 'team';
 	tabsList: TabList;
 }
@@ -20,7 +20,7 @@ const CONTENT_COMPONENTS = {
 	team: TeamTypeContent,
 } as const;
 
-const Tabs = ({ tabsType, tabsList }: ITabsProps) => {
+const Tabs = ({ tabsType, tabsList }: Props) => {
 	const { tabs, tabsContent } = tabsList;
 
 	const [activeTab, setActiveTab] = useState(tabs[0]);
