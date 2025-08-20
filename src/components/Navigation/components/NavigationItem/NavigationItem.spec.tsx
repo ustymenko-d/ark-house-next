@@ -20,6 +20,8 @@ describe('NavigationItem', () => {
 		index: 2,
 	};
 
+	const getLink = () => screen.getByTestId('mocked-link');
+
 	it('renders link title', () => {
 		(usePathname as jest.Mock).mockReturnValue('/');
 		render(<NavigationItem {...defaultProps} />);
@@ -29,19 +31,19 @@ describe('NavigationItem', () => {
 	it('sets correct href when pathname is "/"', () => {
 		(usePathname as jest.Mock).mockReturnValue('/');
 		render(<NavigationItem {...defaultProps} />);
-		expect(screen.getByRole('link')).toHaveAttribute('href', 'about');
+		expect(getLink()).toHaveAttribute('href', 'about');
 	});
 
 	it('sets correct href when pathname is not "/"', () => {
 		(usePathname as jest.Mock).mockReturnValue('/blog');
 		render(<NavigationItem {...defaultProps} />);
-		expect(screen.getByRole('link')).toHaveAttribute('href', '/about');
+		expect(getLink()).toHaveAttribute('href', '/about');
 	});
 
 	it('sets data-number attribute from index', () => {
 		(usePathname as jest.Mock).mockReturnValue('/');
 		render(<NavigationItem {...defaultProps} />);
-		expect(screen.getByRole('link')).toHaveAttribute('data-number', '2');
+		expect(getLink()).toHaveAttribute('data-number', '2');
 	});
 
 	it('calls toggleNavListVisible on click if provided', () => {
@@ -50,13 +52,13 @@ describe('NavigationItem', () => {
 		render(
 			<NavigationItem {...defaultProps} toggleNavListVisible={toggleMock} />
 		);
-		fireEvent.click(screen.getByRole('link'));
+		fireEvent.click(getLink());
 		expect(toggleMock).toHaveBeenCalledTimes(1);
 	});
 
 	it('does not throw if toggleNavListVisible is undefined', () => {
 		(usePathname as jest.Mock).mockReturnValue('/');
 		render(<NavigationItem {...defaultProps} />);
-		expect(() => fireEvent.click(screen.getByRole('link'))).not.toThrow();
+		expect(() => fireEvent.click(getLink())).not.toThrow();
 	});
 });

@@ -1,17 +1,14 @@
 import React from 'react';
 
-interface Props {
+interface Props extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 	href: string;
 	children: React.ReactNode;
-	className?: string;
 }
 
-const Link = ({ href, children, className }: Props) => {
-	return (
-		<a data-testid='mocked-link' href={href} className={className}>
-			{children}
-		</a>
-	);
-};
+const Link = ({ href, children, ...rest }: Props) => (
+	<a data-testid='mocked-link' href={href} {...rest}>
+		{children}
+	</a>
+);
 
 export default Link;
