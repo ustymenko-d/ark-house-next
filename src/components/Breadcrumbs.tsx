@@ -14,8 +14,7 @@ const Breadcrumbs = ({ navItems }: { navItems: INavItem[] }) => (
 					<li
 						key={`${item.name}-${index}`}
 						className='font-semibold text-gray-900'
-						aria-current='page'
-					>
+						aria-current='page'>
 						{item.name}
 					</li>
 				) : (
@@ -27,8 +26,7 @@ const Breadcrumbs = ({ navItems }: { navItems: INavItem[] }) => (
 						)}>
 						<Link
 							className='animatedUnderline text-dark-color'
-							href={item.href || '#'}
-						>
+							href={item.href || '#'}>
 							{item.name}
 						</Link>
 					</li>

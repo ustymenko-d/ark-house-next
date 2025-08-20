@@ -22,8 +22,7 @@ const ServicesTypeContent = ({ tabsContent, activeTab }: ITabContentProps) => (
 						id={`services-tabpanel-${index}`}
 						role='tabpanel'
 						aria-labelledby={`services-tab-${index}`}
-						className='h-full'
-					>
+						className='h-full'>
 						<ImageWithSkeleton
 							className='h-full object-cover'
 							src={content as string}

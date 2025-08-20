@@ -25,8 +25,7 @@ const ContactTypeToggle = ({
 				'before:pointer-events-none before:duration-300 before:ease-linear',
 
 				phoneType ? 'before:left-0' : 'before:left-1/2'
-			)}
-		>
+			)}>
 			{['Phone', 'Email'].map((label, idx) => {
 				const isPhone = idx === 0;
 				const selected = phoneType === isPhone;

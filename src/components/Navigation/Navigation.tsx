@@ -41,7 +41,7 @@ const Navigation = () => {
 
 	useEffect(() => {
 		if (shouldAutoClose) toggleNavListVisible();
-	});
+	}, [shouldAutoClose, toggleNavListVisible]);
 
 	return (
 		<nav>
@@ -56,7 +56,7 @@ const Navigation = () => {
 					aria-controls='navigation-list'
 					aria-label={`${headerNavVisible ? 'Hide' : 'Show'}page navigation`}
 					onClick={toggleNavListVisible}
-				>
+					data-testid='navigation-toggler'>
 					<span className={`${styles['toggler-text']}`}></span>
 				</button>
 			)}
@@ -68,7 +68,7 @@ const Navigation = () => {
 					'md:visible md:relative md:left-0 md:top-0 md:min-h-fit md:flex-row md:items-center md:justify-end md:gap-8 md:px-0 md:py-5 md:text-xl md:transition-none'
 				)}
 				navListVisible={headerNavVisible}
-				header={true}
+				header
 				toggleNavListVisible={toggleNavListVisible}
 			/>
 		</nav>

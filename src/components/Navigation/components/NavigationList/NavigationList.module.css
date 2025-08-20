@@ -1,24 +1,6 @@
 .navigation-list_header {
-	justify-content: center;
-
-	@media screen and (max-width: 767px) {
-		left: -100%;
-		top: 78px;
-		height: calc(100% - 78.5px);
-		min-height: calc(100vh - 78.5px);
-		min-height: calc(100dvh - 78.5px);
-		transition:
-			left 0.4s,
-			visibility 0.4s;
-	}
-
 	@media screen and (max-height: 600px) {
 		justify-content: start;
 		padding-block: 2rem;
 	}
-}
-
-.navigation-list_active {
-	visibility: visible;
-	left: 0;
 }

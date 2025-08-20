@@ -31,8 +31,7 @@ const TeamTypeContent = ({ tabsContent, activeTab }: ITabContentProps) => (
 							<AnimatedWrapper
 								typeFade={false}
 								key={`${member.name}-${memberIndex}`}
-								delay={memberIndex * 0.1}
-							>
+								delay={memberIndex * 0.1}>
 								<TeamMemberCard {...member} />
 							</AnimatedWrapper>
 						))}

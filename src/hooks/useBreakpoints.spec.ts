@@ -4,21 +4,15 @@ import { useBreakpoints } from './useBreakpoints';
 
 jest.mock('lodash.debounce');
 
-const resizeWindow = (width: number) => {
-	Object.defineProperty(window, 'innerWidth', {
-		writable: true,
-		configurable: true,
-		value: width,
-	});
-
-	window.dispatchEvent(new Event('resize'));
+export const expectBreakpoint = (width: number, expected: number) => {
+	resizeWindow(width);
+	const { result } = renderHook(() => useBreakpoints([768]));
+	expect(result.current).toBe(expected);
 };
 
 describe('useBreakpoints', () => {
 	it('return initial index based on window width', () => {
-		resizeWindow(800);
-		const { result } = renderHook(() => useBreakpoints([500, 1000]));
-		expect(result.current).toBe(1);
+		expectBreakpoint(800, 1);
 	});
 
 	it('update index on window resize', () => {

@@ -8,17 +8,13 @@ import { NavigationLink } from '@/const/const.types';
 
 import styles from './NavigationItem.module.css';
 
-interface INavigationItemProps {
+interface Props {
 	link: NavigationLink;
 	index: number;
 	toggleNavListVisible?: () => void;
 }
 
-const NavigationItem = ({
-	link,
-	index,
-	toggleNavListVisible,
-}: INavigationItemProps) => {
+const NavigationItem = ({ link, index, toggleNavListVisible }: Props) => {
 	const { title, href } = link;
 	const pathname = usePathname();
 	const to = pathname === '/' ? href : `/${href}`;
@@ -32,8 +28,7 @@ const NavigationItem = ({
 				if (toggleNavListVisible) {
 					toggleNavListVisible();
 				}
-			}}
-		>
+			}}>
 			{title}
 		</Link>
 	);
