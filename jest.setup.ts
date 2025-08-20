@@ -8,3 +8,12 @@ global.resizeWindow = (width: number) => {
 	});
 	window.dispatchEvent(new Event('resize'));
 };
+
+global.setScrollY = (value: number) => {
+	Object.defineProperty(window, 'scrollY', {
+		writable: true,
+		configurable: true,
+		value,
+	});
+	window.dispatchEvent(new Event('scroll'));
+};

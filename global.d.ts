@@ -1,6 +1,7 @@
+/* eslint-disable no-var */
 export {};
 
 declare global {
-	// eslint-disable-next-line no-var
 	var resizeWindow: (width: number) => void;
+	var setScrollY: (value: number) => void;
 }

@@ -4,14 +4,6 @@ import useScrollBeyondThreshold from './useScrollBeyondThreshold';
 
 jest.mock('lodash.debounce');
 
-const setScrollY = (value: number) => {
-	Object.defineProperty(window, 'scrollY', {
-		writable: true,
-		configurable: true,
-		value,
-	});
-};
-
 describe('useScrollBeyondThreshold', () => {
 	it('returns false when scrollY < threshold', () => {
 		const { result } = renderHook(() => useScrollBeyondThreshold(50));
