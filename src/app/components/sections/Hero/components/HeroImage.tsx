@@ -1,6 +1,6 @@
 import { getImageProps } from 'next/image';
 
-import AnimatedWrapper from '@/components/AnimatedWrapper';
+// import AnimatedWrapper from '@/components/AnimatedWrapper';
 
 const commonProps = {
 	alt: 'Pyramid-shaped building',
@@ -35,28 +35,28 @@ const HeroImage = () => {
 	);
 
 	return (
-		<AnimatedWrapper
-			duration={0.6}
-			className='absolute bottom-0 left-0 right-0 h-full w-full'>
-			<picture>
-				{sources.map(({ media }, index) => (
-					<source
-						key={media}
-						media={media}
-						srcSet={imageProps[index].srcSet}
-						sizes={commonProps.sizes}
-					/>
-				))}
-				<img
-					{...imageProps[0]}
-					alt={commonProps.alt}
-					className='pointer-events-none absolute bottom-0 left-0 right-0 h-auto w-full object-contain object-bottom lg:px-20'
-					loading='eager'
-					decoding='async'
-					fetchPriority='high'
+		// <AnimatedWrapper
+		// 	duration={0.6}
+		// 	className='absolute bottom-0 left-0 right-0 h-full w-full'>
+		<picture>
+			{sources.map(({ media }, index) => (
+				<source
+					key={media}
+					media={media}
+					srcSet={imageProps[index].srcSet}
+					sizes={commonProps.sizes}
 				/>
-			</picture>
-		</AnimatedWrapper>
+			))}
+			<img
+				{...imageProps[0]}
+				alt={commonProps.alt}
+				className='pointer-events-none absolute bottom-0 left-0 right-0 h-auto w-full object-contain object-bottom lg:px-20'
+				loading='eager'
+				decoding='async'
+				fetchPriority='high'
+			/>
+		</picture>
+		// </AnimatedWrapper>
 	);
 };
 
