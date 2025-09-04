@@ -1,0 +1,27 @@
+query Showcase {
+	progects(filters: { showcase: { eq: true } }) {
+		title
+		location
+		media {
+			url
+			alternativeText
+			width
+			height
+		}
+		info {
+			label
+			value
+		}
+		description
+		gallery {
+			title
+			location
+			media {
+				url
+				alternativeText
+				width
+				height
+			}
+		}
+	}
+}

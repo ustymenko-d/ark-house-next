@@ -1,0 +1,12 @@
+query Projects($filters: ProgectFiltersInput) {
+	progects(filters: $filters) {
+		title
+		location
+		media {
+			url
+			alternativeText
+			width
+			height
+		}
+	}
+}
