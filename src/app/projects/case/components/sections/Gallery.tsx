@@ -1,6 +1,5 @@
 import clsx from 'clsx';
 
-import AnimatedWrapper from '@/components/AnimatedWrapper';
 import ProjectCard from '@/components/ProjectCard';
 import Button from '@/components/UI/Button';
 import { ONE_PROJECT } from '@/const/const';
@@ -26,9 +25,7 @@ const Gallery = () => (
 				<div
 					key={`project-${idx}`}
 					className={clsx(gridItemClasses[idx], 'duration-200')}>
-					<AnimatedWrapper className='h-full'>
-						<ProjectCard {...project} />
-					</AnimatedWrapper>
+					<ProjectCard {...project} />
 				</div>
 			))}
 		</div>

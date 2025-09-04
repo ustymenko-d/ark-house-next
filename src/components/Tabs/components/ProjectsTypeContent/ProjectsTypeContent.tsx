@@ -48,9 +48,7 @@ const ProjectsTypeContent = ({ tabsContent, activeTab }: ITabContentProps) => (
 										styles.project,
 										'outline-dark-color transition-[outline-offset] duration-150 hover:outline hover:outline-2 hover:outline-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2'
 									)}>
-									<AnimatedWrapper className='h-full' typeFade={false}>
-										<ProjectCard {...projectCase} />
-									</AnimatedWrapper>
+									<ProjectCard {...projectCase} />
 								</Link>
 							)
 						)}
