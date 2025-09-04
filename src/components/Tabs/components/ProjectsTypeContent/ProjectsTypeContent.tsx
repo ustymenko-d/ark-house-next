@@ -4,7 +4,6 @@ import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
-import AnimatedWrapper from '@/components/AnimatedWrapper';
 import ProjectCard from '@/components/ProjectCard';
 import { ITabContentProps, ProjectCase } from '@/const/const.types';
 

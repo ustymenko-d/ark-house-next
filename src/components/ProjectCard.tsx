@@ -1,12 +1,10 @@
-import { ProjectsAndArticlesQuery } from '@/graphql/generated';
+import { ProjectsQuery } from '@/graphql/generated';
 
 import AnimatedWrapper from './AnimatedWrapper';
 import ImageWithSkeleton from './UI/ImageWithSkeleton';
 import Logo from './UI/Logo';
 
-type Props = NonNullable<
-	NonNullable<ProjectsAndArticlesQuery['progects']>[number]
->;
+type Props = NonNullable<NonNullable<ProjectsQuery['progects']>[number]>;
 
 const ProjectCard = ({ title, location, media }: Props) => (
 	<AnimatedWrapper className='h-full'>

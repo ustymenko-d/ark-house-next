@@ -1,5 +1,3 @@
-import 'dotenv/config';
-
 import type { CodegenConfig } from '@graphql-codegen/cli';
 
 const config: CodegenConfig = {
@@ -16,6 +14,11 @@ const config: CodegenConfig = {
 			config: {
 				withMutationFn: false,
 				apolloReactHooksImportFrom: '@apollo/client/react',
+				scalars: {
+					Date: 'string',
+					DateTime: 'string',
+					JSON: 'Record<string, unknown>',
+				},
 			},
 		},
 		'./graphql.schema.json': {

@@ -3,13 +3,11 @@
 import clsx from 'clsx';
 
 import AnimatedWrapper from '@/components/AnimatedWrapper';
-import { ProjectsAndArticlesQuery } from '@/graphql/generated';
+import { ArticlesQuery } from '@/graphql/generated';
 import { useAppStore } from '@/store';
 import ImageWithSkeleton from '../../../../../components/UI/ImageWithSkeleton';
 
-type Props = NonNullable<
-	NonNullable<ProjectsAndArticlesQuery['blogArticles']>[number]
->;
+type Props = NonNullable<NonNullable<ArticlesQuery['blogArticles']>[number]>;
 
 const ArticleItem = ({ date, title, description, media }: Props) => {
 	const toggleModalOpen = useAppStore((s) => s.toggleModalOpen);
