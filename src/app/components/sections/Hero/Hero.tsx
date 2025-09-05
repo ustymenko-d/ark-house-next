@@ -44,11 +44,15 @@ const Hero = () => (
 			<SocialLinks />
 		</div>
 
-		<div
-			className={clsx(
-				styles.background,
-				'absolute bottom-0 left-0 right-0 w-full bg-no-repeat'
-			)}></div>
+		<AnimatedWrapper
+			duration={0.6}
+			className='absolute bottom-0 left-0 right-0 h-full w-full'>
+			<div
+				className={clsx(
+					styles.background,
+					'absolute bottom-0 left-0 right-0 w-full bg-no-repeat'
+				)}></div>
+		</AnimatedWrapper>
 	</div>
 );
 
