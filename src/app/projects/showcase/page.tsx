@@ -1,9 +1,10 @@
 import { Suspense } from 'react';
 
 import Breadcrumbs from '@/components/Breadcrumbs';
+import Loader from '@/components/Loader';
 
 import Content from './components/Content';
-// import Team from './components/sections/Team';
+import Team from './components/sections/Team';
 
 const navItems = [
 	{ name: 'Home', href: '/' },
@@ -17,15 +18,11 @@ const ProjectPage = () => (
 			<Breadcrumbs navItems={navItems} />
 		</div>
 
-		<Suspense
-			fallback={
-				<div className='container mx-auto md:px-10 lg:px-20'>
-					<p>Loading...</p>
-				</div>
-			}>
+		<Suspense fallback={<Loader className='h-64 justify-center' />}>
 			<Content />
-			{/* <Team /> */}
 		</Suspense>
+
+		<Team />
 	</main>
 );
 

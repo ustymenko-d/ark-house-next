@@ -2,8 +2,8 @@ import About from './components/sections/About';
 import Blog from './components/sections/Blog/Blog';
 import Hero from './components/sections/Hero/Hero';
 import Projects from './components/sections/Projects/Projects';
-import Services from './components/sections/Services';
-// import Team from './components/sections/Team';
+import Services from './components/sections/Services/Services';
+import Team from './components/sections/Team';
 
 const Home = async () => (
 	<main>
@@ -11,7 +11,7 @@ const Home = async () => (
 		<About />
 		<Services />
 		<Projects />
-		{/* <Team /> */}
+		<Team />
 		<Blog />
 	</main>
 );

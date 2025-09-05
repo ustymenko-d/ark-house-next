@@ -1,6 +1,6 @@
 import Breadcrumbs from '@/components/Breadcrumbs';
-import Tabs from '@/components/Tabs/Tabs';
-import { PROJECTS_TABS } from '@/const/const';
+
+import ProjectsTabs from './components/ProjectsTabs';
 
 const navItems = [{ name: 'Home', href: '/' }, { name: 'Projects' }];
 
@@ -23,7 +23,7 @@ const ProjectsPage = () => (
 					experience of contemporary conditions set within a given frame.
 				</p>
 
-				<Tabs tabsType='projects' tabsList={PROJECTS_TABS} />
+				<ProjectsTabs />
 			</section>
 		</div>
 	</main>

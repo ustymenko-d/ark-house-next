@@ -34,7 +34,7 @@ const Content = async () => {
 								<Link
 									className={styles.projectLink}
 									key={`${projectCase.title}-${index}`}
-									href='/projects/case'>
+									href='/projects/showcase'>
 									<ProjectCard {...projectCase} />
 								</Link>
 							)
@@ -53,7 +53,7 @@ const Content = async () => {
 							<Link
 								className={styles.projectLink}
 								key={`${projectCase.title}-${index}`}
-								href='/projects/case'>
+								href='/projects/showcase'>
 								<ProjectCard {...projectCase} />
 							</Link>
 						)
@@ -67,7 +67,7 @@ const Content = async () => {
 				/>
 
 				{lastProjectCase && (
-					<Link className={styles.projectLink} href='/projects/case'>
+					<Link className={styles.projectLink} href='/projects/showcase'>
 						<ProjectCard {...lastProjectCase} />
 					</Link>
 				)}

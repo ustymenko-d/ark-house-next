@@ -1,5 +1,7 @@
 import { Suspense } from 'react';
 
+import Loader from '@/components/Loader';
+
 import Content from './components/Content';
 import HeadButton from './components/HeadButton';
 
@@ -10,12 +12,7 @@ const Blog = () => (
 			<HeadButton />
 		</div>
 
-		<Suspense
-			fallback={
-				<div className='container mx-auto md:px-10 lg:px-20'>
-					<p>Loading...</p>
-				</div>
-			}>
+		<Suspense fallback={<Loader className='h-64 justify-center' />}>
 			<Content />
 		</Suspense>
 	</section>

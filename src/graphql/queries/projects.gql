@@ -3,8 +3,8 @@ query Projects($filters: ProgectFiltersInput) {
 		title
 		location
 		media {
-			url
 			alternativeText
+			url
 			width
 			height
 		}

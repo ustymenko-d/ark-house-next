@@ -1,8 +1,8 @@
 import { Banner3 } from '@/assets/banner-icons';
 import Banner from '@/components/Banner';
-import Tabs from '@/components/Tabs/Tabs';
 import Button from '@/components/UI/Button';
-import { SERVICES_TABS } from '@/const/const';
+
+import ServicesTabs from './components/ServicesTabs';
 
 const ServicesSection = () => (
 	<section id='services' className='mb-14 px-4'>
@@ -11,16 +11,18 @@ const ServicesSection = () => (
 			<Button to='/projects'>Discover&nbsp;All</Button>
 		</div>
 
-		<div className='container mx-auto grid grid-rows-[1fr_1.5fr_auto] gap-8 md:px-10 lg:grid-cols-[30%_1fr] lg:grid-rows-[minmax(640px,auto)_auto] lg:px-20 xl:grid-cols-[40%_1fr] xl:gap-x-12 xl:gap-y-6'>
+		<div className='container mx-auto grid gap-10 md:px-10 lg:grid-cols-3 lg:grid-rows-[auto_auto] lg:gap-x-10 lg:gap-y-6 lg:px-20'>
 			<Banner
-				className='mx-auto'
+				className='mx-auto max-lg:hidden'
 				svgImage={<Banner3 />}
 				topLineText='Offices around'
 				bottomLineText='the world'
 			/>
-			<Tabs tabsType='services' tabsList={SERVICES_TABS} />
-			<div className='lg:col-start-2 lg:row-start-2 xl:ml-auto xl:max-w-[66.66%]'>
-				<p className='mb-4 text-balance text-base text-gray-800 md:text-lg'>
+
+			<ServicesTabs className='lg:col-span-2' />
+
+			<div className='flex flex-col items-start gap-4 lg:col-start-2 lg:row-start-2 lg:max-2xl:-col-end-1 xl:max-2xl:max-w-[66.66%]'>
+				<p className='text-balance text-base text-gray-800 md:text-lg'>
 					At the heart of everything we do is the human experience to feel.
 					To&nbsp;love. To&nbsp;image. To&nbsp;wonder. To&nbsp;guide.
 					To&nbsp;jest. To&nbsp;rule. To&nbsp;serve. To&nbsp;belong.

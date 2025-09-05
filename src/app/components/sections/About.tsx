@@ -32,7 +32,7 @@ const AboutSection = () => (
 								src={`/img/home-page/${item}.png`}
 								width={432}
 								height={432}
-								quality={100}
+								quality={90}
 								sizes='(max-width: 639px) 31vw, (max-width: 767px) 190px, (max-width: 1023px) 216px, (max-width: 1279px) 262px, 432px'
 								alt='Building'
 							/>

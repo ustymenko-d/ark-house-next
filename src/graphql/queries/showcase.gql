@@ -3,8 +3,8 @@ query Showcase {
 		title
 		location
 		media {
-			url
 			alternativeText
+			url
 			width
 			height
 		}
@@ -17,8 +17,8 @@ query Showcase {
 			title
 			location
 			media {
-				url
 				alternativeText
+				url
 				width
 				height
 			}

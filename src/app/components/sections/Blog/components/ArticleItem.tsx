@@ -40,7 +40,7 @@ const ArticleItem = ({ date, title, description, media }: Props) => {
 						className='aspect-[7/5] w-full bg-dark-color'
 						src={media.url}
 						alt={media.alternativeText ?? 'Article image'}
-						quality={100}
+						quality={90}
 						width={media.width ?? 540}
 						height={media.height ?? 405}
 						sizes='(max-width: 639px) 587px, (max-width: 767px) 640px, (max-width: 1023px) 688px, (max-width: 1279px) 412px, 540px'

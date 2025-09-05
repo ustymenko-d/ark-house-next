@@ -26,7 +26,7 @@ const ProjectCard = ({ title, location, media }: Props) => (
 						width={media.width ?? 656}
 						height={media.height ?? 800}
 						loading='lazy'
-						quality={100}
+						quality={90}
 						className='h-full min-h-20 w-full flex-grow bg-dark-color shadow'
 					/>
 				</div>

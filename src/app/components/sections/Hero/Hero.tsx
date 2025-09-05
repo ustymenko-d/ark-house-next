@@ -4,13 +4,13 @@ import AnimatedWrapper from '@/components/AnimatedWrapper';
 import Button from '@/components/UI/Button';
 import SocialLinks from '@/components/UI/SocialLinks/SocialLinks';
 
-import HeroImage from './components/HeroImage';
+import styles from './Hero.module.css';
 
 const Hero = () => (
 	<div
 		className={clsx(
 			'container relative mx-auto mb-10 flex max-h-[800px] min-h-[calc(100dvh-78px)] flex-col items-start justify-center gap-12 overflow-hidden py-16',
-			'md:justify-normal md:bg-none md:px-10',
+			'md:min-h-fit md:justify-normal md:bg-none md:px-10',
 			'lg:h-[calc(100dvh-93px)] lg:max-h-[1000px] lg:min-h-[800px] lg:flex-row lg:justify-between lg:gap-0 lg:px-20',
 			'duration-500',
 			'before:absolute before:bottom-0 before:left-0 before:right-0 before:z-0 before:h-[70%] before:w-full before:bg-[#f8f8f8] before:content-[""]',
@@ -44,7 +44,11 @@ const Hero = () => (
 			<SocialLinks />
 		</div>
 
-		<HeroImage />
+		<div
+			className={clsx(
+				styles.background,
+				'absolute bottom-0 left-0 right-0 w-full bg-no-repeat'
+			)}></div>
 	</div>
 );
 
