@@ -18,7 +18,7 @@ const ProjectPage = () => (
 			<Breadcrumbs navItems={navItems} />
 		</div>
 
-		<Suspense fallback={<Loader className='h-64 justify-center' />}>
+		<Suspense fallback={<Loader />}>
 			<Content />
 		</Suspense>
 

@@ -12,7 +12,7 @@ const Projects = () => (
 			<Button to='/projects'>Discover&nbsp;All</Button>
 		</div>
 
-		<Suspense fallback={<Loader className='h-64 justify-center' />}>
+		<Suspense fallback={<Loader />}>
 			<Content />
 		</Suspense>
 	</section>

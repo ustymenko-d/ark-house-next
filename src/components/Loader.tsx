@@ -1,10 +1,9 @@
 import 'ldrs/react/Square.css';
 
-import clsx from 'clsx';
 import { Square } from 'ldrs/react';
 
-const Loader = ({ className }: { className?: string }) => (
-	<div className={clsx('flex items-center gap-4', className)}>
+const Loader = () => (
+	<div className='flex h-64 items-center justify-center gap-4'>
 		<Square
 			size='25'
 			stroke='4'

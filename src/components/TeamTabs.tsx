@@ -23,7 +23,7 @@ const TeamTabs = () => {
 			extract: (data) => data?.teams,
 		});
 
-	if (loadingInitial) return <Loader className='h-64 justify-center' />;
+	if (loadingInitial) return <Loader />;
 
 	return (
 		<Tabs.Root
