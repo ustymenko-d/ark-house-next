@@ -1,10 +1,17 @@
-import { ProjectsQuery } from '@/graphql/generated';
-
 import AnimatedWrapper from './AnimatedWrapper';
 import ImageWithSkeleton from './UI/ImageWithSkeleton';
 import Logo from './UI/Logo';
 
-type Props = NonNullable<NonNullable<ProjectsQuery['progects']>[number]>;
+interface Props {
+	title: string;
+	location?: string | null;
+	media: {
+		url: string;
+		alternativeText?: string | null;
+		width?: number | null;
+		height?: number | null;
+	};
+}
 
 const ProjectCard = ({ title, location, media }: Props) => (
 	<AnimatedWrapper className='h-full'>
@@ -16,7 +23,6 @@ const ProjectCard = ({ title, location, media }: Props) => (
 					<ImageWithSkeleton
 						src={media.url}
 						alt={media.alternativeText ?? title}
-						// fill
 						width={media.width ?? 656}
 						height={media.height ?? 800}
 						loading='lazy'

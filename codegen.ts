@@ -12,8 +12,11 @@ const config: CodegenConfig = {
 				'typescript-react-apollo',
 			],
 			config: {
-				withMutationFn: false,
 				apolloReactHooksImportFrom: '@apollo/client/react',
+				withMutationFn: false,
+				withResultType: false,
+				withComponent: false,
+				withHOC: false,
 				scalars: {
 					Date: 'string',
 					DateTime: 'string',

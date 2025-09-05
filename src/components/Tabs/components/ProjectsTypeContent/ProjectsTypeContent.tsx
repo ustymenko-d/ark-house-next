@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
-import ProjectCard from '@/components/ProjectCard';
+// import ProjectCard from '@/components/ProjectCard';
 import { ITabContentProps, ProjectCase } from '@/const/const.types';
 
 import styles from './ProjectsTypeContent.module.css';
@@ -47,7 +47,7 @@ const ProjectsTypeContent = ({ tabsContent, activeTab }: ITabContentProps) => (
 										styles.project,
 										'outline-dark-color transition-[outline-offset] duration-150 hover:outline hover:outline-2 hover:outline-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2'
 									)}>
-									<ProjectCard {...projectCase} />
+									{/* <ProjectCard {...projectCase} /> */}
 								</Link>
 							)
 						)}
