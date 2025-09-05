@@ -11,9 +11,10 @@ interface Props {
 		width?: number | null;
 		height?: number | null;
 	};
+	hero?: boolean;
 }
 
-const ProjectCard = ({ title, location, media }: Props) => (
+const ProjectCard = ({ title, location, media, hero = false }: Props) => (
 	<AnimatedWrapper className='h-full'>
 		<div className='relative flex h-full flex-col gap-1 bg-neutral-100 text-center tracking-tight md:bg-transparent md:text-left'>
 			<div className='flex h-full flex-col justify-start gap-2 md:gap-4'>
@@ -27,6 +28,8 @@ const ProjectCard = ({ title, location, media }: Props) => (
 						height={media.height ?? 800}
 						loading='lazy'
 						quality={90}
+						priority={hero}
+						fetchPriority={hero ? 'high' : 'auto'}
 						className='h-full min-h-20 w-full flex-grow bg-dark-color shadow'
 					/>
 				</div>
