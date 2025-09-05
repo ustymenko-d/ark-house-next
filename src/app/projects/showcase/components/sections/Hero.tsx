@@ -23,6 +23,7 @@ const Hero = ({ title, media, description, info }: Props) => (
 					width={media.width ?? 1005}
 					height={media.height ?? 754}
 					priority
+					fetchPriority='high'
 					sizes='(max-width: 639px) 84vw, (max-width: 767px) 360px, (max-width: 1023px) 440px, (max-width: 1279px) 616px, 1005px'
 					className='block h-full min-h-48 bg-dark-color shadow xl:row-span-2'
 				/>
