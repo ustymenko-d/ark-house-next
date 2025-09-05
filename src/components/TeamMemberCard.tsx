@@ -1,13 +1,15 @@
-import { TeamMember } from '@/const/const.types';
+import { TeamsQuery } from '@/graphql/generated';
 
 import ImageWithSkeleton from './UI/ImageWithSkeleton';
 
-const TeamMemberCard = ({ name, role, media }: TeamMember) => (
+type Props = NonNullable<NonNullable<TeamsQuery['teams']>[number]>;
+
+const TeamMemberCard = ({ name, role, media }: Props) => (
 	<div className='relative'>
 		<ImageWithSkeleton
 			className='block aspect-square w-full bg-dark-color shadow'
-			src={media.src}
-			alt={media.alt}
+			src={media.url}
+			alt={media.alternativeText ?? name}
 			width={366}
 			height={366}
 			sizes='(max-width: 639px) 92vw, (max-width: 767px) 640px, (max-width: 1023px) 324px, (max-width: 1279px) 412px, 366px'

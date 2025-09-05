@@ -1,0 +1,13 @@
+query Articles {
+	blogArticles {
+		date
+		title
+		description
+		media {
+			alternativeText
+			url
+			width
+			height
+		}
+	}
+}

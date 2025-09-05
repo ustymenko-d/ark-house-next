@@ -14,7 +14,7 @@ const About = () => (
 			width={844}
 			height={563}
 			sizes='(max-width: 639px) 92vw, (max-width: 767px) 608px, (max-width: 1023px) 688px, (max-width: 1279px) 864px, 844px'
-			quality={100}
+			quality={90}
 			alt='Meet'
 		/>
 

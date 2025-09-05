@@ -1,0 +1,10 @@
+query Teams($filters: TeamFiltersInput) {
+	teams(filters: $filters) {
+		name
+		role
+		media {
+			alternativeText
+			url
+		}
+	}
+}

@@ -1,8 +1,7 @@
 import clsx from 'clsx';
 
-import Tabs from '@/components/Tabs/Tabs';
+import TeamTabs from '@/components/TeamTabs';
 import Button from '@/components/UI/Button';
-import { TEAM_TABS } from '@/const/const';
 
 const TeamSection = () => (
 	<section id='team' className='mb-14 px-4'>
@@ -24,7 +23,7 @@ const TeamSection = () => (
 					deliver functional and beautiful structures that exceed expectations.
 				</p>
 
-				<Tabs tabsList={TEAM_TABS} tabsType='team' />
+				<TeamTabs />
 			</div>
 		</div>
 	</section>

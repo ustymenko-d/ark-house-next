@@ -19,10 +19,10 @@ describe('NavigationList', () => {
 		expect(list).toHaveAttribute('id', 'navigation-list');
 	});
 
-	it('sets aria-hidden when isMobile and navListVisible is false', () => {
+	it('sets aria-hidden when isMobile, navListVisible is false and header is true', () => {
 		expectBreakpoint(640, 0);
 
-		render(<NavigationList navListVisible={false} />);
+		render(<NavigationList navListVisible={false} header />);
 		const list = screen.getByTestId('navigation-list');
 		expect(list).toHaveAttribute('aria-hidden', 'true');
 	});

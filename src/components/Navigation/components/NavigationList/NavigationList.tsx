@@ -22,16 +22,19 @@ const NavigationList = ({
 }: Props) => {
 	const breakpoints = useBreakpoints([768]);
 	const isMobile = breakpoints === 0;
+	const listId = header ? 'navigation-list' : 'footer-navigation-list';
+	const isHidden = isMobile && !navListVisible && header;
 
 	return (
 		<ul
-			id={header ? 'navigation-list' : 'footer-navigation-list'}
-			aria-hidden={isMobile && !navListVisible}
+			id={listId}
+			aria-hidden={isHidden}
 			className={clsx(
 				className,
-				header &&
+				header && [
 					'justify-center max-md:-left-full max-md:top-[78px] max-md:h-[calc(100%-78.5px)] max-md:min-h-[calc(100dvh-78.5px)] max-md:duration-300',
-				header && styles['navigation-list_header'],
+					styles['navigation-list_header'],
+				],
 				navListVisible && 'visible max-md:left-0'
 			)}
 			data-testid='navigation-list'>
