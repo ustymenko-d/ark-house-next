@@ -52,6 +52,7 @@ const HeroImage = () => {
 					alt={commonProps.alt}
 					className='pointer-events-none absolute bottom-0 left-0 right-0 h-auto w-full object-contain object-bottom lg:px-20'
 					decoding='async'
+					fetchPriority='high'
 				/>
 			</picture>
 		</AnimatedWrapper>
