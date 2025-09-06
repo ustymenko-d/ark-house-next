@@ -26,7 +26,6 @@ const ProjectCard = ({ title, location, media, hero = false }: Props) => (
 						alt={media.alternativeText ?? title}
 						width={media.width ?? 656}
 						height={media.height ?? 800}
-						loading='lazy'
 						quality={90}
 						priority={hero}
 						fetchPriority={hero ? 'high' : 'auto'}

@@ -60,7 +60,9 @@ const ProjectsTabs = () => {
 							'grid gap-x-4 gap-y-6 md:grid-cols-2 xl:grid-cols-12'
 						)}>
 						{loadingContent && service === active ? (
-							<Loader />
+							<div className='md:col-span-2 xl:col-span-12'>
+								<Loader />
+							</div>
 						) : (
 							list?.map((elem, idx) =>
 								!elem ? null : (
@@ -71,7 +73,10 @@ const ProjectsTabs = () => {
 											styles.project,
 											'outline-dark-color transition-[outline-offset] duration-150 hover:outline hover:outline-2 hover:outline-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2'
 										)}>
-										<ProjectCard hero={idx === 0} {...elem} />
+										<ProjectCard
+											hero={idx === 0 && service === SERVICES[0]}
+											{...elem}
+										/>
 									</Link>
 								)
 							)
