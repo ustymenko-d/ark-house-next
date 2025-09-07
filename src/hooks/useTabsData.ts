@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
-import { ApolloClient, DocumentNode } from '@apollo/client';
+import { useState } from 'react';
+import { DocumentNode } from '@apollo/client';
+import { useLazyQuery, useQuery } from '@apollo/client/react';
 
 interface UseTabsDataOptions<TType extends string, TData, TQuery> {
-	client: ApolloClient;
 	query: DocumentNode;
 	tabs: readonly TType[];
 	variableKey: string;
@@ -10,48 +10,42 @@ interface UseTabsDataOptions<TType extends string, TData, TQuery> {
 }
 
 export function useTabsData<TType extends string, TData, TQuery>({
-	client,
 	query,
 	tabs,
 	variableKey,
 	extract,
 }: UseTabsDataOptions<TType, TData, TQuery>) {
 	const [active, setActive] = useState<TType>(tabs[0]);
-	const [list, setList] = useState<TData[]>([]);
-	const [loadingInitial, setLoadingInitial] = useState(true);
-	const [loadingContent, setLoadingContent] = useState(false);
 
-	const fetchData = async (type: TType, isInitial = false) => {
-		if (isInitial) setLoadingInitial(true);
-		else setLoadingContent(true);
+	const { data: initialData, loading: initialLoading } = useQuery<TQuery>(
+		query,
+		{
+			variables: { filters: { [variableKey]: { eq: tabs[0].toLowerCase() } } },
+			fetchPolicy: 'cache-first',
+		}
+	);
 
-		const { data } = await client.query<TQuery>({
-			query,
-			variables: { filters: { [variableKey]: { eq: type.toLowerCase() } } },
-		});
-
-		setList(extract(data) ?? []);
-
-		if (isInitial) setLoadingInitial(false);
-		else setLoadingContent(false);
-	};
-
-	useEffect(() => {
-		fetchData(tabs[0], true);
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []);
+	const [fetchLazy, { data, loading }] = useLazyQuery<TQuery>(query, {
+		fetchPolicy: 'cache-first',
+	});
 
 	const handleTabChange = (val: string) => {
 		const type = val as TType;
 		setActive(type);
-		fetchData(type);
+
+		fetchLazy({
+			variables: { filters: { [variableKey]: { eq: type.toLowerCase() } } },
+		});
 	};
+
+	const list =
+		active === tabs[0] ? (extract(initialData) ?? []) : (extract(data) ?? []);
 
 	return {
 		active,
 		list,
-		loadingInitial,
-		loadingContent,
+		initialLoading,
+		loading,
 		handleTabChange,
 	};
 }

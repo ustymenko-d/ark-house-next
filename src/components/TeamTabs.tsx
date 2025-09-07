@@ -7,23 +7,21 @@ import { DEPARTMENTS } from '@/const/const';
 import { Department } from '@/const/const.types';
 import { TeamsDocument, TeamsQuery } from '@/graphql/generated';
 import { useTabsData } from '@/hooks/useTabsData';
-import apolloClient from '@/lib/apolloClient';
 
 import AnimatedWrapper from './AnimatedWrapper';
 import Loader from './Loader';
 import TeamMemberCard from './TeamMemberCard';
 
 const TeamTabs = () => {
-	const { active, list, loadingInitial, loadingContent, handleTabChange } =
+	const { active, list, initialLoading, loading, handleTabChange } =
 		useTabsData<Department, TeamsQuery['teams'][number], TeamsQuery>({
-			client: apolloClient,
 			query: TeamsDocument,
 			tabs: DEPARTMENTS,
 			variableKey: 'department',
 			extract: (data) => data?.teams,
 		});
 
-	if (loadingInitial) return <Loader />;
+	if (initialLoading) return <Loader />;
 
 	return (
 		<Tabs.Root
@@ -55,7 +53,7 @@ const TeamTabs = () => {
 						key={department}
 						value={department}
 						className='grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3'>
-						{loadingContent && department === active ? (
+						{loading && department === active ? (
 							<div className='md:col-span-2 xl:col-span-3'>
 								<Loader />
 							</div>

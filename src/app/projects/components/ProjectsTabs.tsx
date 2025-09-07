@@ -10,21 +10,19 @@ import { SERVICES } from '@/const/const';
 import { Service } from '@/const/const.types';
 import { ProjectsDocument, ProjectsQuery } from '@/graphql/generated';
 import { useTabsData } from '@/hooks/useTabsData';
-import apolloClient from '@/lib/apolloClient';
 
 import styles from './ProjectsTabs.module.css';
 
 const ProjectsTabs = () => {
-	const { active, list, loadingInitial, loadingContent, handleTabChange } =
+	const { active, list, initialLoading, loading, handleTabChange } =
 		useTabsData<Service, ProjectsQuery['progects'][number], ProjectsQuery>({
-			client: apolloClient,
 			query: ProjectsDocument,
 			tabs: SERVICES,
 			variableKey: 'type',
 			extract: (data) => data?.progects,
 		});
 
-	if (loadingInitial) return <Loader />;
+	if (initialLoading) return <Loader />;
 
 	return (
 		<Tabs.Root
@@ -59,7 +57,7 @@ const ProjectsTabs = () => {
 							styles.grid,
 							'grid gap-x-4 gap-y-6 md:grid-cols-2 xl:grid-cols-12'
 						)}>
-						{loadingContent && service === active ? (
+						{loading && service === active ? (
 							<div className='md:col-span-2 xl:col-span-12'>
 								<Loader />
 							</div>
