@@ -28,7 +28,7 @@ const Modal = () => {
 
 					<AnimatedWrapper
 						motionKey='modal'
-						typeFade={false}
+						variant='opacityScale'
 						duration={0.2}
 						className='flex items-center justify-center'>
 						<div

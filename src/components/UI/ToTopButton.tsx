@@ -33,7 +33,10 @@ const ToTopButton = () => {
 		<AnimatePresence mode='wait'>
 			{hasScrolledBeyond && (
 				<div className='pointer-events-none fixed inset-0 z-20'>
-					<AnimatedWrapper typeFade={false} duration={0.2} className='h-full'>
+					<AnimatedWrapper
+						variant='opacityScale'
+						duration={0.2}
+						className='h-full'>
 						<button
 							disabled={isDisabled}
 							onClick={handleGoToTop}

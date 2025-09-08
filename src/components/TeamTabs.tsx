@@ -60,7 +60,9 @@ const TeamTabs = () => {
 						) : (
 							list?.map((elem, idx) =>
 								!elem ? null : (
-									<AnimatedWrapper key={`${elem.name}-${idx}`} typeFade={false}>
+									<AnimatedWrapper
+										key={`${elem.name}-${idx}`}
+										variant='opacityScale'>
 										<TeamMemberCard {...elem} />
 									</AnimatedWrapper>
 								)

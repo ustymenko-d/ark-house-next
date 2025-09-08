@@ -1,3 +1,6 @@
+'use client';
+
+import { useState } from 'react';
 import { getImageProps } from 'next/image';
 
 import AnimatedWrapper from '@/components/AnimatedWrapper';
@@ -30,13 +33,16 @@ const sources = [
 ] as const;
 
 const HeroImage = () => {
+	const [loaded, setLoaded] = useState(false);
 	const imageProps = sources.map(
 		({ image }) => getImageProps({ ...commonProps, ...image }).props
 	);
 
 	return (
 		<AnimatedWrapper
+			motionKey='hero-image'
 			duration={0.6}
+			loaded={loaded}
 			className='absolute bottom-0 left-0 right-0 h-full w-full'>
 			<picture>
 				{sources.map(({ media }, index) => (
@@ -53,6 +59,7 @@ const HeroImage = () => {
 					className='pointer-events-none absolute bottom-0 left-0 right-0 h-auto w-full object-contain object-bottom lg:px-20'
 					decoding='async'
 					fetchPriority='high'
+					onLoad={() => setLoaded(true)}
 				/>
 			</picture>
 		</AnimatedWrapper>

@@ -9,39 +9,52 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 	motionKey?: string;
 	delay?: number;
 	duration?: number;
-	typeFade?: boolean;
+	variant?: keyof typeof variants;
+	loaded?: boolean;
 }
+
+const variants = {
+	slideInBottom: {
+		hidden: { opacity: 0, y: 50 },
+		visible: { opacity: 1, y: 0 },
+	},
+	opacityScale: {
+		hidden: { opacity: 0, scale: 0.98 },
+		visible: { opacity: 1, scale: 1 },
+	},
+};
 
 const AnimatedWrapper = ({
 	children,
 	motionKey,
 	delay = 0,
 	duration = 0.4,
-	typeFade = true,
+	variant = 'slideInBottom',
 	className,
+	loaded,
 }: Props) => {
-	const motionRef = useRef<HTMLDivElement | null>(null);
-	const isInView = useInView(motionRef, { once: true });
+	const ref = useRef<HTMLDivElement | null>(null);
+	const isInView = useInView(ref, { once: true });
+	const selectedVariant = variants[variant] ?? variants.slideInBottom;
 
-	const fadeInBottom = {
-		hidden: { opacity: 0, y: 50 },
-		visible: { opacity: 1, y: 0 },
-	};
-
-	const opacityScale = {
-		hidden: { opacity: 0, scale: 0.98 },
-		visible: { opacity: 1, scale: 1 },
-	};
+	const shouldAnimate =
+		typeof loaded === 'boolean'
+			? isInView && loaded
+				? 'visible'
+				: 'hidden'
+			: isInView
+				? 'visible'
+				: 'hidden';
 
 	return (
 		<motion.div
 			key={motionKey}
 			className={clsx(className)}
-			ref={motionRef}
+			ref={ref}
 			initial='hidden'
-			animate={isInView ? 'visible' : 'hidden'}
+			animate={shouldAnimate ? 'visible' : 'hidden'}
 			exit='hidden'
-			variants={typeFade ? fadeInBottom : opacityScale}
+			variants={selectedVariant}
 			transition={{ duration, ease: 'easeOut', delay }}>
 			{children}
 		</motion.div>
