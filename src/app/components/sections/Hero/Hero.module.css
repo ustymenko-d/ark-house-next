@@ -1,0 +1,35 @@
+.background {
+	height: calc(100% - 62px);
+	background-size: contain;
+	background-position: 0 100%;
+	background-image: url(/img/home-page/hero@mob.png);
+
+	@media screen and (min-width: 768px) {
+		background-image: url(/img/home-page/hero.png);
+		background-size: contain;
+		background-size: 100%;
+		background-position-x: 200px;
+		height: 78%;
+	}
+
+	@media screen and (min-width: 1024px) {
+		background-position-x: center;
+		background-size: calc(100% - 160px);
+	}
+
+	@media screen and (min-width: 1536px) {
+		background-position-y: center;
+		background-size: contain;
+	}
+
+	@supports (
+		background-image:
+			url('data:image/webp;base64,UklGRhYAAABXRUJQVlA4TBEAAAAAAABAAEAAQAAAABAAEAAQAAABAAEAAQAAAAA=')
+	) {
+		background-image: url(/img/home-page/hero@mob.webp);
+
+		@media screen and (min-width: 768px) {
+			background-image: url(/img/home-page/hero.webp);
+		}
+	}
+}
