@@ -17,7 +17,7 @@ const ContactTypeToggle = ({ phoneType, toggleContactType }: Props) => {
 
 				'sm:max-w-[60%] xl:max-w-[50%]',
 
-				"before:absolute before:top-0 before:content-['']",
+				'before:absolute before:top-0 before:content-[""]',
 				'before:h-full before:w-1/2 before:bg-dark-color',
 				'before:pointer-events-none before:duration-300 before:ease-linear',
 

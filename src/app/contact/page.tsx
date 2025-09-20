@@ -67,7 +67,7 @@ const ContactPage = () => {
 		{
 			name: 'contact',
 			type: phoneType ? 'tel' : 'email',
-			placeholder: phoneType ? '+0(123) 456-7890' : 'username@mail.com',
+			placeholder: phoneType ? '+0(123) 456-7890' : 'username@example.com',
 		},
 	] as const;
 

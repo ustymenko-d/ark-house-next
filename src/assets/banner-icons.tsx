@@ -1,4 +1,4 @@
-const Banner2 = () => (
+export const Banner2 = () => (
 	<svg
 		className='w-full'
 		width='556'
@@ -24,7 +24,8 @@ const Banner2 = () => (
 		/>
 	</svg>
 );
-const Banner3 = () => (
+
+export const Banner3 = () => (
 	<svg
 		width='240'
 		height='326'
@@ -37,7 +38,8 @@ const Banner3 = () => (
 		/>
 	</svg>
 );
-const Banner45 = () => (
+
+export const Banner45 = () => (
 	<svg
 		className='w-full'
 		width='580'
@@ -55,5 +57,3 @@ const Banner45 = () => (
 		/>
 	</svg>
 );
-
-export { Banner2, Banner3, Banner45 };

@@ -5,7 +5,7 @@ export type NavigationLink = {
 	href: string;
 };
 
-export interface OneTabContent<C> {
+interface OneTabContent<C> {
 	tabName: Service;
 	content: C;
 }

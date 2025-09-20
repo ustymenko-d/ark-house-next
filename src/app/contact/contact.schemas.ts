@@ -8,8 +8,8 @@ const nameSchema = z
 const phoneSchema = z
 	.string()
 	.regex(
-		/^\+(\d{1,3})(\(\d{3}\))? ?\d{3}-?\d{4}$|^\+\d{1,3}\d{7,10}$/,
-		'Invalid phone format +1(800) 555-5555'
+		/^(\+?\d{11})$/,
+		'Phone must be 11 digits, optionally starting with +'
 	);
 
 const emailSchema = z.string().email('Invalid email format');
