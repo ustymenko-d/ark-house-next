@@ -4,7 +4,7 @@ import AnimatedWrapper from '@/components/AnimatedWrapper';
 import Button from '@/components/UI/Button';
 import SocialLinks from '@/components/UI/SocialLinks/SocialLinks';
 
-import styles from './Hero.module.css';
+import HeroImage from './components/HeroImage';
 
 const Hero = () => (
 	<div
@@ -44,11 +44,7 @@ const Hero = () => (
 			<SocialLinks />
 		</div>
 
-		<div
-			className={clsx(
-				styles.background,
-				'pointer-events-none absolute bottom-0 left-0 right-0 w-full bg-no-repeat'
-			)}></div>
+		<HeroImage />
 	</div>
 );
 

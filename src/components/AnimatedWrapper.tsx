@@ -10,7 +10,6 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 	delay?: number;
 	duration?: number;
 	variant?: keyof typeof variants;
-	loaded?: boolean;
 }
 
 const variants = {
@@ -31,20 +30,12 @@ const AnimatedWrapper = ({
 	duration = 0.4,
 	variant = 'slideInBottom',
 	className,
-	loaded,
 }: Props) => {
 	const ref = useRef<HTMLDivElement | null>(null);
 	const isInView = useInView(ref, { once: true });
 	const selectedVariant = variants[variant] ?? variants.slideInBottom;
 
-	const shouldAnimate =
-		typeof loaded === 'boolean'
-			? isInView && loaded
-				? 'visible'
-				: 'hidden'
-			: isInView
-				? 'visible'
-				: 'hidden';
+	const shouldAnimate = isInView ? 'visible' : 'hidden';
 
 	return (
 		<motion.div
