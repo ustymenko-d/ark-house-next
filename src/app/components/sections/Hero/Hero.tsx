@@ -11,7 +11,7 @@ const Hero = () => (
 		className={clsx(
 			'container relative mx-auto mb-10 flex max-h-[800px] min-h-[calc(100dvh-78px)] flex-col items-start justify-center gap-12 overflow-hidden py-16',
 			'md:min-h-fit md:justify-normal md:bg-none md:px-10',
-			'lg:h-[calc(100dvh-93px)] lg:max-h-[1000px] lg:min-h-[800px] lg:flex-row lg:justify-between lg:gap-0 lg:px-20',
+			'lg:grid lg:h-[calc(100dvh-93px)] lg:max-h-[1000px] lg:min-h-[800px] lg:grid-cols-[auto_auto] lg:justify-between lg:gap-0 lg:px-20',
 			'duration-500',
 			'before:absolute before:bottom-0 before:left-0 before:right-0 before:z-0 before:h-[70%] before:w-full before:bg-[#f8f8f8] before:content-[""]',
 			'lg:before:mx-auto lg:before:min-h-[63%] lg:before:w-[calc(100%-160px)]'
@@ -37,8 +37,8 @@ const Hero = () => (
 
 		<div
 			className={clsx(
-				'z-10 flex flex-col items-start gap-8 px-4 lg:items-end lg:self-center lg:px-0',
-				'xl:items-end xl:gap-20 xl:self-start'
+				'z-10 flex flex-col items-start gap-8 px-4',
+				'lg:items-center lg:self-start lg:px-0'
 			)}>
 			<Button to='/contact'>Contact&nbsp;us</Button>
 			<SocialLinks />
